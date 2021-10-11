@@ -48,6 +48,9 @@ pub type Moment = u64;
 /// Index of a transaction in the chain.
 pub type Index = u32;
 
+/// Index of a transaction in the relay chain. 32-bit should be plenty.
+pub type Nonce = u32;
+
 /// A hash of some data used by the chain.
 pub type Hash = sp_core::H256;
 
@@ -64,6 +67,13 @@ pub type Header = generic::Header<BlockNumber, BlakeTwo256>;
 pub type Block = generic::Block<Header, OpaqueExtrinsic>;
 /// Block ID.
 pub type BlockId = generic::BlockId<Block>;
+
+/// Asset id type for assets module
+pub type AssetId = u32;
+/// Token amount type for tokens module
+pub type Amount = i128;
+/// Currency id for tokens module
+pub type CurrencyId = u64;
 
 /// App-specific crypto used for reporting equivocation/misbehavior in AURA and
 /// GRANDPA. Any rewards for misbehavior reporting will be paid out to this
@@ -85,13 +95,13 @@ pub mod report {
 	/// Identity of the equivocation/misbehavior reporter.
 	pub type ReporterId = app::Public;
 
-	/// An `AppCrypto` type to allow submitting signed transactions using the reporting
-	/// application key as signer.
+	/// An `AppCrypto` type to allow submitting signed transactions using the
+	/// reporting application key as signer.
 	pub struct ReporterAppCrypto;
 
 	impl AppCrypto<<Signature as Verify>::Signer, Signature> for ReporterAppCrypto {
-		type RuntimeAppPublic = ReporterId;
-		type GenericSignature = sp_core::ed25519::Signature;
 		type GenericPublic = sp_core::ed25519::Public;
+		type GenericSignature = sp_core::ed25519::Signature;
+		type RuntimeAppPublic = ReporterId;
 	}
 }

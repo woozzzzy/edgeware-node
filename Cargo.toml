@@ -71,17 +71,17 @@ zeroize = { opt-level = 3 }
 
 [patch.crates-io]
 # frontier deps
-fc-consensus = { git = "https://github.com/woozzzzy/frontier" }
-fc-rpc = { git = "https://github.com/woozzzzy/frontier" }
-fc-rpc-core = { git = "https://github.com/woozzzzy/frontier" }
-fp-consensus = { git = "https://github.com/woozzzzy/frontier" }
-fp-evm = { git = "https://github.com/woozzzzy/frontier" }
-fp-rpc = { git = "https://github.com/woozzzzy/frontier" }
-pallet-ethereum = { git = "https://github.com/woozzzzy/frontier" }
-pallet-evm = { git = "https://github.com/woozzzzy/frontier" }
-pallet-evm-precompile-ed25519 = { git = "https://github.com/woozzzzy/frontier" }
-pallet-evm-precompile-modexp = { git = "https://github.com/woozzzzy/frontier" }
-pallet-evm-precompile-simple = { git = "https://github.com/woozzzzy/frontier" }
+fc-consensus = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
+fc-rpc = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
+fc-rpc-core = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
+fp-consensus = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
+fp-evm = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
+fp-rpc = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
+pallet-ethereum = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
+pallet-evm = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
+pallet-evm-precompile-ed25519 = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
+pallet-evm-precompile-modexp = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
+pallet-evm-precompile-simple = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
 
 # substrate deps
 fork-tree = { git = "https://github.com/woozzzzy/substrate.git", branch = "polkadot-v0.9.10" }

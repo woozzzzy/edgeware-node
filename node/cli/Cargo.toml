@@ -92,8 +92,8 @@ pallet-staking = { git = "https://github.com/woozzzzy/substrate", branch = "polk
 pallet-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
 # xox - commented below and added the two lines below
 # pallet-evm = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
-pallet-dynamic-fee = { git = "https://github.com/woozzzzy/frontier" }
-pallet-evm = { git = "https://github.com/woozzzzy/frontier" }
+pallet-dynamic-fee = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
+pallet-evm = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10" }
 
 # node-specific dependencies
 edgeware-runtime = { version = "3.2.0", path = "../runtime" }
@@ -109,9 +109,9 @@ frame-benchmarking-cli = { git = "https://github.com/woozzzzy/substrate", branch
 # fp-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
 # fc-rpc-core = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
 # xox check the default-features = false below. Is it relevant?
-fc-consensus = { git = "https://github.com/woozzzzy/frontier", default-features = false }
-fp-consensus = { git = "https://github.com/woozzzzy/frontier", default-features = false }
-fc-rpc-core = { git = "https://github.com/woozzzzy/frontier", default-features = false }
+fc-consensus = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
+fp-consensus = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
+fc-rpc-core = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
 
 # WASM-specific dependencies
 wasm-bindgen = { version = "0.2.57", optional = true }
