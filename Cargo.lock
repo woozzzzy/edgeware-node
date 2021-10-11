@@ -1685,6 +1685,7 @@ dependencies = [
  "pallet-contracts-rpc-runtime-api",
  "pallet-democracy",
  "pallet-dynamic-fee",
+ "pallet-election-provider-multi-phase",
  "pallet-elections-phragmen",
  "pallet-ethereum",
  "pallet-evm",
@@ -5228,6 +5229,25 @@ dependencies = [
  "sp-inherents 4.0.0-dev (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.10)",
  "sp-runtime 4.0.0-dev (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.10)",
  "sp-std 4.0.0-dev (git+https://github.com/purestake/substrate?branch=moonbeam-polkadot-v0.9.10)",
+]
+
+[[package]]
+name = "pallet-election-provider-multi-phase"
+version = "4.0.0-dev"
+source = "git+https://github.com/woozzzzy/substrate?branch=polkadot-v0.9.10#420db18eaa1a1f5ce9ba40dd6ccb69f7b3dd9bb7"
+dependencies = [
+ "frame-election-provider-support",
+ "frame-support 4.0.0-dev (git+https://github.com/woozzzzy/substrate?branch=polkadot-v0.9.10)",
+ "frame-system 4.0.0-dev (git+https://github.com/woozzzzy/substrate?branch=polkadot-v0.9.10)",
+ "log",
+ "parity-scale-codec 2.3.1",
+ "sp-arithmetic 4.0.0-dev (git+https://github.com/woozzzzy/substrate?branch=polkadot-v0.9.10)",
+ "sp-core 4.0.0-dev (git+https://github.com/woozzzzy/substrate?branch=polkadot-v0.9.10)",
+ "sp-io 4.0.0-dev (git+https://github.com/woozzzzy/substrate?branch=polkadot-v0.9.10)",
+ "sp-npos-elections",
+ "sp-runtime 4.0.0-dev (git+https://github.com/woozzzzy/substrate?branch=polkadot-v0.9.10)",
+ "sp-std 4.0.0-dev (git+https://github.com/woozzzzy/substrate?branch=polkadot-v0.9.10)",
+ "static_assertions",
 ]
 
 [[package]]

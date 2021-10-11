@@ -64,6 +64,7 @@ pallet-contracts-primitives = { default-features = false, git = "https://github.
 pallet-contracts-rpc-runtime-api = { default-features = false, git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
 pallet-democracy = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
 pallet-elections-phragmen = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+pallet-election-provider-multi-phase = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
 frame-executive = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
 pallet-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
 pallet-identity = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
@@ -147,7 +148,7 @@ std = [
 	"pallet-contracts-rpc-runtime-api/std",
 	"pallet-democracy/std",
 	"pallet-elections-phragmen/std",
-#	"pallet-election-provider-multi-phase/std",
+	"pallet-election-provider-multi-phase/std",
 	"frame-executive/std",
 	"pallet-grandpa/std",
 	"pallet-identity/std",
