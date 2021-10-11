@@ -5,7 +5,7 @@ authors = ["Commonwealth Labs <hello@commonwealth.im>"]
 edition = "2018"
 license = "Apache-2.0"
 homepage = "https://substrate.dev"
-repository = "https://github.com/paritytech/substrate/"
+repository = "https://github.com/woozzzzy/substrate/"
 description = "FRAME asset management pallet"
 readme = "README.md"
 
@@ -15,17 +15,17 @@ targets = ["x86_64-unknown-linux-gnu"]
 [dependencies]
 serde = { version = "1.0.101", optional = true }
 codec = { package = "parity-scale-codec", version = "1.3.4", default-features = false }
-sp-std = { version = "2.0", default-features = false }
-sp-runtime = { version = "2.0", default-features = false }
-frame-support = { version = "2.0", default-features = false }
-frame-system = { version = "2.0", default-features = false }
-frame-benchmarking = { version = "2.0", default-features = false, optional = true }
+sp-std = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+frame-benchmarking = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false, optional = true }
 
 [dev-dependencies]
-sp-core = { version = "2.0" }
-sp-std = { version = "2.0" }
-sp-io = { version = "2.0" }
-pallet-balances = { version = "2.0", default-features = false }
+sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-std = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
 
 [features]
 default = ["std"]

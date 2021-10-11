@@ -47,50 +47,53 @@ hex = "0.3.2"
 serde_json = "1.0"
 
 # primitives
-sp-authority-discovery = { version = "2.0" }
-sp-blockchain = { version = "2.0" }
-sp-consensus-aura = { version = "0.8" }
-sp-finality-grandpa = { version = "2.0" }
-sp-core = { version = "2.0" }
-sp-runtime = { version = "2.0" }
-sp-timestamp = { version = "2.0", default-features = false }
-sp-inherents = { version = "2.0" }
-sp-keyring = { version = "2.0" }
-sp-io = { version = "2.0" }
-sp-consensus = { version = "0.8" }
-sp-transaction-pool = { version = "2.0" }
+sp-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-blockchain = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-consensus-aura = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-finality-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-timestamp = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+sp-inherents = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-keyring = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
 
 # client dependencies
-sc-client-api = { version = "2.0" }
-sc-chain-spec = { version = "2.0" }
-sc-consensus = { version = "0.8" }
-sc-transaction-pool = { version = "2.0" }
-sc-network = { version = "0.8" }
-sc-consensus-aura = { version = "0.8" }
-sc-finality-grandpa = { version = "0.8" }
-sc-client-db = { version = "0.8", default-features = false }
-sc-offchain = { version = "2.0" }
-sc-rpc = { version = "2.0" }
-sc-basic-authorship = { version = "0.8" }
-sc-service = { version = "0.8", default-features = false }
-sc-tracing = { version = "2.0" }
-sc-telemetry = { version = "2.0" }
-sc-authority-discovery = { version = "0.8" }
+sc-client-api = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-chain-spec = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-network = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-consensus-aura = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-finality-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-client-db = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+sc-offchain = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-rpc = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-basic-authorship = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-service = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+sc-tracing = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-telemetry = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
 
 
 # frame dependencies
-pallet-indices = { version = "2.0" }
-pallet-timestamp = { version = "2.0", default-features = false }
-pallet-contracts = { version = "2.0" }
-frame-system = { version = "2.0" }
-pallet-balances = { version = "2.0" }
-pallet-transaction-payment = { version = "2.0" }
-frame-support = { version = "2.0", default-features = false }
-pallet-im-online = { version = "2.0", default-features = false }
-pallet-authority-discovery = { version = "2.0" }
-pallet-staking = { version = "2.0" }
-pallet-grandpa = { version = "2.0" }
-pallet-evm = { version = "2.0" }
+pallet-indices = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+pallet-timestamp = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+pallet-contracts = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+pallet-transaction-payment = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+pallet-im-online = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+pallet-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+pallet-staking = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+pallet-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+# xox - commented below and added the two lines below
+# pallet-evm = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+pallet-dynamic-fee = { git = "https://github.com/woozzzzy/frontier" }
+pallet-evm = { git = "https://github.com/woozzzzy/frontier" }
 
 # node-specific dependencies
 edgeware-runtime = { version = "3.2.0", path = "../runtime" }
@@ -99,27 +102,32 @@ edgeware-primitives = { version = "3.2.0", path = "../primitives" }
 edgeware-executor = { version = "3.2.0", path = "../executor" }
 
 # CLI-specific dependencies
-sc-cli = { version = "0.8", optional = true }
-frame-benchmarking-cli = { version = "2.0", optional = true }
-fc-consensus = { version = "0.1" }
-fp-consensus = { version = "0.1" }
-fc-rpc-core = { version = "0.1" }
+sc-cli = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", optional = true }
+frame-benchmarking-cli = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", optional = true }
+# xox -  The below are linked to woozy, but maybe the substrate of woozy is different from the one here.
+# fc-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+# fp-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+# fc-rpc-core = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+# xox check the default-features = false below. Is it relevant?
+fc-consensus = { git = "https://github.com/woozzzzy/frontier", default-features = false }
+fp-consensus = { git = "https://github.com/woozzzzy/frontier", default-features = false }
+fc-rpc-core = { git = "https://github.com/woozzzzy/frontier", default-features = false }
 
 # WASM-specific dependencies
 wasm-bindgen = { version = "0.2.57", optional = true }
 wasm-bindgen-futures = { version = "0.4.7", optional = true }
-browser-utils = { version = "0.8", package = "substrate-browser-utils", optional = true }
+browser-utils = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", package = "substrate-browser-utils", optional = true }
 
 [target.'cfg(target_arch="x86_64")'.dependencies]
 edgeware-executor = { path = "../executor", features = [ "wasmtime" ] }
-sc-cli = { version = "0.8", optional = true, features = [ "wasmtime" ] }
-sc-service = { version = "0.8", default-features = false, features = [ "wasmtime" ] }
-sp-trie = { version = "2.0", default-features = false, features = ["memory-tracker"] }
+sc-cli = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", optional = true, features = [ "wasmtime" ] }
+sc-service = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false, features = [ "wasmtime" ] }
+sp-trie = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false, features = ["memory-tracker"] }
 
 [dev-dependencies]
-sc-keystore = { version = "2.0" }
-sc-consensus = { version = "0.8" }
-sc-consensus-epochs = { version = "0.8" }
+sc-keystore = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-consensus-epochs = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
 
 futures = "0.3.4"
 tempfile = "3.1.0"
@@ -131,10 +139,10 @@ platforms = "0.2.1"
 
 [build-dependencies]
 structopt = { version = "0.3.8", optional = true }
-frame-benchmarking-cli = { version = "2.0", optional = true }
-substrate-build-script-utils = { version = "2.0", optional = true }
-substrate-frame-cli = { version = "2.0", optional = true }
-sc-cli = { version = "0.8", optional = true }
+frame-benchmarking-cli = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", optional = true }
+substrate-build-script-utils = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", optional = true }
+substrate-frame-cli = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", optional = true }
+sc-cli = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", optional = true }
 
 [features]
 default = [ "cli" ]

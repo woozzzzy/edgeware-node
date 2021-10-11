@@ -14,26 +14,25 @@ jsonrpc-core = "15.0.0"
 jsonrpc-pubsub = "15.0.0"
 edgeware-primitives = { path = "../primitives" }
 edgeware-runtime = { path = "../runtime" }
-pallet-contracts-rpc = { version = "0.8" }
-pallet-transaction-payment-rpc = { version = "2.0" }
-sc-client-api = { version = "2.0" }
-sc-consensus-aura = { version = "0.8" }
-sc-consensus-epochs = { version = "0.8" }
-sc-finality-grandpa = { version = "0.8" }
-sc-finality-grandpa-rpc = { version = "0.8" }
-sc-keystore = { version = "2.0" }
-sc-network = { version = "0.8" }
-sc-rpc-api = { version = "0.8" }
-sc-rpc = { version = "2.0" }
-sp-api = { version = "2.0" }
-sp-block-builder = { version = "2.0" }
-sp-blockchain = { version = "2.0" }
-sp-consensus = { version = "0.8" }
-sp-consensus-aura = { version = "0.8" }
-sp-runtime = { version = "2.0" }
-sp-transaction-pool = { version = "2.0" }
-substrate-frame-rpc-system = { version = "2.0" }
-pallet-ethereum = { version = "0.1" }
-fc-rpc = { version = "0.1", features = ["rpc_binary_search_estimate"] }
-fp-rpc = { version = "0.1" }
-fc-rpc-core = { version = "0.1" }
+pallet-contracts-rpc = {  git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+pallet-transaction-payment-rpc = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-client-api = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-consensus-aura = {  git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-consensus-epochs = {  git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-finality-grandpa = {  git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-finality-grandpa-rpc = {  git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-keystore = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-network = {  git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-rpc-api = {  git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sc-rpc = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-api = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-block-builder = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-blockchain = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-consensus = {  git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-consensus-aura = {  git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+substrate-frame-rpc-system = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+pallet-ethereum = { git = "https://github.com/woozzzzy/frontier" }
+fc-rpc = { git = "https://github.com/woozzzzy/frontier", features = ["rpc_binary_search_estimate"] }
+fc-rpc-core = { git = "https://github.com/woozzzzy/frontier" }

@@ -1,27 +1,29 @@
-// Copyright 2018-2020 Commonwealth Labs, Inc.
-// This file is part of Edgeware.
+// This file is part of Substrate.
 
-// Edgeware is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
+// Copyright (C) 2018-2021 Parity Technologies (UK) Ltd.
+// SPDX-License-Identifier: Apache-2.0
 
-// Edgeware is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// You should have received a copy of the GNU General Public License
-// along with Edgeware.  If not, see <http://www.gnu.org/licenses/>.
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// 	http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 //! Low-level types used throughout the Substrate code.
 
 #![warn(missing_docs)]
-
 #![cfg_attr(not(feature = "std"), no_std)]
 
 use sp_runtime::{
-	generic, traits::{Verify, BlakeTwo256, IdentifyAccount}, OpaqueExtrinsic, MultiSignature
+	generic,
+	traits::{BlakeTwo256, IdentifyAccount, Verify},
+	MultiSignature, OpaqueExtrinsic,
 };
 
 /// An index to a block.
@@ -46,9 +48,6 @@ pub type Moment = u64;
 /// Index of a transaction in the chain.
 pub type Index = u32;
 
-/// Index of a transaction in the relay chain. 32-bit should be plenty.
-pub type Nonce = u32;
-
 /// A hash of some data used by the chain.
 pub type Hash = sp_core::H256;
 
@@ -72,11 +71,11 @@ pub type BlockId = generic::BlockId<Block>;
 pub mod report {
 	use super::{Signature, Verify};
 	use frame_system::offchain::AppCrypto;
-	use sp_core::crypto::KeyTypeId;
+	use sp_core::crypto::{key_types, KeyTypeId};
 
 	/// Key type for the reporting module. Used for reporting GRANDPA
 	/// equivocations.
-	pub const KEY_TYPE: KeyTypeId = KeyTypeId(*b"fish");
+	pub const KEY_TYPE: KeyTypeId = key_types::REPORTING;
 
 	mod app {
 		use sp_application_crypto::{app_crypto, ed25519};
