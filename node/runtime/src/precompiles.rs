@@ -1,7 +1,21 @@
-use codec::Decode;
+// Copyright 2019-2021 PureStake Inc.
+// This file is part of Moonbeam.
+
+// Moonbeam is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+
+// Moonbeam is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// You should have received a copy of the GNU General Public License
+// along with Moonbeam.  If not, see <http://www.gnu.org/licenses/>.
+
 use evm::{executor::PrecompileOutput, Context, ExitError};
-use frame_support::dispatch::{Dispatchable, GetDispatchInfo, PostDispatchInfo};
-use pallet_evm::{Precompile, PrecompileSet};
+use pallet_evm::{AddressMapping, Precompile, PrecompileSet};
 use pallet_evm_precompile_blake2::Blake2F;
 use pallet_evm_precompile_bn128::{Bn128Add, Bn128Mul, Bn128Pairing};
 use pallet_evm_precompile_curve25519::{Curve25519Add, Curve25519ScalarMul};
@@ -11,40 +25,42 @@ use pallet_evm_precompile_modexp::Modexp;
 use pallet_evm_precompile_sha3fips::Sha3FIPS256;
 use pallet_evm_precompile_simple::{ECRecover, ECRecoverPublicKey, Identity, Ripemd160, Sha256};
 use sp_core::H160;
+use sp_std::fmt::Debug;
+use sp_std::marker::PhantomData;
 
-use sp_std::{fmt::Debug, marker::PhantomData};
-
+/// The PrecompileSet installed in the Edgeware runtime.
+/// We include the nine Istanbul precompiles
+/// (https://github.com/ethereum/go-ethereum/blob/3c46f557/core/vm/contracts.go#L69)
+/// as well as a special precompile for dispatching Substrate extrinsics
 #[derive(Debug, Clone, Copy)]
 pub struct EdgewarePrecompiles<R>(PhantomData<R>);
 
-impl<R: frame_system::Config> EdgewarePrecompiles<R> {
-	/// Return all addresses that contain precompiles. This can be used to
-	/// populate dummy code under the precompile, and potentially in the future
-	/// to prevent using accounts that have precompiles at their addresses
-	/// explicitly using something like SignedExtra.
-	#[allow(dead_code)]
-	fn used_addresses() -> impl Iterator<Item = H160> {
+impl<R> EdgewarePrecompiles<R>
+where
+	R: pallet_evm::Config,
+{
+	/// Return all addresses that contain precompiles. This can be used to populate dummy code
+	/// under the precompile.
+	pub fn used_addresses() -> impl Iterator<Item = R::AccountId> {
 		sp_std::vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 1024, 1025, 1026, 1027, 1028, 1029]
 			.into_iter()
-			.map(|x| hash(x).into())
+			.map(|x| R::AddressMapping::into_account_id(hash(x)))
 	}
 }
 
 /// The following distribution has been decided for the precompiles
 /// 0-1023: Ethereum Mainnet Precompiles
-/// 1024-2047 Precompiles that are not in Ethereum Mainnet but are neither
-/// Moonbeam specific
-impl<R: frame_system::Config + pallet_evm::Config> PrecompileSet for EdgewarePrecompiles<R>
+/// 1024-2047 Precompiles that are not in Ethereum Mainnet but are neither Edgeware specific
+impl<R> PrecompileSet for EdgewarePrecompiles<R>
 where
-	R::Call: Dispatchable<PostInfo = PostDispatchInfo> + GetDispatchInfo + Decode,
-	<R::Call as Dispatchable>::Origin: From<Option<R::AccountId>>,
+	Dispatch<R>: Precompile,
 {
 	fn execute(
 		address: H160,
 		input: &[u8],
 		target_gas: Option<u64>,
 		context: &Context,
-	) -> Option<core::result::Result<PrecompileOutput, ExitError>> {
+	) -> Option<Result<PrecompileOutput, ExitError>> {
 		match address {
 			// Ethereum precompiles
 			a if a == hash(1) => Some(ECRecover::execute(input, target_gas, context)),

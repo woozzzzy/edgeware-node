@@ -14,18 +14,18 @@ targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
 serde = { version = "1.0.101", optional = true }
-codec = { package = "parity-scale-codec", version = "1.3.4", default-features = false }
-sp-std = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-frame-benchmarking = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false, optional = true }
+codec = { package = "parity-scale-codec", version = "2.0.0", default-features = false }
+sp-std = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-benchmarking = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false, optional = true }
 
 [dev-dependencies]
-sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
-sp-std = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
-sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
-pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+sp-std = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
 [features]
 default = ["std"]
@@ -33,6 +33,8 @@ std = [
 	"serde",
 	"codec/std",
 	"sp-std/std",
+	"sp-core/std",
+	"sp-io/std",
 	"sp-runtime/std",
 	"frame-support/std",
 	"frame-system/std",

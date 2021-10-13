@@ -10,25 +10,25 @@ description = "Edgeware treasury reward module"
 targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
-serde = { version = "1.0", default-features = false, optional = true }
+serde = { version = "1.0.101", default-features = false, optional = true }
 safe-mix = { version = "1.0", default-features = false }
 codec = { package = "parity-scale-codec", version = "2.0.0", default-features = false, features = ["derive"] }
-sp-std = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-authorship = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-staking = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-treasury = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+sp-std = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-authorship = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-staking = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-treasury = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
 [dev-dependencies]
-sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-staking = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-staking-reward-curve = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-session = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-timestamp = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-staking = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-staking-reward-curve = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-session = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-timestamp = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
 [features]
 default = ["std"]
@@ -37,6 +37,8 @@ std = [
 	"safe-mix/std",
 	"codec/std",
 	"sp-std/std",
+	"sp-core/std",
+	"sp-io/std",
 	"sp-runtime/std",
 	"pallet-authorship/std",
 	"pallet-balances/std",

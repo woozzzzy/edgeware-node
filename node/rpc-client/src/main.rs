@@ -1,52 +1,42 @@
-// Copyright 2018-2020 Commonwealth Labs, Inc.
-// This file is part of Edgeware.
+// This file is part of Substrate.
 
-// Edgeware is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
+// Copyright (C) 2019-2021 Parity Technologies (UK) Ltd.
+// SPDX-License-Identifier: Apache-2.0
 
-// Edgeware is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// You should have received a copy of the GNU General Public License
-// along with Edgeware.  If not, see <http://www.gnu.org/licenses/>.
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// 	http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 #![warn(missing_docs)]
 
-//! Example edgeware RPC client code.
+//! Example substrate RPC client code.
 //!
 //! This module shows how you can write a Rust RPC client that connects to a running
-//! edgeware node and use statically typed RPC wrappers.
+//! substrate node and use statically typed RPC wrappers.
 
-use futures::Future;
-use hyper::rt;
+use futures::{Future, TryFutureExt};
+use jsonrpc_core_client::{transports::http, RpcError};
 use edgeware_primitives::Hash;
-use sc_rpc::author::{
-	AuthorClient,
-	hash::ExtrinsicOrHash,
-};
-use jsonrpc_core_client::{
-	transports::http,
-	RpcError,
-};
+use sc_rpc::author::{hash::ExtrinsicOrHash, AuthorClient};
 
-fn main() {
+fn main() -> Result<(), RpcError> {
 	sp_tracing::try_init_simple();
 
-	rt::run(rt::lazy(|| {
+	futures::executor::block_on(async {
 		let uri = "http://localhost:9933";
 
 		http::connect(uri)
-			.and_then(|client: AuthorClient<Hash, Hash>| {
-				remove_all_extrinsics(client)
-			})
-			.map_err(|e| {
-				println!("Error: {:?}", e);
-			})
-	}))
+			.and_then(|client: AuthorClient<Hash, Hash>| remove_all_extrinsics(client))
+			.await
+	})
 }
 
 /// Remove all pending extrinsics from the node.
@@ -57,15 +47,17 @@ fn main() {
 ///
 /// As the result of running the code the entire content of the transaction pool is going
 /// to be removed and the extrinsics are going to be temporarily banned.
-fn remove_all_extrinsics(client: AuthorClient<Hash, Hash>) -> impl Future<Item=(), Error=RpcError> {
-	client.pending_extrinsics()
+fn remove_all_extrinsics(
+	client: AuthorClient<Hash, Hash>,
+) -> impl Future<Output = Result<(), RpcError>> {
+	client
+		.pending_extrinsics()
 		.and_then(move |pending| {
 			client.remove_extrinsic(
-				pending.into_iter().map(|tx| ExtrinsicOrHash::Extrinsic(tx.into())).collect()
+				pending.into_iter().map(|tx| ExtrinsicOrHash::Extrinsic(tx.into())).collect(),
 			)
 		})
-		.map(|removed| {
+		.map_ok(|removed| {
 			println!("Removed extrinsics: {:?}", removed);
 		})
 }
-

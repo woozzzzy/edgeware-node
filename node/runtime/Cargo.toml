@@ -20,30 +20,30 @@ targets = ["x86_64-unknown-linux-gnu"]
 codec = { package = "parity-scale-codec", version = "2.0.0", default-features = false, features = ["derive"] }
 integer-sqrt = { version = "0.1.2" }
 safe-mix = { version = "1.0", default-features = false }
-rustc-hex = { version = "2.0", optional = true }
+rustc-hex = { version = "2.1.0", optional = true }
 serde = { version = "1.0.102", optional = true }
 static_assertions = "1.1.0"
 evm-runtime = { version = "0.30.0", default-features = false }
 log = { version = "0.4.14", default-features = false }
 
 # primitives
-sp-application-crypto = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-consensus-aura = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-block-builder = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false}
-sp-inherents = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-std = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-api = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-staking = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-keyring = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", optional = true }
-sp-session = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-version = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-offchain = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-sp-npos-elections = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+sp-application-crypto = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-consensus-aura = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-block-builder = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false}
+sp-inherents = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-std = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-staking = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-keyring = { git = "https://github.com/woozzzzy/substrate", branch = "bb", optional = true }
+sp-session = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-version = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-offchain = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-npos-elections = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
 # edgeware primitives
 edgeware-primitives = { version = "3.2.0", path = "../primitives", default-features = false }
@@ -53,44 +53,44 @@ edgeware-primitives = { version = "3.2.0", path = "../primitives", default-featu
 #edgeware-rpc-primitives-txpool = { path = "../txpool", default-features = false }
 
 # pallet dependencies
-pallet-assets = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-authorship = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-aura = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-collective = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false, features = ["runtime-benchmarks"] }
-pallet-contracts = { default-features = false, git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
-pallet-contracts-primitives = { default-features = false, git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
-pallet-contracts-rpc-runtime-api = { default-features = false, git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
-pallet-democracy = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-elections-phragmen = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-election-provider-multi-phase = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-frame-executive = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-identity = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-im-online = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-indices = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-multisig = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-offences = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-proxy = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-randomness-collective-flip = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-recovery = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-scheduler = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-session = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false, features = ["historical"] }
-pallet-staking = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-staking-reward-curve = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
-pallet-sudo = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-frame-system-rpc-runtime-api = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-timestamp = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-treasury = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-tips = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-bounties = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-utility = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-transaction-payment = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-transaction-payment-rpc-runtime-api = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
-pallet-vesting = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false }
+pallet-assets = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-authorship = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-aura = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-collective = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false, features = ["runtime-benchmarks"] }
+pallet-contracts = { default-features = false, git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+pallet-contracts-primitives = { default-features = false, git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+pallet-contracts-rpc-runtime-api = { default-features = false, git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+pallet-democracy = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-elections-phragmen = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-election-provider-multi-phase = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-executive = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-identity = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-im-online = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-indices = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-multisig = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-offences = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-proxy = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-randomness-collective-flip = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-recovery = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-scheduler = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-session = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false, features = ["historical"] }
+pallet-staking = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-staking-reward-curve = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+pallet-sudo = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-system-rpc-runtime-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-timestamp = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-treasury = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-tips = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-bounties = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-utility = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-transaction-payment = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-transaction-payment-rpc-runtime-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-vesting = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
 treasury-reward = { package = "edge-treasury-reward", path = "../../modules/edge-treasury-reward", default-features = false }
 
@@ -99,33 +99,33 @@ treasury-reward = { package = "edge-treasury-reward", path = "../../modules/edge
 # chainbridge = { path = "../../modules/chainbridge", default-features = false }
 # edge-assets = { path = "../../modules/edge-assets", default-features = false }
 
-pallet-dynamic-fee = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
-fp-rpc = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
-pallet-evm = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
-pallet-ethereum = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
-pallet-evm-precompile-simple = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
-pallet-evm-precompile-blake2 = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
-pallet-evm-precompile-modexp = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
-pallet-evm-precompile-bn128 = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
-pallet-evm-precompile-dispatch = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
-pallet-evm-precompile-ed25519 = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
-pallet-evm-precompile-sha3fips = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
-pallet-evm-precompile-curve25519 = { git = "https://github.com/woozzzzy/frontier", branch = "moonbeam-polkadot-v0.9.10", default-features = false }
+pallet-dynamic-fee = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+fp-rpc = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+pallet-evm = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+pallet-ethereum = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+pallet-evm-precompile-simple = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+pallet-evm-precompile-blake2 = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+pallet-evm-precompile-modexp = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+pallet-evm-precompile-bn128 = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+pallet-evm-precompile-dispatch = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+pallet-evm-precompile-ed25519 = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+pallet-evm-precompile-sha3fips = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+pallet-evm-precompile-curve25519 = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
 
 sha3 = { version = "0.9", default-features = false }
 
-evm = { version = "0.27.0", default-features = false, features = ["with-codec"] }
+evm = { version = "0.30.1", default-features = false, features = ["with-codec"] }
 
 # used for runtime benchmarking
-frame-benchmarking = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false, optional = true }
-frame-system-benchmarking = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10", default-features = false, optional = true }
+frame-benchmarking = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false, optional = true }
+frame-system-benchmarking = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false, optional = true }
 hex-literal = { version = "0.3.1", optional = true }
 
 [build-dependencies]
 substrate-wasm-builder = { package = "substrate-wasm-builder", version = "3.0.0" }
 
 [dev-dependencies]
-sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "polkadot-v0.9.10" }
+sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
 [features]
 default = ["std"]
@@ -160,7 +160,6 @@ std = [
 	"pallet-proxy/std",
 	"pallet-recovery/std",
 	"sp-core/std",
-	"sp-io/std",
 	"pallet-randomness-collective-flip/std",
 	"sp-std/std",
 	"rustc-hex",
