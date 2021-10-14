@@ -33,7 +33,7 @@ crate-type = ["cdylib", "rlib"]
 [dependencies]
 # third-party dependencies
 codec = { package = "parity-scale-codec", version = "2.0.0" }
-serde = { version = "1.0.101", features = ["derive"] }
+serde = { version = "1.0.102", features = ["derive"] }
 futures = { version = "0.3.16", features = ["compat"] }
 hex-literal = "0.3.1"
 jsonrpc-core = "15.0.0"
@@ -47,59 +47,59 @@ hex = "0.3.2"
 serde_json = "1.0"
 
 # primitives
-sp-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-blockchain = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-consensus-aura = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-finality-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+sp-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-blockchain = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-consensus-aura = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-finality-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 sp-timestamp = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
-sp-inherents = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-keyring = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+sp-inherents = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-keyring = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
-sp-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+sp-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
 # client dependencies
-sc-client-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-chain-spec = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-network = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-consensus-aura = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-finality-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+sc-client-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-chain-spec = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-network = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-consensus-aura = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-finality-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 sc-client-db = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
-sc-offchain = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-rpc = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-basic-authorship = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+sc-offchain = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-rpc = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-basic-authorship = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 sc-service = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
-sc-tracing = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-telemetry = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+sc-tracing = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-telemetry = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
 
 # frame dependencies
-pallet-indices = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+pallet-indices = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-timestamp = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
-pallet-contracts = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-pallet-transaction-payment = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+pallet-contracts = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-transaction-payment = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-im-online = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
-pallet-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-pallet-staking = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-pallet-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+pallet-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-staking = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 # xox - commented below and added the two lines below
 # pallet-evm = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-pallet-dynamic-fee = { git = "https://github.com/woozzzzy/frontier", branch = "bb" }
-pallet-evm = { git = "https://github.com/woozzzzy/frontier", branch = "bb" }
+pallet-dynamic-fee = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+pallet-evm = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
 
 # node-specific dependencies
-edgeware-runtime = { version = "3.2.0", path = "../runtime" }
-edgeware-rpc = { version = "3.2.0", path = "../rpc" }
-edgeware-primitives = { version = "3.2.0", path = "../primitives" }
-edgeware-executor = { version = "3.2.0", path = "../executor" }
+edgeware-runtime = { version = "3.2.0", path = "../runtime", default-features = false }
+edgeware-rpc = { version = "3.2.0", path = "../rpc", default-features = false }
+edgeware-primitives = { version = "3.2.0", path = "../primitives", default-features = false }
+edgeware-executor = { version = "3.2.0", path = "../executor", default-features = false }
 
 # CLI-specific dependencies
 sc-cli = { git = "https://github.com/woozzzzy/substrate", branch = "bb", optional = true }
@@ -120,15 +120,15 @@ wasm-bindgen-futures = { version = "0.4.7", optional = true }
 # browser-utils = { git = "https://github.com/woozzzzy/substrate", branch = "bb", package = "substrate-browser-utils", optional = true }
 
 [target.'cfg(target_arch="x86_64")'.dependencies]
-edgeware-executor = { path = "../executor", features = [ "wasmtime" ] }
+edgeware-executor = { path = "../executor", default-features = false, features = [ "wasmtime" ] }
 sc-cli = { git = "https://github.com/woozzzzy/substrate", branch = "bb", optional = true, features = [ "wasmtime" ] }
 sc-service = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false, features = [ "wasmtime" ] }
 sp-trie = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false, features = ["memory-tracker"] }
 
 [dev-dependencies]
-sc-keystore = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-consensus-epochs = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+sc-keystore = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-consensus-epochs = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
 futures = "0.3.16"
 tempfile = "3.1.0"

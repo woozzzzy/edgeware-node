@@ -12,28 +12,28 @@ targets = ["x86_64-unknown-linux-gnu"]
 [dependencies]
 trie-root = "0.16.0"
 codec = { package = "parity-scale-codec", version = "2.0.0" }
-sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false}
-sp-state-machine = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
-sc-executor = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
-sp-trie = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
-frame-benchmarking = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
+sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-state-machine = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-executor = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-trie = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-benchmarking = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
-edgeware-primitives = { version = "3.2.0", path = "../primitives" }
-edgeware-runtime = { version = "3.2.0", path = "../runtime" }
-edgeware-runtime-interface = { version = "3.2.0", path = "../runtime-interface" }
+edgeware-primitives = { version = "3.2.0", path = "../primitives", default-features = false }
+edgeware-runtime = { version = "3.2.0", path = "../runtime", default-features = false }
+edgeware-runtime-interface = { version = "3.2.0", path = "../runtime-interface", default-features = false }
 
 [dev-dependencies]
-sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
-frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
-pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
-pallet-transaction-payment = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
-pallet-session = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
-frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
-pallet-timestamp = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
-pallet-treasury = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
-pallet-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
-pallet-indices = { git = "https://github.com/woozzzzy/substrate", branch = "bb"}
+sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-transaction-payment = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-session = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-timestamp = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-treasury = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-indices = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 wabt = "0.10.0"
 criterion = "0.3.0"
 

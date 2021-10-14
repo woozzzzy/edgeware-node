@@ -12,27 +12,27 @@ targets = ["x86_64-unknown-linux-gnu"]
 [dependencies]
 jsonrpc-core = "15.0.0"
 jsonrpc-pubsub = "15.0.0"
-edgeware-primitives = { path = "../primitives" }
-edgeware-runtime = { path = "../runtime" }
-pallet-contracts-rpc = {  git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-pallet-transaction-payment-rpc = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-client-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-consensus-aura = {  git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-consensus-epochs = {  git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-finality-grandpa = {  git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-finality-grandpa-rpc = {  git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-keystore = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-network = {  git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-rpc-api = {  git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-rpc = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-block-builder = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-blockchain = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-consensus = {  git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-consensus-aura = {  git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-substrate-frame-rpc-system = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-pallet-ethereum = { git = "https://github.com/woozzzzy/frontier", branch = "bb" }
-fc-rpc = { git = "https://github.com/woozzzzy/frontier", branch = "bb", features = ["rpc_binary_search_estimate"] }
-fc-rpc-core = { git = "https://github.com/woozzzzy/frontier", branch = "bb" }
+edgeware-primitives = { path = "../primitives", default-features = false }
+edgeware-runtime = { path = "../runtime", default-features = false }
+pallet-contracts-rpc = {  git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-transaction-payment-rpc = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-client-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-consensus-aura = {  git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-consensus-epochs = {  git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-finality-grandpa = {  git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-finality-grandpa-rpc = {  git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-keystore = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-network = {  git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-rpc-api = {  git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-rpc = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-block-builder = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-blockchain = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-consensus = {  git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-consensus-aura = {  git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+substrate-frame-rpc-system = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-ethereum = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+fc-rpc = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false, features = ["rpc_binary_search_estimate"] }
+fc-rpc-core = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }

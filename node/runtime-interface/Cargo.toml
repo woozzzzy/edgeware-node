@@ -11,10 +11,10 @@ targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
 codec = { package = "parity-scale-codec", version = "2.0.0" }
-sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-runtime-interface = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sp-runtime-interface-proc-macro = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-edgeware-primitives = { path = "../primitives" }
+sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-runtime-interface = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sp-runtime-interface-proc-macro = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+edgeware-primitives = { path = "../primitives", default-features = false }
 
 [features]
 default = [ "std" ]

@@ -10,7 +10,7 @@ description = "Edgeware treasury reward module"
 targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
-serde = { version = "1.0.101", default-features = false, optional = true }
+serde = { version = "1.0.102", default-features = false, optional = true }
 safe-mix = { version = "1.0", default-features = false }
 codec = { package = "parity-scale-codec", version = "2.0.0", default-features = false, features = ["derive"] }
 sp-std = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
@@ -38,7 +38,6 @@ std = [
 	"codec/std",
 	"sp-std/std",
 	"sp-core/std",
-	"sp-io/std",
 	"sp-runtime/std",
 	"pallet-authorship/std",
 	"pallet-balances/std",

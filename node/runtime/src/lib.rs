@@ -27,8 +27,8 @@ pub use edgeware_primitives::{AccountId, AccountIndex, Balance, BlockNumber, Has
 use frame_support::{
 	construct_runtime, parameter_types,
 	traits::{
-		Currency, FindAuthor, Imbalance, KeyOwnerProofSystem, LockIdentifier, OnUnbalanced,
-		U128CurrencyToVote,
+		Currency, FindAuthor, Everything, Imbalance, InstanceFilter, KeyOwnerProofSystem, LockIdentifier,
+		Nothing, OnUnbalanced, U128CurrencyToVote,
 	},
 	weights::{
 		constants::{BlockExecutionWeight, ExtrinsicBaseWeight, RocksDbWeight, WEIGHT_PER_SECOND},
@@ -39,7 +39,6 @@ use frame_support::{
 };
 
 use codec::{Decode, Encode};
-use frame_support::traits::InstanceFilter;
 use frame_system::{
 	limits::{BlockLength, BlockWeights},
 	EnsureOneOf, EnsureRoot,
@@ -978,16 +977,10 @@ impl pallet_sudo::Config for Runtime {
 }
 
 parameter_types! {
-	pub TombstoneDeposit: Balance = deposit(
+	pub ContractDeposit: Balance = deposit(
 		1,
 		<pallet_contracts::Pallet<Runtime>>::contract_info_size(),
 	);
-	pub DepositPerContract: Balance = TombstoneDeposit::get();
-	pub const DepositPerStorageByte: Balance = deposit(0, 1);
-	pub const DepositPerStorageItem: Balance = deposit(1, 0);
-	pub RentFraction: Perbill = Perbill::from_rational(1u32, 30 * DAYS);
-	pub const SurchargeReward: Balance = 150 * MILLICENTS;
-	pub const SignedClaimHandicap: u32 = 2;
 	pub const MaxValueSize: u32 = 16 * 1024;
 	// The lazy deletion runs inside on_initialize.
 	pub DeletionWeightLimit: Weight = AVERAGE_ON_INITIALIZE_RATIO *
@@ -1002,25 +995,26 @@ parameter_types! {
 }
 
 impl pallet_contracts::Config for Runtime {
-	type CallStack = [pallet_contracts::Frame<Self>; 31];
-	type ChainExtension = ();
+	type Time = Timestamp;
+	type Randomness = RandomnessCollectiveFlip;
 	type Currency = Balances;
+	type Event = Event;
+	type Call = Call;
+	/// The safest default is to allow no calls at all.
+	///
+	/// Runtimes should whitelist dispatchables that are allowed to be called from contracts
+	/// and make sure they are stable. Dispatchables exposed to contracts are not allowed to
+	/// change because that would break already deployed contracts. The `Call` structure itself
+	/// is not allowed to change the indices of existing pallets, too.
+	type CallFilter = Nothing;
+	type ContractDeposit = ContractDeposit;
+	type CallStack = [pallet_contracts::Frame<Self>; 31];
+	type WeightPrice = pallet_transaction_payment::Pallet<Self>;
+	type WeightInfo = pallet_contracts::weights::SubstrateWeight<Self>;
+	type ChainExtension = ();
 	type DeletionQueueDepth = DeletionQueueDepth;
 	type DeletionWeightLimit = DeletionWeightLimit;
-	type DepositPerContract = DepositPerContract;
-	type DepositPerStorageByte = DepositPerStorageByte;
-	type DepositPerStorageItem = DepositPerStorageItem;
-	type Event = Event;
-	type Randomness = RandomnessCollectiveFlip;
-	type RentFraction = RentFraction;
-	type RentPayment = ();
 	type Schedule = Schedule;
-	type SignedClaimHandicap = SignedClaimHandicap;
-	type SurchargeReward = SurchargeReward;
-	type Time = Timestamp;
-	type TombstoneDeposit = TombstoneDeposit;
-	type WeightInfo = pallet_contracts::weights::SubstrateWeight<Self>;
-	type WeightPrice = pallet_transaction_payment::Pallet<Self>;
 }
 
 #[cfg(not(feature = "beresheet-runtime"))]
@@ -1190,7 +1184,7 @@ construct_runtime!(
 		Multisig: pallet_multisig::{Pallet, Call, Storage, Event<T>} = 28,
 		Assets: pallet_assets::{Pallet, Call, Storage, Event<T>} = 29,
 		TreasuryReward: treasury_reward::{Pallet, Call, Storage, Config<T>, Event<T>} = 32,
-		Ethereum: pallet_ethereum::{Pallet, Call, Storage, Event, Config, ValidateUnsigned} = 33,
+		Ethereum: pallet_ethereum::{Pallet, Call, Storage, Event, Config, Origin} = 33,
 		EVM: pallet_evm::{Pallet, Config, Call, Storage, Event<T>} = 34,
 		// REMOVED: ChainBridge: chainbridge::{Pallet, Call, Storage, Event<T>} = 35,
 		// REMOVED: EdgeBridge: edge_chainbridge::{Pallet, Call, Event<T>} = 36,
@@ -1394,9 +1388,9 @@ impl_runtime_apis! {
 			code: pallet_contracts_primitives::Code<Hash>,
 			data: Vec<u8>,
 			salt: Vec<u8>,
-		) -> pallet_contracts_primitives::ContractInstantiateResult<AccountId, BlockNumber>
+		) -> pallet_contracts_primitives::ContractInstantiateResult<AccountId>
 		{
-			Contracts::bare_instantiate(origin, endowment, gas_limit, code, data, salt, true, true)
+			Contracts::bare_instantiate(origin, endowment, gas_limit, code, data, salt, true)
 		}
 
 		fn get_storage(
@@ -1405,13 +1399,8 @@ impl_runtime_apis! {
 		) -> pallet_contracts_primitives::GetStorageResult {
 			Contracts::get_storage(address, key)
 		}
-
-		fn rent_projection(
-			address: AccountId,
-		) -> pallet_contracts_primitives::RentProjectionResult<BlockNumber> {
-			Contracts::rent_projection(address)
-		}
 	}
+
 
 	impl pallet_transaction_payment_rpc_runtime_api::TransactionPaymentApi<
 		Block,
@@ -1523,24 +1512,15 @@ impl_runtime_apis! {
 		}
 
 		fn current_transaction_statuses() -> Option<Vec<TransactionStatus>> {
-			match Ethereum::current_transaction_statuses() {
-				Some(elt) => Some(elt.into()),
-				None => None,
-			}
+			Ethereum::current_transaction_statuses()
 		}
 
 		fn current_block() -> Option<pallet_ethereum::Block> {
-			match Ethereum::current_block() {
-				Some(elt) => Some(elt.into()),
-				None => None,
-			}
+			Ethereum::current_block()
 		}
 
 		fn current_receipts() -> Option<Vec<pallet_ethereum::Receipt>> {
-			match Ethereum::current_receipts() {
-				Some(elt) => Some(elt.into()),
-				None => None,
-			}
+			Ethereum::current_receipts()
 		}
 
 		fn current_all() -> (

@@ -14,7 +14,7 @@ futures = "0.3.16"
 hyper = "0.12.35"
 jsonrpc-core-client = { version = "18.0.0", default-features = false, features = ["http"] }
 log = "0.4.8"
-edgeware-primitives = { path = "../primitives" }
-sp-tracing = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-sc-rpc = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+edgeware-primitives = { path = "../primitives", default-features = false }
+sp-tracing = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+sc-rpc = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 

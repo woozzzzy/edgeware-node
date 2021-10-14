@@ -17,7 +17,7 @@ sp-core = { git = "https://github.com/woozzzzy/substrate", branch = "bb", defaul
 sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
 [dev-dependencies]
-sp-serializer = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+sp-serializer = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pretty_assertions = "0.6.1"
 
 [features]

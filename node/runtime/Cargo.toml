@@ -18,7 +18,7 @@ targets = ["x86_64-unknown-linux-gnu"]
 [dependencies]
 # third-party dependencies
 codec = { package = "parity-scale-codec", version = "2.0.0", default-features = false, features = ["derive"] }
-integer-sqrt = { version = "0.1.2" }
+integer-sqrt = { version = "0.1.2", default-features = false }
 safe-mix = { version = "1.0", default-features = false }
 rustc-hex = { version = "2.1.0", optional = true }
 serde = { version = "1.0.102", optional = true }
@@ -38,7 +38,7 @@ sp-std = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default
 sp-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 sp-runtime = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 sp-staking = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
-sp-keyring = { git = "https://github.com/woozzzzy/substrate", branch = "bb", optional = true }
+sp-keyring = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false, optional = true }
 sp-session = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 sp-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 sp-version = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
@@ -59,9 +59,9 @@ pallet-authorship = { git = "https://github.com/woozzzzy/substrate", branch = "b
 pallet-aura = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-balances = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-collective = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false, features = ["runtime-benchmarks"] }
-pallet-contracts = { default-features = false, git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-pallet-contracts-primitives = { default-features = false, git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-pallet-contracts-rpc-runtime-api = { default-features = false, git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+pallet-contracts = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-contracts-primitives = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+pallet-contracts-rpc-runtime-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-democracy = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-elections-phragmen = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-election-provider-multi-phase = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
@@ -78,7 +78,7 @@ pallet-recovery = { git = "https://github.com/woozzzzy/substrate", branch = "bb"
 pallet-scheduler = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-session = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false, features = ["historical"] }
 pallet-staking = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
-pallet-staking-reward-curve = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
+pallet-staking-reward-curve = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-sudo = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
@@ -122,7 +122,7 @@ frame-system-benchmarking = { git = "https://github.com/woozzzzy/substrate", bra
 hex-literal = { version = "0.3.1", optional = true }
 
 [build-dependencies]
-substrate-wasm-builder = { package = "substrate-wasm-builder", version = "3.0.0" }
+substrate-wasm-builder = {  git = "https://github.com/woozzzzy/substrate", branch = "bb", version = "5.0.0-dev" }
 
 [dev-dependencies]
 sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
