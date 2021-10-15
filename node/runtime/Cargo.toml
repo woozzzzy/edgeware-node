@@ -122,7 +122,7 @@ frame-system-benchmarking = { git = "https://github.com/woozzzzy/substrate", bra
 hex-literal = { version = "0.3.1", optional = true }
 
 [build-dependencies]
-substrate-wasm-builder = { package = "substrate-wasm-builder", version = "3.0.0" }
+substrate-wasm-builder = { git = "https://github.com/woozzzzy/substrate", branch = "bb", version = "5.0.0-dev" }
 
 [dev-dependencies]
 sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
