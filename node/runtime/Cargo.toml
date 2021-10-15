@@ -83,6 +83,7 @@ pallet-sudo = { git = "https://github.com/woozzzzy/substrate", branch = "bb", de
 frame-support = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 frame-system = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 frame-system-rpc-runtime-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
+frame-election-provider-support = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-timestamp = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-treasury = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-tips = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
