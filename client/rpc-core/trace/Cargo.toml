@@ -1,18 +1,19 @@
 [package]
-name = "edgeware-rpc-core-trace"
+name = "moonbeam-rpc-core-trace"
 version = '0.6.0'
 authors = ['PureStake']
 edition = '2018'
-homepage = 'https://edgewa.re'
+homepage = 'https://moonbeam.network'
 license = 'GPL-3.0-only'
 repository = 'https://github.com/PureStake/moonbeam/'
 
 [dependencies]
-ethereum-types = "0.11.0"
+ethereum-types = "0.12.0"
 jsonrpc-core = "15.0.0"
 jsonrpc-core-client = "14.0.3"
 jsonrpc-derive = "14.0.3"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 futures = { version = "0.3.1", features = ["compat"] }
-edgeware-rpc-primitives-debug = { path = "../../../node/debug" }
+moonbeam-client-evm-tracing = { path = "../../evm-tracing" }
+moonbeam-rpc-core-types = { path = "../types" }

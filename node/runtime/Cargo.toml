@@ -27,100 +27,103 @@ evm-runtime = { version = "0.27.0", default-features = false }
 log = { version = "0.4.14", default-features = false }
 
 # primitives
-sp-application-crypto = { version = "3.0", default-features = false }
-sp-authority-discovery = { version = "3.0", default-features = false }
-sp-consensus-aura = { version = "0.9", default-features = false }
-sp-block-builder = { version = "3.0", default-features = false}
-sp-inherents = { version = "3.0", default-features = false }
-sp-core = { version = "3.0", default-features = false }
-sp-io = { version = "3.0", default-features = false }
-sp-std = { version = "3.0", default-features = false }
-sp-api = { version = "3.0", default-features = false }
-sp-runtime = { version = "3.0", default-features = false }
-sp-staking = { version = "3.0", default-features = false }
-sp-keyring = { version = "3.0", optional = true }
-sp-session = { version = "3.0", default-features = false }
-sp-transaction-pool = { version = "3.0", default-features = false }
-sp-version = { version = "3.0", default-features = false }
-sp-offchain = { version = "3.0", default-features = false }
-sp-npos-elections = { version = "3.0", default-features = false }
+sp-application-crypto = { version = "4.0.0-dev", default-features = false }
+sp-authority-discovery = { version = "4.0.0-dev", default-features = false }
+sp-consensus-aura = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+sp-block-builder = { version = "4.0.0-dev", default-features = false}
+sp-inherents = { version = "4.0.0-dev", default-features = false }
+sp-core = { version = "4.0.0-dev", default-features = false }
+sp-io = { version = "4.0.0-dev", default-features = false }
+sp-std = { version = "4.0.0-dev", default-features = false }
+sp-api = { version = "4.0.0-dev", default-features = false }
+sp-runtime = { version = "4.0.0-dev", default-features = false }
+sp-staking = { version = "4.0.0-dev", default-features = false }
+sp-keyring = { version = "4.0.0-dev", optional = true }
+sp-session = { version = "4.0.0-dev", default-features = false }
+sp-transaction-pool = { version = "4.0.0-dev", default-features = false }
+sp-version = { version = "4.0.0-dev", default-features = false }
+sp-offchain = { version = "4.0.0-dev", default-features = false }
+sp-npos-elections = { version = "4.0.0-dev", default-features = false }
 
 # edgeware primitives
 edgeware-primitives = { version = "3.3.6", path = "../primitives", default-features = false }
-edgeware-evm-tracer = { path = "../evm_tracer", default-features = false }
-edgeware-rpc-primitives-debug = { path = "../debug", default-features = false }
-edgeware-rpc-primitives-txpool = { path = "../txpool", default-features = false }
+
+# moonbeam dependencies
+moonbeam-rpc-txpool = { path = "../../client/rpc/txpool" }
+moonbeam-rpc-primitives-txpool = { path = "../../primitives/rpc/txpool" }
+moonbeam-rpc-primitives-debug = { path = "../../primitives/rpc/debug" }
+# moonbeam-primitives-ext = { path = "../../primitives/ext" }
 
 # pallet dependencies
-pallet-assets = { version = "3.0", default-features = false }
-pallet-authority-discovery = { version = "3.0", default-features = false }
-pallet-authorship = { version = "3.0", default-features = false }
-pallet-aura = { version = "3.0", default-features = false }
-pallet-balances = { version = "3.0", default-features = false }
-pallet-collective = { version = "3.0", default-features = false, features = ["runtime-benchmarks"] }
-pallet-contracts = { default-features = false, version = "3.0" }
-pallet-contracts-primitives = { default-features = false, version = "3.0" }
-pallet-contracts-rpc-runtime-api = { default-features = false, version = "3.0" }
-pallet-democracy = { version = "3.0", default-features = false }
-pallet-election-provider-multi-phase = { version = "3.0", default-features = false }
-pallet-elections-phragmen = { version = "4.0", default-features = false }
+pallet-assets = { version = "4.0.0-dev", default-features = false }
+pallet-authority-discovery = { version = "4.0.0-dev", default-features = false }
+pallet-authorship = { version = "4.0.0-dev", default-features = false }
+pallet-aura = { version = "4.0.0-dev", default-features = false }
+pallet-balances = { version = "4.0.0-dev", default-features = false }
+pallet-collective = { version = "4.0.0-dev", default-features = false, features = ["runtime-benchmarks"] }
+pallet-contracts = { default-features = false, version = "4.0.0-dev" }
+pallet-contracts-primitives = { default-features = false, version = "4.0.0-dev" }
+pallet-contracts-rpc-runtime-api = { default-features = false, version = "4.0.0-dev" }
+pallet-democracy = { version = "4.0.0-dev", default-features = false }
+# pallet-election-provider-multi-phase = { version = "4.0.0-dev", default-features = false }
+pallet-elections-phragmen = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10", default-features = false }
 
-frame-executive = { version = "3.0", default-features = false }
-pallet-grandpa = { version = "3.0", default-features = false }
-pallet-identity = { version = "3.0", default-features = false }
-pallet-im-online = { version = "3.0", default-features = false }
-pallet-indices = { version = "3.0", default-features = false }
-pallet-multisig = { version = "3.0", default-features = false }
-pallet-offences = { version = "3.0", default-features = false }
-pallet-proxy = { version = "3.0", default-features = false }
-pallet-randomness-collective-flip = { version = "3.0", default-features = false }
-pallet-recovery = { version = "3.0", default-features = false }
-pallet-scheduler = { version = "3.0", default-features = false }
-pallet-session = { version = "3.0", default-features = false, features = ["historical"] }
-pallet-staking = { version = "3.0", default-features = false }
+frame-executive = { version = "4.0.0-dev", default-features = false }
+pallet-grandpa = { version = "4.0.0-dev", default-features = false }
+pallet-identity = { version = "4.0.0-dev", default-features = false }
+pallet-im-online = { version = "4.0.0-dev", default-features = false }
+pallet-indices = { version = "4.0.0-dev", default-features = false }
+pallet-multisig = { version = "4.0.0-dev", default-features = false }
+pallet-offences = { version = "4.0.0-dev", default-features = false }
+pallet-proxy = { version = "4.0.0-dev", default-features = false }
+pallet-randomness-collective-flip = { version = "4.0.0-dev", default-features = false }
+pallet-recovery = { version = "4.0.0-dev", default-features = false }
+pallet-scheduler = { version = "4.0.0-dev", default-features = false }
+pallet-session = { version = "4.0.0-dev", default-features = false, features = ["historical"] }
+pallet-staking = { version = "4.0.0-dev", default-features = false }
 pallet-staking-reward-curve = { version = "3.0" }
-pallet-sudo = { version = "3.0", default-features = false }
-frame-support = { version = "3.0", default-features = false }
-frame-system = { version = "3.0", default-features = false }
-frame-system-rpc-runtime-api = { version = "3.0", default-features = false }
-pallet-timestamp = { version = "3.0", default-features = false }
-pallet-treasury = { version = "3.0", default-features = false }
-pallet-tips = { version = "3.0", default-features = false }
-pallet-bounties = { version = "3.0", default-features = false }
-pallet-utility = { version = "3.0", default-features = false }
-pallet-transaction-payment = { version = "3.0", default-features = false }
-pallet-transaction-payment-rpc-runtime-api = { version = "3.0", default-features = false }
-pallet-vesting = { version = "3.0", default-features = false }
+pallet-sudo = { version = "4.0.0-dev", default-features = false }
+frame-support = { version = "4.0.0-dev", default-features = false }
+frame-system = { version = "4.0.0-dev", default-features = false }
+frame-system-rpc-runtime-api = { version = "4.0.0-dev", default-features = false }
+pallet-timestamp = { version = "4.0.0-dev", default-features = false }
+pallet-treasury = { version = "4.0.0-dev", default-features = false }
+pallet-tips = { version = "4.0.0-dev", default-features = false }
+pallet-bounties = { version = "4.0.0-dev", default-features = false }
+pallet-utility = { version = "4.0.0-dev", default-features = false }
+pallet-transaction-payment = { version = "4.0.0-dev", default-features = false }
+pallet-transaction-payment-rpc-runtime-api = { version = "4.0.0-dev", default-features = false }
+pallet-vesting = { version = "4.0.0-dev", default-features = false }
 
 treasury-reward = { package = "edge-treasury-reward", path = "../../pallets/edge-treasury-reward", default-features = false }
 
-pallet-dynamic-fee = { default-features = false, git = "https://github.com/webb-tools/frontier", branch = "erup-4" }
-fp-rpc = { default-features = false, git = "https://github.com/webb-tools/frontier", branch = "erup-4" }
-pallet-evm = { git = "https://github.com/webb-tools/frontier", branch = "erup-4", default-features = false }
-pallet-ethereum = { git = "https://github.com/webb-tools/frontier", branch = "erup-4", default-features = false }
-pallet-evm-precompile-simple = { git = "https://github.com/webb-tools/frontier", branch = "erup-4", default-features = false }
-pallet-evm-precompile-blake2 = { git = "https://github.com/webb-tools/frontier", branch = "erup-4", default-features = false }
-pallet-evm-precompile-modexp = { git = "https://github.com/webb-tools/frontier", branch = "erup-4", default-features = false }
-pallet-evm-precompile-bn128 = { git = "https://github.com/webb-tools/frontier", branch = "erup-4", default-features = false }
-pallet-evm-precompile-dispatch = { git = "https://github.com/webb-tools/frontier", branch = "erup-4", default-features = false }
-pallet-evm-precompile-ed25519 = { git = "https://github.com/webb-tools/frontier", branch = "erup-4", default-features = false }
-pallet-evm-precompile-sha3fips = { git = "https://github.com/webb-tools/frontier", branch = "erup-4", default-features = false }
-pallet-evm-precompile-curve25519 = { git = "https://github.com/webb-tools/frontier", branch = "erup-4", default-features = false }
+pallet-dynamic-fee = { default-features = false, git = "https://github.com/woozzzzy/frontier" }
+fp-rpc = { default-features = false, git = "https://github.com/woozzzzy/frontier" }
+pallet-evm = { git = "https://github.com/woozzzzy/frontier", default-features = false }
+pallet-ethereum = { git = "https://github.com/woozzzzy/frontier", default-features = false }
+pallet-evm-precompile-simple = { git = "https://github.com/woozzzzy/frontier", default-features = false }
+pallet-evm-precompile-blake2 = { git = "https://github.com/woozzzzy/frontier", default-features = false }
+pallet-evm-precompile-modexp = { git = "https://github.com/woozzzzy/frontier", default-features = false }
+pallet-evm-precompile-bn128 = { git = "https://github.com/woozzzzy/frontier", default-features = false }
+pallet-evm-precompile-dispatch = { git = "https://github.com/woozzzzy/frontier", default-features = false }
+pallet-evm-precompile-ed25519 = { git = "https://github.com/woozzzzy/frontier", default-features = false }
+pallet-evm-precompile-sha3fips = { git = "https://github.com/woozzzzy/frontier", default-features = false }
+pallet-evm-precompile-curve25519 = { git = "https://github.com/woozzzzy/frontier", default-features = false }
 
 sha3 = { version = "0.9", default-features = false }
 
 evm = { version = "0.27.0", default-features = false, features = ["with-codec"] }
 
 # used for runtime benchmarking
-frame-benchmarking = { version = "3.0", default-features = false, optional = true }
-frame-system-benchmarking = { version = "3.0", default-features = false, optional = true }
+frame-benchmarking = { version = "4.0.0-dev", default-features = false, optional = true }
+frame-system-benchmarking = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10", default-features = false, optional = true }
 hex-literal = { version = "0.3.1", optional = true }
 
 [build-dependencies]
 substrate-wasm-builder = { package = "substrate-wasm-builder", version = "3.0.0" }
 
 [dev-dependencies]
-sp-io = { version = "3.0" }
+sp-io = { version = "4.0.0-dev" }
 
 [features]
 default = ["std"]
@@ -143,7 +146,7 @@ std = [
 	"pallet-contracts-rpc-runtime-api/std",
 	"pallet-democracy/std",
 	"pallet-elections-phragmen/std",
-	"pallet-election-provider-multi-phase/std",
+	# "pallet-election-provider-multi-phase/std",
 	"frame-executive/std",
 	"pallet-grandpa/std",
 	"pallet-identity/std",
@@ -199,9 +202,9 @@ std = [
 	"pallet-tips/std",
 	"pallet-bounties/std",
 	"sp-npos-elections/std",
-	"edgeware-evm-tracer/std",
-	"edgeware-rpc-primitives-debug/std",
-	"edgeware-rpc-primitives-txpool/std",
+	# "edgeware-evm-tracer/std",
+	"moonbeam-rpc-primitives-debug/std",
+	"moonbeam-rpc-primitives-txpool/std",
 ]
 
 runtime-benchmarks = [

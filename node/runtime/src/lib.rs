@@ -44,7 +44,7 @@ use frame_system::{
 	EnsureOneOf, EnsureRoot,
 };
 
-use edgeware_rpc_primitives_txpool::TxPoolResponse;
+use moonbeam_rpc_primitives_txpool::TxPoolResponse;
 use pallet_ethereum::{Call::transact, Transaction as EthereumTransaction};
 
 pub use pallet_grandpa::{fg_primitives, AuthorityId as GrandpaId, AuthorityList as GrandpaAuthorityList};
@@ -1750,7 +1750,7 @@ impl_runtime_apis! {
 	}
 
 
-	impl edgeware_rpc_primitives_txpool::TxPoolRuntimeApi<Block> for Runtime {
+	impl moonbeam_rpc_primitives_txpool::TxPoolRuntimeApi<Block> for Runtime {
 		fn extrinsic_filter(
 			xts_ready: Vec<<Block as BlockT>::Extrinsic>,
 			xts_future: Vec<<Block as BlockT>::Extrinsic>

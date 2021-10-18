@@ -20,7 +20,7 @@
 
 use crate::Cli;
 use edgeware_executor::Executor;
-use edgeware_opts::{EthApi as EthApiCmd, RpcConfig};
+use cli_opt::{EthApi as EthApiCmd, RpcConfig};
 use edgeware_primitives::Block;
 
 use edgeware_runtime::RuntimeApi;

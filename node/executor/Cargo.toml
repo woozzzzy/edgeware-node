@@ -12,28 +12,28 @@ targets = ["x86_64-unknown-linux-gnu"]
 [dependencies]
 trie-root = "0.16.0"
 codec = { package = "parity-scale-codec", version = "2.0.0" }
-sp-io = { version = "3.0" }
-sp-state-machine = { version = "0.9" }
-sc-executor = { version = "0.9" }
-sp-core = { version = "3.0" }
-sp-trie = { version = "3.0" }
-frame-benchmarking = { version = "3.0" }
+sp-io = { version = "4.0.0-dev" }
+sp-state-machine = { version = "0.10.0-dev" }
+sc-executor = { version = "0.10.0-dev" }
+sp-core = { version = "4.0.0-dev" }
+sp-trie = { version = "4.0.0-dev" }
+frame-benchmarking = { version = "4.0.0-dev" }
 
 edgeware-primitives = { version = "3.3.6", path = "../primitives" }
 edgeware-runtime = { version = "3.3.6", path = "../runtime" }
 edgeware-runtime-interface = { version = "3.3.6", path = "../runtime-interface" }
 
 [dev-dependencies]
-sp-runtime = { version = "3.0" }
-frame-support = { version = "3.0" }
-pallet-balances = { version = "3.0" }
-pallet-transaction-payment = { version = "3.0" }
-pallet-session = { version = "3.0" }
-frame-system = { version = "3.0" }
-pallet-timestamp = { version = "3.0" }
-pallet-treasury = { version = "3.0" }
-pallet-grandpa = { version = "3.0" }
-pallet-indices = { version = "3.0" }
+sp-runtime = { version = "4.0.0-dev" }
+frame-support = { version = "4.0.0-dev" }
+pallet-balances = { version = "4.0.0-dev" }
+pallet-transaction-payment = { version = "4.0.0-dev" }
+pallet-session = { version = "4.0.0-dev" }
+frame-system = { version = "4.0.0-dev" }
+pallet-timestamp = { version = "4.0.0-dev" }
+pallet-treasury = { version = "4.0.0-dev" }
+pallet-grandpa = { version = "4.0.0-dev" }
+pallet-indices = { version = "4.0.0-dev" }
 wabt = "0.10.0"
 criterion = "0.3.0"
 

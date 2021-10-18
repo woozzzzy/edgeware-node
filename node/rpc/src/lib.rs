@@ -29,8 +29,8 @@
 
 #![warn(missing_docs)]
 
-pub use edgeware_opts as opts;
-use edgeware_opts::EthApi as EthApiCmd;
+pub use cli_opt as opts;
+use cli_opt::EthApi as EthApiCmd;
 use edgeware_primitives::{AccountId, Balance, Block, BlockNumber, Hash, Index};
 use fc_rpc::{OverrideHandle, RuntimeApiStorageOverride, SchemaV1Override, StorageOverride};
 use fc_rpc_core::types::{FilterPool, PendingTransactions};
