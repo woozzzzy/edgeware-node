@@ -79,6 +79,14 @@ use fp_rpc::EthereumRuntimeRPCApi;
 pub mod client;
 use client::RuntimeApiCollection;
 
+use fc_rpc::{
+	EthApi, EthApiServer, EthDevSigner, EthFilterApi, EthFilterApiServer, EthPubSubApi, EthPubSubApiServer,
+	EthSigner, HexEncodedIdProvider, NetApi, NetApiServer, Web3Api, Web3ApiServer,
+};
+use pallet_contracts_rpc::{Contracts, ContractsApi};
+use pallet_transaction_payment_rpc::{TransactionPayment, TransactionPaymentApi};
+use substrate_frame_rpc_system::{FullSystem, SystemApi};
+
 
 /// Light client extra dependencies.
 pub struct LightDeps<C, F, P> {
@@ -301,6 +309,154 @@ where
 	// if let Some(debug_requester) = debug_requester {
 	// 	io.extend_with(DebugServer::to_delegate(Debug::new(debug_requester)));
 	// }
+
+	io
+}
+
+// Full client dependencies.
+pub struct FullDeps2<C, P, A: ChainApi, BE> {
+	/// The client instance to use.
+	pub client: Arc<C>,
+	/// Transaction pool instance.
+	pub pool: Arc<P>,
+	/// Graph pool instance.
+	pub graph: Arc<Pool<A>>,
+	/// Whether to deny unsafe calls
+	pub deny_unsafe: DenyUnsafe,
+	/// The Node authority flag
+	pub is_authority: bool,
+	/// Network service
+	pub network: Arc<NetworkService<Block, Hash>>,
+	/// EthFilterApi pool.
+	pub filter_pool: Option<FilterPool>,
+	/// The list of optional RPC extensions.
+	pub ethapi_cmd: Vec<EthApiCmd>,
+	/// Frontier Backend.
+	pub frontier_backend: Arc<fc_db::Backend<Block>>,
+	/// Backend.
+	pub backend: Arc<BE>,
+	// /// Manual seal command sink
+	// pub command_sink: Option<futures::channel::mpsc::Sender<EngineCommand<Hash>>>,
+	/// Maximum number of logs in a query.
+	pub max_past_logs: u32,
+	// /// Ethereum transaction to Extrinsic converter.
+	// pub transaction_converter: TransactionConverters,
+}
+/// Instantiate all Full RPC extensions.
+pub fn create_full2<C, P, BE, A>(
+	deps: FullDeps2<C, P, A, BE>,
+	subscription_task_executor: SubscriptionTaskExecutor,
+) -> jsonrpc_core::IoHandler<sc_rpc::Metadata>
+where
+	BE: Backend<Block> + 'static,
+	BE::State: StateBackend<BlakeTwo256>,
+	BE::Blockchain: sp_blockchain::Backend<Block>,
+	C: ProvideRuntimeApi<Block> + StorageProvider<Block, BE> + AuxStore,
+	C: BlockchainEvents<Block>,
+	C: HeaderBackend<Block> + HeaderMetadata<Block, Error = BlockChainError> + 'static,
+	C: Send + Sync + 'static,
+	A: ChainApi<Block = Block> + 'static,
+	C::Api: RuntimeApiCollection<StateBackend = BE::State>,
+	P: TransactionPool<Block = Block> + 'static,
+{
+	let mut io = jsonrpc_core::IoHandler::default();
+	let FullDeps2 {
+		client,
+		pool,
+		graph,
+		deny_unsafe,
+		is_authority,
+		network,
+		filter_pool,
+		ethapi_cmd,
+		// command_sink,
+		frontier_backend,
+		backend: _,
+		max_past_logs,
+		// transaction_converter,
+	} = deps;
+
+	io.extend_with(SystemApi::to_delegate(FullSystem::new(
+		client.clone(),
+		pool.clone(),
+		deny_unsafe,
+	)));
+	io.extend_with(TransactionPaymentApi::to_delegate(TransactionPayment::new(
+		client.clone(),
+	)));
+	// TODO: are we supporting signing?
+	let signers = Vec::new();
+
+	let block_data_cache = Arc::new(EthBlockDataCache::new(3000, 3000));
+
+	let mut overrides_map = BTreeMap::new();
+	overrides_map.insert(
+		EthereumStorageSchema::V1,
+		Box::new(SchemaV1Override::new(client.clone()))
+			as Box<dyn StorageOverride<_> + Send + Sync>,
+	);
+
+	let overrides = Arc::new(OverrideHandle {
+		schemas: overrides_map,
+		fallback: Box::new(RuntimeApiStorageOverride::new(client.clone())),
+	});
+
+	io.extend_with(EthApiServer::to_delegate(EthApi::new(
+		client.clone(),
+		pool.clone(),
+		graph.clone(),
+		edgeware_runtime::TransactionConverter,
+		network.clone(),
+		signers,
+		overrides.clone(),
+		frontier_backend.clone(),
+		is_authority,
+		max_past_logs,
+		block_data_cache.clone(),
+	)));
+
+	if let Some(filter_pool) = filter_pool {
+		io.extend_with(EthFilterApiServer::to_delegate(EthFilterApi::new(
+			client.clone(),
+			frontier_backend,
+			filter_pool,
+			500_usize, // max stored filters
+			overrides.clone(),
+			max_past_logs,
+			block_data_cache.clone(),
+		)));
+	}
+
+	io.extend_with(NetApiServer::to_delegate(NetApi::new(
+		client.clone(),
+		network.clone(),
+		true,
+	)));
+	io.extend_with(Web3ApiServer::to_delegate(Web3Api::new(client.clone())));
+	io.extend_with(EthPubSubApiServer::to_delegate(EthPubSubApi::new(
+		pool,
+		client.clone(),
+		network,
+		SubscriptionManager::<HexEncodedIdProvider>::with_id_provider(
+			HexEncodedIdProvider::default(),
+			Arc::new(subscription_task_executor),
+		),
+		overrides,
+	)));
+	// if ethapi_cmd.contains(&EthApiCmd::Txpool) {
+	// 	io.extend_with(TxPoolServer::to_delegate(TxPool::new(
+	// 		Arc::clone(&client),
+	// 		graph,
+	// 	)));
+	// }
+
+	// if let Some(command_sink) = command_sink {
+	// 	io.extend_with(
+	// 		// We provide the rpc handler with the sending end of the channel to allow the rpc
+	// 		// send EngineCommands to the background block authorship task.
+	// 		ManualSealApi::to_delegate(ManualSeal::new(command_sink)),
+	// 	);
+	// };
 
 	io
 }

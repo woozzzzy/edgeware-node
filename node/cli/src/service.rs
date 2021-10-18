@@ -343,73 +343,121 @@ pub fn new_full_base(mut config: Configuration, cli: &Cli) -> Result<NewFullBase
 	// let ethapi_cmd = rpc_config.ethapi.clone();
 	let shared_voter_state = sc_finality_grandpa::SharedVoterState::empty();
 
+	// let rpc_extensions_builder = {
+	// 	let client = client.clone();
+	// 	let pool = transaction_pool.clone();
+	// 	let select_chain = select_chain.clone();
+	// 	let network = network.clone();
+	// 	let filter_pool = filter_pool.clone();
+	// 	let frontier_backend = frontier_backend.clone();
+	// 	let backend = backend.clone();
+	// 	let ethapi_cmd = rpc_config.ethapi.clone();
+	// 	let max_past_logs = rpc_config.max_past_logs;
+
+	// 	let is_authority = role.is_authority();
+	// 	let _keystore = keystore_container.sync_keystore();
+	// 	let subscription_executor = sc_rpc::SubscriptionTaskExecutor::new(task_manager.spawn_handle());
+
+	// 	let justification_stream = grandpa_link.justification_stream();
+	// 	let shared_authority_set = grandpa_link.shared_authority_set().clone();	
+	// 	let finality_proof_provider = sc_finality_grandpa::FinalityProofProvider::new_for_service(
+	// 		backend.clone(),
+	// 		Some(shared_authority_set.clone()),
+	// 	);
+
+	// 	Box::new(move |deny_unsafe, _| {
+	// 		let deps = edgeware_rpc::FullDeps {
+	// 			client: client.clone(),
+	// 			pool: pool.clone(),
+	// 			graph: pool.pool().clone(),
+	// 			select_chain: select_chain.clone(),
+	// 			network: network.clone(),
+	// 			is_authority,
+	// 			deny_unsafe,
+	// 			// Grandpa
+	// 			grandpa: edgeware_rpc::GrandpaDeps {
+	// 				shared_voter_state: shared_voter_state.clone(),
+	// 				shared_authority_set: shared_authority_set.clone(),
+	// 				justification_stream: justification_stream.clone(),
+	// 				subscription_executor: subscription_executor.clone(),
+	// 				finality_provider: finality_proof_provider.clone(),
+	// 			},
+	// 			// Frontier
+	// 			enable_dev_signer,
+	// 			filter_pool: filter_pool.clone(),
+	// 			backend: frontier_backend.clone(),
+	// 			max_past_logs,
+	// 			ethapi_cmd: cli.run.ethapi.clone(),
+	// 			// debug_requester: spawned_requesters.debug.clone(),
+	// 			// trace_filter_requester: spawned_requesters.trace.clone(),
+	// 			// trace_filter_max_count: rpc_config.ethapi_trace_max_count,
+	// 		};
+	// 		Ok(edgeware_rpc::create_full(
+	// 			deps,
+	// 			subscription_task_executor.clone(),
+	// 		))
+	// 		// xox extend moonbeam
+	// 		// #[allow(unused_mut)]
+	// 		// let mut io = edgeware_rpc::create_full(deps, subscription_executor.clone());
+	// 		// if ethapi_cmd.contains(&EthApiCmd::Debug) || ethapi_cmd.contains(&EthApiCmd::Trace) {
+	// 		// 	edgeware_rpc::tracing::extend_with_tracing(
+	// 		// 		client.clone(),
+	// 		// 		tracing_requesters.clone(),
+	// 		// 		rpc_config.ethapi_trace_max_count,
+	// 		// 		&mut io,
+	// 		// 	);
+	// 		// }
+	// 		// Ok(io)
+	// 	})
+	// };
+
+
+
+
 	let rpc_extensions_builder = {
 		let client = client.clone();
 		let pool = transaction_pool.clone();
-		let select_chain = select_chain.clone();
 		let network = network.clone();
 		let filter_pool = filter_pool.clone();
 		let frontier_backend = frontier_backend.clone();
 		let backend = backend.clone();
 		let ethapi_cmd = rpc_config.ethapi.clone();
 		let max_past_logs = rpc_config.max_past_logs;
-
 		let is_authority = role.is_authority();
-		let _keystore = keystore_container.sync_keystore();
-		let subscription_executor = sc_rpc::SubscriptionTaskExecutor::new(task_manager.spawn_handle());
-
-		let justification_stream = grandpa_link.justification_stream();
-		let shared_authority_set = grandpa_link.shared_authority_set().clone();	
-		let finality_proof_provider = sc_finality_grandpa::FinalityProofProvider::new_for_service(
-			backend.clone(),
-			Some(shared_authority_set.clone()),
-		);
 
 		Box::new(move |deny_unsafe, _| {
-			let deps = edgeware_rpc::FullDeps {
+		
+
+			let deps = edgeware_rpc::FullDeps2 {
 				client: client.clone(),
 				pool: pool.clone(),
 				graph: pool.pool().clone(),
-				select_chain: select_chain.clone(),
-				network: network.clone(),
-				is_authority,
 				deny_unsafe,
-				// Grandpa
-				grandpa: edgeware_rpc::GrandpaDeps {
-					shared_voter_state: shared_voter_state.clone(),
-					shared_authority_set: shared_authority_set.clone(),
-					justification_stream: justification_stream.clone(),
-					subscription_executor: subscription_executor.clone(),
-					finality_provider: finality_proof_provider.clone(),
-				},
-				// Frontier
-				enable_dev_signer,
+				is_authority,
+				network: network.clone(),
 				filter_pool: filter_pool.clone(),
-				backend: frontier_backend.clone(),
+				ethapi_cmd: ethapi_cmd.clone(),
+				// command_sink: None,
+				frontier_backend: frontier_backend.clone(),
+				backend: backend.clone(),
 				max_past_logs,
-				ethapi_cmd: cli.run.ethapi.clone(),
-				// debug_requester: spawned_requesters.debug.clone(),
-				// trace_filter_requester: spawned_requesters.trace.clone(),
-				// trace_filter_max_count: rpc_config.ethapi_trace_max_count,
+				// transaction_converter,
 			};
-			Ok(edgeware_rpc::create_full(
-				deps,
-				subscription_task_executor.clone(),
-			))
-			// xox extend moonbeam
-			// #[allow(unused_mut)]
-			// let mut io = edgeware_rpc::create_full(deps, subscription_executor.clone());
+			#[allow(unused_mut)]
+			let mut io = edgeware_rpc::create_full2(deps, subscription_task_executor.clone());
 			// if ethapi_cmd.contains(&EthApiCmd::Debug) || ethapi_cmd.contains(&EthApiCmd::Trace) {
-			// 	edgeware_rpc::tracing::extend_with_tracing(
+			// 	rpc::tracing::extend_with_tracing(
 			// 		client.clone(),
 			// 		tracing_requesters.clone(),
 			// 		rpc_config.ethapi_trace_max_count,
 			// 		&mut io,
 			// 	);
 			// }
-			// Ok(io)
+			Ok(io)
 		})
 	};
+
+	let local_role=config.role.clone();
 
 	sc_service::spawn_tasks(sc_service::SpawnTasksParams {
 		config,
@@ -428,7 +476,7 @@ pub fn new_full_base(mut config: Configuration, cli: &Cli) -> Result<NewFullBase
 
 	let backoff_authoring_blocks: Option<()> = None;
 
-	let (block_import, grandpa_link) = consensus_result;
+	// let (block_import, grandpa_link) = consensus_result;
 
 	if let sc_service::config::Role::Authority { .. } = &role {
 		let proposer_factory = sc_basic_authorship::ProposerFactory::new(
@@ -519,7 +567,7 @@ pub fn new_full_base(mut config: Configuration, cli: &Cli) -> Result<NewFullBase
 		name: Some(name),
 		observer_enabled: false,
 		keystore,
-		local_role: config.role.clone(),
+		local_role: local_role,
 		telemetry: telemetry.as_ref().map(|x| x.handle()),
 	};
 
@@ -562,7 +610,7 @@ pub fn new_full(config: Configuration, cli: &Cli) -> Result<TaskManager, Service
 }
 
 pub fn new_light_base(
-	config: Configuration,
+	mut config: Configuration,
 ) -> Result<TaskManager, ServiceError> {
 	let telemetry = config
 		.telemetry_endpoints
