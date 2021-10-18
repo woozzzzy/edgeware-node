@@ -114,207 +114,8 @@ pub struct GrandpaDeps<B> {
 	pub finality_provider: Arc<FinalityProofProvider<B, Block>>,
 }
 
-/// Full client dependencies.
-pub struct FullDeps<C, P, SC, B, A: ChainApi> {
-	/// The client instance to use.
-	pub client: Arc<C>,
-	/// Transaction pool instance.
-	pub pool: Arc<P>,
-	/// Graph pool instance.
-	pub graph: Arc<Pool<A>>,
-	/// Whether to deny unsafe calls
-	pub deny_unsafe: DenyUnsafe,
-	/// The SelectChain Strategy
-	pub select_chain: SC,
-	/// The Node authority flag
-	pub is_authority: bool,
-	/// Network service
-	pub network: Arc<NetworkService<Block, Hash>>,
-	/// GRANDPA specific dependencies.
-	pub grandpa: GrandpaDeps<B>,
-	/// Whether to enable dev signer
-	pub enable_dev_signer: bool,
-	/// EthFilterApi pool.
-	pub filter_pool: Option<FilterPool>,
-	/// The list of optional RPC extensions.
-	pub ethapi_cmd: Vec<EthApiCmd>,
-	/// Backend.
-	pub backend: Arc<fc_db::Backend<Block>>,
-	/// Maximum number of logs in a query.
-	pub max_past_logs: u32,
-	// /// Debug server requester.
-	// pub debug_requester: Option<DebugRequester>,
-	// /// Trace filter cache server requester.
-	// pub trace_filter_requester: Option<TraceFilterCacheRequester>,
-	// /// Trace filter max count.
-	// pub trace_filter_max_count: u32,
-}
-
-/// Instantiate all Full RPC extensions.
-pub fn create_full<C, P, SC, B, A>(
-	deps: FullDeps<C, P, SC, B, A>,
-	subscription_task_executor: SubscriptionTaskExecutor,
-) -> jsonrpc_core::IoHandler<sc_rpc::Metadata>
-where
-	C: ProvideRuntimeApi<Block> + StorageProvider<Block, B> + AuxStore,
-	C: HeaderBackend<Block> + HeaderMetadata<Block, Error = BlockChainError> + 'static,
-	C: Send + Sync + 'static,
-	C: BlockchainEvents<Block>,
-	C::Api: pallet_contracts_rpc::ContractsRuntimeApi<Block, AccountId, Balance, BlockNumber, Hash>,
-	C::Api: BlockBuilder<Block>,
-	C::Api: pallet_transaction_payment_rpc::TransactionPaymentRuntimeApi<Block, Balance>,
-	C::Api: fp_rpc::EthereumRuntimeRPCApi<Block>,
-	C::Api: BlockBuilder<Block>,
-	P: TransactionPool<Block = Block> + 'static,
-	SC: SelectChain<Block> + 'static,
-	B: sc_client_api::Backend<Block> + Send + Sync + 'static,
-	B::State: sc_client_api::backend::StateBackend<sp_runtime::traits::HashFor<Block>>,
-	A: ChainApi<Block = Block> + 'static,
-	C::Api: RuntimeApiCollection<StateBackend = B::State>,
-{
-	use fc_rpc::{
-		EthApi, EthApiServer, EthDevSigner, EthFilterApi, EthFilterApiServer, EthPubSubApi, EthPubSubApiServer,
-		EthSigner, HexEncodedIdProvider, NetApi, NetApiServer, Web3Api, Web3ApiServer,
-	};
-	use pallet_contracts_rpc::{Contracts, ContractsApi};
-	use pallet_transaction_payment_rpc::{TransactionPayment, TransactionPaymentApi};
-	use substrate_frame_rpc_system::{FullSystem, SystemApi};
-
-	let mut io = jsonrpc_core::IoHandler::default();
-	let FullDeps {
-		client,
-		pool,
-		graph,
-		deny_unsafe,
-		select_chain: _,
-		is_authority,
-		network,
-		grandpa,
-		enable_dev_signer,
-		filter_pool,
-		ethapi_cmd,
-		backend,
-		max_past_logs,
-		// debug_requester,
-		// trace_filter_requester,
-		// trace_filter_max_count,
-	} = deps;
-	let GrandpaDeps {
-		shared_voter_state,
-		shared_authority_set,
-		justification_stream,
-		subscription_executor,
-		finality_provider,
-	} = grandpa;
-
-	io.extend_with(SystemApi::to_delegate(FullSystem::new(
-		client.clone(),
-		pool.clone(),
-		deny_unsafe,
-	)));
-	// Making synchronous calls in light client freezes the browser currently,
-	// more context: https://github.com/paritytech/substrate/pull/3480
-	// These RPCs should use an asynchronous caller instead.
-	io.extend_with(ContractsApi::to_delegate(Contracts::new(client.clone())));
-	io.extend_with(TransactionPaymentApi::to_delegate(TransactionPayment::new(
-		client.clone(),
-	)));
-
-	let mut signers = Vec::new();
-	if enable_dev_signer {
-		signers.push(Box::new(EthDevSigner::new()) as Box<dyn EthSigner>);
-	}
-	let mut overrides_map = BTreeMap::new();
-	overrides_map.insert(
-		EthereumStorageSchema::V1,
-		Box::new(SchemaV1Override::new(client.clone()))
-			as Box<dyn StorageOverride<_> + Send + Sync>,
-	);
-
-	let overrides = Arc::new(OverrideHandle {
-		schemas: overrides_map,
-		fallback: Box::new(RuntimeApiStorageOverride::new(client.clone())),
-	});
-
-	let block_data_cache = Arc::new(EthBlockDataCache::new(50, 50));
-
-	io.extend_with(EthApiServer::to_delegate(EthApi::new(
-		client.clone(),
-		pool.clone(),
-		graph,
-		edgeware_runtime::TransactionConverter,
-		network.clone(),
-		signers,
-		overrides.clone(),
-		backend.clone(),
-		is_authority,
-		max_past_logs,
-		block_data_cache.clone(),
-	)));
-
-	if let Some(filter_pool) = filter_pool {
-		io.extend_with(EthFilterApiServer::to_delegate(EthFilterApi::new(
-			client.clone(),
-			backend.clone(),
-			filter_pool.clone(),
-			500 as usize, // max stored filters
-			overrides.clone(),
-			max_past_logs,
-			block_data_cache.clone(),
-		)));
-	}
-
-	io.extend_with(NetApiServer::to_delegate(NetApi::new(
-		client.clone(),
-		network.clone(),
-		// Whether to format the `peer_count` response as Hex (default) or not.
-		true,
-	)));
-
-	io.extend_with(Web3ApiServer::to_delegate(Web3Api::new(client.clone())));
-
-	io.extend_with(EthPubSubApiServer::to_delegate(EthPubSubApi::new(
-		pool.clone(),
-		client.clone(),
-		network.clone(),
-		SubscriptionManager::<HexEncodedIdProvider>::with_id_provider(
-			HexEncodedIdProvider::default(),
-			Arc::new(subscription_task_executor),
-		),
-		overrides,
-	)));
-
-	io.extend_with(sc_finality_grandpa_rpc::GrandpaApi::to_delegate(
-		GrandpaRpcHandler::new(
-			shared_authority_set,
-			shared_voter_state,
-			justification_stream,
-			subscription_executor,
-			finality_provider,
-		),
-	));
-
-	// if ethapi_cmd.contains(&EthApiCmd::Txpool) {
-	// 	io.extend_with(TxPoolServer::to_delegate(TxPool::new(Arc::clone(&client), graph)));
-	// }
-
-	// if let Some(trace_filter_requester) = trace_filter_requester {
-	// 	io.extend_with(TraceServer::to_delegate(Trace::new(
-	// 		client,
-	// 		trace_filter_requester,
-	// 		trace_filter_max_count,
-	// 	)));
-	// }
-
-	// if let Some(debug_requester) = debug_requester {
-	// 	io.extend_with(DebugServer::to_delegate(Debug::new(debug_requester)));
-	// }
-
-	io
-}
-
 // Full client dependencies.
-pub struct FullDeps2<C, P, A: ChainApi, BE> {
+pub struct FullDeps<C, P, A: ChainApi, BE, SC> {
 	/// The client instance to use.
 	pub client: Arc<C>,
 	/// Transaction pool instance.
@@ -341,14 +142,28 @@ pub struct FullDeps2<C, P, A: ChainApi, BE> {
 	pub max_past_logs: u32,
 	// /// Ethereum transaction to Extrinsic converter.
 	// pub transaction_converter: TransactionConverters,
+	/// The SelectChain Strategy
+	pub select_chain: SC,
+	/// GRANDPA specific dependencies.
+	pub grandpa_deps: GrandpaDeps<BE>,
+	/// Whether to enable dev signer
+	pub enable_dev_signer: bool,
+	// /// Debug server requester.
+	// pub debug_requester: Option<DebugRequester>,
+	// /// Trace filter cache server requester.
+	// pub trace_filter_requester: Option<TraceFilterCacheRequester>,
+	// /// Trace filter max count.
+	// pub trace_filter_max_count: u32,
+
+
 }
 /// Instantiate all Full RPC extensions.
-pub fn create_full2<C, P, BE, A>(
-	deps: FullDeps2<C, P, A, BE>,
+pub fn create_full<C, P, BE, A, SC>(
+	deps: FullDeps<C, P, A, BE, SC>,
 	subscription_task_executor: SubscriptionTaskExecutor,
 ) -> jsonrpc_core::IoHandler<sc_rpc::Metadata>
 where
-	BE: Backend<Block> + 'static,
+	BE: Backend<Block> + 'static,//+ Send + Sync + 'static,
 	BE::State: StateBackend<BlakeTwo256>,
 	BE::Blockchain: sp_blockchain::Backend<Block>,
 	C: ProvideRuntimeApi<Block> + StorageProvider<Block, BE> + AuxStore,
@@ -358,9 +173,10 @@ where
 	A: ChainApi<Block = Block> + 'static,
 	C::Api: RuntimeApiCollection<StateBackend = BE::State>,
 	P: TransactionPool<Block = Block> + 'static,
+	SC: SelectChain<Block> + 'static,
 {
 	let mut io = jsonrpc_core::IoHandler::default();
-	let FullDeps2 {
+	let FullDeps {
 		client,
 		pool,
 		graph,
@@ -374,18 +190,38 @@ where
 		backend: _,
 		max_past_logs,
 		// transaction_converter,
+		select_chain,
+		grandpa_deps,
+		enable_dev_signer,
+		// debug_requester,
+		// trace_filter_requester,
+		// trace_filter_max_count,
 	} = deps;
+	let GrandpaDeps {
+		shared_voter_state,
+		shared_authority_set,
+		justification_stream,
+		subscription_executor,
+		finality_provider,
+	} = grandpa_deps;
 
 	io.extend_with(SystemApi::to_delegate(FullSystem::new(
 		client.clone(),
 		pool.clone(),
 		deny_unsafe,
 	)));
+	// Making synchronous calls in light client freezes the browser currently,
+	// more context: https://github.com/paritytech/substrate/pull/3480
+	// These RPCs should use an asynchronous caller instead.
+	// io.extend_with(ContractsApi::to_delegate(Contracts::new(client.clone())));
 	io.extend_with(TransactionPaymentApi::to_delegate(TransactionPayment::new(
 		client.clone(),
 	)));
 	// TODO: are we supporting signing?
-	let signers = Vec::new();
+	let signers = Vec::new();//xox make mut
+	//if enable_dev_signer {
+	//	signers.push(Box::new(EthDevSigner::new()) as Box<dyn EthSigner>);
+	//}
 
 	let block_data_cache = Arc::new(EthBlockDataCache::new(3000, 3000));
 
@@ -430,6 +266,7 @@ where
 	io.extend_with(NetApiServer::to_delegate(NetApi::new(
 		client.clone(),
 		network.clone(),
+		// Whether to format the `peer_count` response as Hex (default) or not.
 		true,
 	)));
 	io.extend_with(Web3ApiServer::to_delegate(Web3Api::new(client.clone())));
@@ -443,6 +280,17 @@ where
 		),
 		overrides,
 	)));
+
+	io.extend_with(sc_finality_grandpa_rpc::GrandpaApi::to_delegate(
+		GrandpaRpcHandler::new(
+			shared_authority_set,
+			shared_voter_state,
+			justification_stream,
+			subscription_executor,
+			finality_provider,
+		),
+	));
+
 	// if ethapi_cmd.contains(&EthApiCmd::Txpool) {
 	// 	io.extend_with(TxPoolServer::to_delegate(TxPool::new(
 	// 		Arc::clone(&client),
@@ -457,6 +305,19 @@ where
 	// 		ManualSealApi::to_delegate(ManualSeal::new(command_sink)),
 	// 	);
 	// };
+
+
+	// if let Some(trace_filter_requester) = trace_filter_requester {
+	// 	io.extend_with(TraceServer::to_delegate(Trace::new(
+	// 		client,
+	// 		trace_filter_requester,
+	// 		trace_filter_max_count,
+	// 	)));
+	// }
+
+	// if let Some(debug_requester) = debug_requester {
+	// 	io.extend_with(DebugServer::to_delegate(Debug::new(debug_requester)));
+	// }
 
 	io
 }

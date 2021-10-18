@@ -136,8 +136,6 @@ sc-block-builder = { git = "https://github.com/woozzzzy/substrate", branch = "bb
 sc-chain-spec = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sc-chain-spec-derive = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sc-cli = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-# xox not present so removed. Check!
-# sc-cli-proc-macro = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sc-client-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sc-client-db = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sc-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
@@ -167,11 +165,7 @@ sc-service = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sc-state-db = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sc-telemetry = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sc-tracing = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-# xox not present so removed. Check!
-# sc-transaction-graph = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sc-transaction-pool = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-# xox not present so removed. Check!
-# sp-allocator = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-api-proc-macro = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-application-crypto = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
@@ -180,8 +174,6 @@ sp-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch
 sp-authorship = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-block-builder = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-blockchain = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-# xox not present so removed. Check!
-# sp-chain-spec = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-consensus-aura = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-consensus-babe = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
@@ -197,8 +189,6 @@ sp-io = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-keyring = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-keystore = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-npos-elections = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-# xox not present so removed. Check!
-# sp-npos-elections-compact = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-offchain = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-panic-handler = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-rpc = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
@@ -220,8 +210,6 @@ sp-trie = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sc-utils = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-version = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 sp-wasm-interface = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-# xox - bb changes.
-# substrate-browser-utils = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 substrate-frame-cli = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 substrate-frame-rpc-system = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
 substrate-prometheus-endpoint = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }

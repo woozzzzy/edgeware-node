@@ -109,12 +109,6 @@ fp-consensus = { git = "https://github.com/woozzzzy/frontier", branch = "bb", de
 fc-rpc-core = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
 fc-db = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
 
-# WASM-specific dependencies
-wasm-bindgen = { version = "0.2.57", optional = true }
-wasm-bindgen-futures = { version = "0.4.7", optional = true }
-# xox - bb changes 
-# browser-utils = { git = "https://github.com/woozzzzy/substrate", branch = "bb", package = "substrate-browser-utils", optional = true }
-
 [target.'cfg(target_arch="x86_64")'.dependencies]
 edgeware-executor = { path = "../executor", default-features = false, features = [ "wasmtime" ] }
 sc-cli = { git = "https://github.com/woozzzzy/substrate", branch = "bb", optional = true, features = [ "wasmtime" ] }
@@ -144,12 +138,6 @@ cli-opt = { package = "moonbeam-cli-opt", path = "../cli-opt", optional = true }
 
 [features]
 default = [ "cli" ]
-browser = [
-# xox - bb changes.
-	# "browser-utils",
-	"wasm-bindgen",
-	"wasm-bindgen-futures",
-]
 cli = [
 	"edgeware-executor/wasmi-errno",
 	"sc-cli",

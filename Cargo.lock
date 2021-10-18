@@ -1553,8 +1553,6 @@ dependencies = [
  "substrate-frame-cli",
  "tempfile",
  "tracing",
- "wasm-bindgen",
- "wasm-bindgen-futures",
 ]
 
 [[package]]
