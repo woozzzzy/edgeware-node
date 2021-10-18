@@ -218,10 +218,10 @@ where
 		client.clone(),
 	)));
 	// TODO: are we supporting signing?
-	let signers = Vec::new();//xox make mut
-	//if enable_dev_signer {
-	//	signers.push(Box::new(EthDevSigner::new()) as Box<dyn EthSigner>);
-	//}
+	let mut signers = Vec::new();
+	if enable_dev_signer {
+		signers.push(Box::new(EthDevSigner::new()) as Box<dyn EthSigner>);
+	}
 
 	let block_data_cache = Arc::new(EthBlockDataCache::new(3000, 3000));
 

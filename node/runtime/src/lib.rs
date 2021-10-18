@@ -645,7 +645,7 @@ parameter_types! {
 	pub const InstantAllowed: bool = false;
 	pub const MinimumDeposit: Balance = 100 * DOLLARS;
 	pub const EnactmentPeriod: BlockNumber = 1 * 24 * 60 * MINUTES;
-	pub const VoteLockingPeriod: BlockNumber = 7 * 24 * 60 * MINUTES;//xox to mention!!!
+	pub const VoteLockingPeriod: BlockNumber = 7 * 24 * 60 * MINUTES;
 	pub const CooloffPeriod: BlockNumber = 7 * 24 * 60 * MINUTES;
 	pub const PreimageByteDeposit: Balance = 1 * CENTS;
 	pub const MaxVotes: u32 = 100;
