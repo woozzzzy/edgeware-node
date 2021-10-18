@@ -16,13 +16,10 @@
 
 //! Substrate chain configurations.
 
-use edgeware_runtime::constants::currency::*;
-use edgeware_runtime::Block;
 use edgeware_runtime::{
-	AuraConfig, AuthorityDiscoveryConfig, BalancesConfig, CouncilConfig,
-	DemocracyConfig, GrandpaConfig, ImOnlineConfig, IndicesConfig, SessionConfig,
-	SessionKeys, StakerStatus, StakingConfig, SudoConfig, SystemConfig,
-	TreasuryRewardConfig, VestingConfig, wasm_binary_unwrap, EVMConfig,
+	constants::currency::*, wasm_binary_unwrap, AuraConfig, AuthorityDiscoveryConfig, BalancesConfig, Block,
+	CouncilConfig, DemocracyConfig, EVMConfig, GrandpaConfig, ImOnlineConfig, IndicesConfig, SessionConfig,
+	opaque::SessionKeys, StakerStatus, StakingConfig, SudoConfig, SystemConfig, TreasuryRewardConfig, VestingConfig,
 };
 use pallet_im_online::ed25519::AuthorityId as ImOnlineId;
 use sc_chain_spec::ChainSpecExtension;
@@ -212,15 +209,15 @@ pub fn testnet_genesis(
 	});
 
 	GenesisConfig {
-		frame_system: Some(SystemConfig {
+		system: SystemConfig {
 			code: wasm_binary_unwrap().to_vec(),
 			changes_trie_config: Default::default(),
-		}),
-		pallet_balances: Some(BalancesConfig {
+		},
+		balances: BalancesConfig {
 			balances: endowed_balances,
-		}),
-		pallet_indices: Some(IndicesConfig { indices: vec![] }),
-		pallet_session: Some(SessionConfig {
+		},
+		indices: IndicesConfig { indices: vec![] },
+		session: SessionConfig {
 			keys: initial_authorities
 				.iter()
 				.map(|x| {
@@ -231,8 +228,8 @@ pub fn testnet_genesis(
 					)
 				})
 				.collect::<Vec<_>>(),
-		}),
-		pallet_staking: Some(StakingConfig {
+		},
+		staking: StakingConfig {
 			validator_count: 20,
 			minimum_validator_count: initial_authorities.len() as u32,
 			stakers: initial_authorities
@@ -242,31 +239,31 @@ pub fn testnet_genesis(
 			invulnerables: [].to_vec(),
 			slash_reward_fraction: Perbill::from_percent(10),
 			..Default::default()
-		}),
-		pallet_democracy: Some(DemocracyConfig::default()),
-		pallet_collective_Instance1: Some(CouncilConfig {
+		},
+		democracy: DemocracyConfig::default(),
+		council: CouncilConfig {
 			members: crate::testnet_fixtures::get_testnet_election_members(),
 			phantom: Default::default(),
-		}),
-		pallet_aura: Some(AuraConfig {
+		},
+		aura: AuraConfig {
 			authorities: vec![],
-		}),
-		pallet_im_online: Some(ImOnlineConfig { keys: vec![] }),
-		pallet_authority_discovery: Some(AuthorityDiscoveryConfig { keys: vec![] }),
-		pallet_grandpa: Some(GrandpaConfig {
+		},
+		im_online: ImOnlineConfig { keys: vec![] },
+		authority_discovery: AuthorityDiscoveryConfig { keys: vec![] },
+		grandpa: GrandpaConfig {
 			authorities: vec![],
-		}),
-		pallet_treasury: Some(Default::default()),
-		pallet_elections_phragmen: Some(Default::default()),
-		pallet_sudo: Some(SudoConfig { key: _root_key }),
-		pallet_vesting: Some(VestingConfig { vesting: vesting }),
-		pallet_evm: Some(EVMConfig { accounts: evm_accounts }),
-		pallet_contracts: Some(Default::default()),
-		pallet_ethereum: Some(Default::default()),
-		treasury_reward: Some(TreasuryRewardConfig {
+		},
+		treasury: Default::default(),
+		phragmen_election: Default::default(),
+		sudo: SudoConfig { key: _root_key },
+		vesting: VestingConfig { vesting: vesting },
+		evm: EVMConfig { accounts: evm_accounts },
+		// contracts: Default::default(),
+		ethereum: Default::default(),
+		treasury_reward: TreasuryRewardConfig {
 			current_payout: 95 * DOLLARS,
 			minting_interval: One::one(),
-		}),
+		},
 	}
 }
 
@@ -460,19 +457,19 @@ pub fn mainnet_genesis(
 	vesting: Vec<(AccountId, BlockNumber, BlockNumber, Balance)>,
 ) -> GenesisConfig {
 	GenesisConfig {
-		frame_system: Some(SystemConfig {
+		system: SystemConfig {
 			code: wasm_binary_unwrap().to_vec(),
 			changes_trie_config: Default::default(),
-		}),
-		pallet_balances: Some(BalancesConfig {
+		},
+		balances: BalancesConfig {
 			balances: founder_allocation
 				.iter()
 				.map(|x| (x.0.clone(), x.1.clone()))
 				.chain(balances.clone())
 				.collect(),
-		}),
-		pallet_indices: Some(IndicesConfig { indices: vec![] }),
-		pallet_session: Some(SessionConfig {
+		},
+		indices: IndicesConfig { indices: vec![] },
+		session: SessionConfig {
 			keys: initial_authorities
 				.iter()
 				.map(|x| {
@@ -483,8 +480,8 @@ pub fn mainnet_genesis(
 					)
 				})
 				.collect::<Vec<_>>(),
-		}),
-		pallet_staking: Some(StakingConfig {
+		},
+		staking: StakingConfig {
 			validator_count: 60,
 			minimum_validator_count: initial_authorities.len() as u32,
 			stakers: initial_authorities
@@ -501,33 +498,33 @@ pub fn mainnet_genesis(
 			invulnerables: vec![],
 			slash_reward_fraction: Perbill::from_percent(10),
 			..Default::default()
-		}),
-		pallet_democracy: Some(DemocracyConfig::default()),
-		pallet_collective_Instance1: Some(CouncilConfig {
+		},
+		democracy: DemocracyConfig::default(),
+		council: CouncilConfig {
 			members: crate::mainnet_fixtures::get_mainnet_election_members(),
 			phantom: Default::default(),
-		}),
-		pallet_aura: Some(AuraConfig {
+		},
+		aura: AuraConfig {
 			authorities: vec![],
-		}),
-		pallet_im_online: Some(ImOnlineConfig { keys: vec![] }),
-		pallet_authority_discovery: Some(AuthorityDiscoveryConfig { keys: vec![] }),
-		pallet_grandpa: Some(GrandpaConfig {
+		},
+		im_online: ImOnlineConfig { keys: vec![] },
+		authority_discovery: AuthorityDiscoveryConfig { keys: vec![] },
+		grandpa: GrandpaConfig {
 			authorities: vec![],
-		}),
-		pallet_treasury: Some(Default::default()),
-		pallet_elections_phragmen: Some(Default::default()),
-		pallet_sudo: Some(SudoConfig {
+		},
+		treasury: Default::default(),
+		phragmen_election: Default::default(),
+		sudo: SudoConfig {
 			key: crate::mainnet_fixtures::get_mainnet_root_key(),
-		}),
-		pallet_vesting: Some(VestingConfig { vesting: vesting }),
-		pallet_evm: Some(Default::default()),
-		pallet_contracts: Some(Default::default()),
-		pallet_ethereum: Some(Default::default()),
-		treasury_reward: Some(TreasuryRewardConfig {
+		},
+		vesting: VestingConfig { vesting: vesting },
+		evm: Default::default(),
+		// contracts: Default::default(),
+		ethereum: Default::default(),
+		treasury_reward: TreasuryRewardConfig {
 			current_payout: 95 * DOLLARS,
 			minting_interval: One::one(),
-		}),
+		},
 	}
 }
 

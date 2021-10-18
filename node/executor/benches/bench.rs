@@ -16,7 +16,7 @@
 
 use codec::{Decode, Encode};
 use criterion::{BatchSize, Criterion, criterion_group, criterion_main};
-use edgeware_executor::Executor;
+use edgeware_executor::ExecutorDispatch;
 use edgeware_primitives::{BlockNumber, Hash};
 use edgeware_runtime::{
 	Block, BuildStorage, Call, CheckedExtrinsic, GenesisConfig, Header, UncheckedExtrinsic,
@@ -28,7 +28,7 @@ use sp_core::storage::well_known_keys;
 use sp_core::traits::{CodeExecutor, RuntimeCode};
 use frame_support::Hashable;
 use sp_state_machine::TestExternalities as CoreTestExternalities;
-use sc_executor::{NativeExecutor, RuntimeInfo, WasmExecutionMethod, Externalities};
+use sc_executor::{NativeElseWasmExecutor, RuntimeInfo, WasmExecutionMethod, Externalities};
 use sp_runtime::traits::BlakeTwo256;
 
 criterion_group!(benches, bench_execute_block);
@@ -65,7 +65,7 @@ fn new_test_ext(genesis_config: &GenesisConfig) -> TestExternalities<BlakeTwo256
 }
 
 fn construct_block<E: Externalities>(
-	executor: &NativeExecutor<Executor>,
+	executor: &NativeElseWasmExecutor<ExecutorDispatch>,
 	ext: &mut E,
 	number: BlockNumber,
 	parent_hash: Hash,
@@ -134,7 +134,7 @@ fn construct_block<E: Externalities>(
 }
 
 
-fn test_blocks(genesis_config: &GenesisConfig, executor: &NativeExecutor<Executor>)
+fn test_blocks(genesis_config: &GenesisConfig, executor: &NativeElseWasmExecutor<ExecutorDispatch>)
 	-> Vec<(Vec<u8>, Hash)>
 {
 	let mut test_ext = new_test_ext(genesis_config);
@@ -171,7 +171,7 @@ fn bench_execute_block(c: &mut Criterion) {
 				ExecutionMethod::Wasm(wasm_method) => (false, *wasm_method),
 			};
 
-			let executor = NativeExecutor::new(wasm_method, None, 8);
+			let executor = NativeElseWasmExecutor::new(wasm_method, None, 8);
 			let runtime_code = RuntimeCode {
 				code_fetcher: &sp_core::traits::WrappedRuntimeCode(COMPACT_CODE.into()),
 				hash: vec![1, 2, 3],

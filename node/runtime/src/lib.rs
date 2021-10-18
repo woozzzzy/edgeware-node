@@ -64,6 +64,8 @@ pub mod opaque {
 		pub struct SessionKeys {
 			pub aura: Aura,
 			pub grandpa: Grandpa,
+			pub im_online: ImOnline,
+			pub authority_discovery: AuthorityDiscovery,
 		}
 	}
 }
@@ -246,7 +248,7 @@ parameter_types! {
 impl frame_system::Config for Runtime {
 	type AccountData = pallet_balances::AccountData<Balance>;
 	type AccountId = AccountId;
-	type BaseCallFilter = frame_support::traits::Everything;
+	type BaseCallFilter = Everything;
 	type BlockHashCount = BlockHashCount;
 	type BlockLength = RuntimeBlockLength;
 	type BlockNumber = BlockNumber;
@@ -268,6 +270,8 @@ impl frame_system::Config for Runtime {
 	type SystemWeightInfo = frame_system::weights::SubstrateWeight<Runtime>;
 	type Version = Version;
 }
+
+impl pallet_randomness_collective_flip::Config for Runtime {}
 
 impl pallet_utility::Config for Runtime {
 	type Call = Call;
@@ -638,9 +642,10 @@ parameter_types! {
 	pub const LaunchPeriod: BlockNumber = 2 * 24 * 60 * MINUTES;
 	pub const VotingPeriod: BlockNumber = 7 * 24 * 60 * MINUTES;
 	pub const FastTrackVotingPeriod: BlockNumber = 2 * 24 * 60 * MINUTES;
-	pub const MinimumDeposit: Balance = 100 * DOLLARS;
 	pub const InstantAllowed: bool = false;
+	pub const MinimumDeposit: Balance = 100 * DOLLARS;
 	pub const EnactmentPeriod: BlockNumber = 1 * 24 * 60 * MINUTES;
+	pub const VoteLockingPeriod: BlockNumber = 7 * 24 * 60 * MINUTES;//xox to mention!!!
 	pub const CooloffPeriod: BlockNumber = 7 * 24 * 60 * MINUTES;
 	pub const PreimageByteDeposit: Balance = 1 * CENTS;
 	pub const MaxVotes: u32 = 100;
@@ -648,32 +653,17 @@ parameter_types! {
 }
 
 impl pallet_democracy::Config for Runtime {
-	type BlacklistOrigin = EnsureRoot<AccountId>;
-	// To cancel a proposal before it has been passed, the technical committee must
-	// be unanimous or Root must agree.
-	type CancelProposalOrigin = EnsureOneOf<
-		AccountId,
-		EnsureRoot<AccountId>,
-		pallet_collective::EnsureProportionAtLeast<_1, _1, AccountId, CouncilCollective>,
-	>;
-	// To cancel a proposal which has been passed, 2/3 of the council must agree to
-	// it.
-	type CancellationOrigin = frame_system::EnsureOneOf<
-		AccountId,
-		pallet_collective::EnsureProportionAtLeast<_2, _3, AccountId, CouncilCollective>,
-		frame_system::EnsureRoot<AccountId>,
-	>;
-	type CooloffPeriod = CooloffPeriod;
+	type Proposal = Call;
+	type Event = Event;
 	type Currency = Balances;
 	type EnactmentPeriod = EnactmentPeriod;
-	type Event = Event;
-	/// A unanimous council can have the next scheduled referendum be a straight
-	/// default-carries (NTB) vote.
-	type ExternalDefaultOrigin = frame_system::EnsureOneOf<
-		AccountId,
-		pallet_collective::EnsureProportionAtLeast<_1, _1, AccountId, CouncilCollective>,
-		frame_system::EnsureRoot<AccountId>,
-	>;
+	type LaunchPeriod = LaunchPeriod;
+	type VotingPeriod = VotingPeriod;
+	type VoteLockingPeriod = VoteLockingPeriod;
+	type MinimumDeposit = MinimumDeposit;
+	/// A straight majority of the council can decide what their next motion is.
+	type ExternalOrigin =
+		pallet_collective::EnsureProportionAtLeast<_1, _2, AccountId, CouncilCollective>;
 	/// A 60% super-majority can have the next scheduled referendum be a
 	/// straight majority-carries vote.
 	type ExternalMajorityOrigin = frame_system::EnsureOneOf<
@@ -681,8 +671,13 @@ impl pallet_democracy::Config for Runtime {
 		pallet_collective::EnsureProportionAtLeast<_3, _5, AccountId, CouncilCollective>,
 		frame_system::EnsureRoot<AccountId>,
 	>;
-	/// A straight majority of the council can decide what their next motion is.
-	type ExternalOrigin = pallet_collective::EnsureProportionAtLeast<_1, _2, AccountId, CouncilCollective>;
+	/// A unanimous council can have the next scheduled referendum be a straight
+	/// default-carries (NTB) vote.
+	type ExternalDefaultOrigin = frame_system::EnsureOneOf<
+		AccountId,
+		pallet_collective::EnsureProportionAtLeast<_1, _1, AccountId, CouncilCollective>,
+		frame_system::EnsureRoot<AccountId>,
+	>;
 	/// Three fourths of the committee can have an
 	/// ExternalMajority/ExternalDefault vote be tabled immediately and with a
 	/// shorter voting/enactment period.
@@ -691,23 +686,35 @@ impl pallet_democracy::Config for Runtime {
 		pallet_collective::EnsureProportionAtLeast<_3, _4, AccountId, CouncilCollective>,
 		frame_system::EnsureRoot<AccountId>,
 	>;
-	type FastTrackVotingPeriod = FastTrackVotingPeriod;
-	type InstantAllowed = InstantAllowed;
 	type InstantOrigin = frame_system::EnsureNever<AccountId>;
-	type LaunchPeriod = LaunchPeriod;
-	type MaxProposals = MaxProposals;
-	type MaxVotes = MaxVotes;
-	type MinimumDeposit = MinimumDeposit;
-	type OperationalPreimageOrigin = pallet_collective::EnsureMember<AccountId, CouncilCollective>;
-	type PalletsOrigin = OriginCaller;
-	type PreimageByteDeposit = PreimageByteDeposit;
-	type Proposal = Call;
-	type Scheduler = Scheduler;
-	type Slash = Treasury;
+	type InstantAllowed = InstantAllowed;
+	type FastTrackVotingPeriod = FastTrackVotingPeriod;
+	// To cancel a proposal which has been passed, 2/3 of the council must agree to
+	// it.
+	type CancellationOrigin = frame_system::EnsureOneOf<
+		AccountId,
+		pallet_collective::EnsureProportionAtLeast<_2, _3, AccountId, CouncilCollective>,
+		frame_system::EnsureRoot<AccountId>,
+	>;	
+	// To cancel a proposal before it has been passed, the technical committee must
+	// be unanimous or Root must agree.
+	type CancelProposalOrigin = EnsureOneOf<
+		AccountId,
+		EnsureRoot<AccountId>,
+		pallet_collective::EnsureProportionAtLeast<_1, _1, AccountId, CouncilCollective>,
+	>;
+	type BlacklistOrigin = EnsureRoot<AccountId>;
 	// No vetoing
 	type VetoOrigin = frame_system::EnsureNever<AccountId>;
-	type VotingPeriod = VotingPeriod;
-	type WeightInfo = pallet_democracy::weights::SubstrateWeight<Runtime>;
+	type CooloffPeriod = CooloffPeriod;
+	type PreimageByteDeposit = PreimageByteDeposit;
+	type OperationalPreimageOrigin = pallet_collective::EnsureMember<AccountId, CouncilCollective>;
+	type Slash = Treasury;
+	type Scheduler = Scheduler;
+	type PalletsOrigin = OriginCaller;
+	type MaxVotes = MaxVotes;
+	type WeightInfo = pallet_democracy::weights::SubstrateWeight<Runtime>;	
+	type MaxProposals = MaxProposals;
 }
 
 parameter_types! {
@@ -826,10 +833,10 @@ impl pallet_tips::Config for Runtime {
 }
 
 parameter_types! {
-	pub const SessionDuration: BlockNumber = EPOCH_DURATION_IN_SLOTS as _;
 	pub const ImOnlineUnsignedPriority: TransactionPriority = TransactionPriority::max_value();
-	/// We prioritize im-online heartbeats over phragmen solution submission.
+	/// We prioritize im-online heartbeats over election solution submission.
 	pub const StakingUnsignedPriority: TransactionPriority = TransactionPriority::max_value() / 2;
+	pub const AuthorityDiscoveryMaxAuthorities: u32 = 100;
 }
 
 /// Submits a transaction with the node's public and signature type. Adheres to
@@ -894,15 +901,10 @@ impl pallet_im_online::Config for Runtime {
 	type AuthorityId = ImOnlineId;
 	type Event = Event;
 	type NextSessionRotation = pallet_session::PeriodicSessions<Period, Offset>;
+	type ValidatorSet = Historical;
 	type ReportUnresponsiveness = Offences;
 	type UnsignedPriority = ImOnlineUnsignedPriority;
-	type ValidatorSet = Historical;
 	type WeightInfo = pallet_im_online::weights::SubstrateWeight<Runtime>;
-}
-
-parameter_types! {
-	pub OffencesWeightSoftLimit: Weight = Perbill::from_percent(60) *
-		RuntimeBlockWeights::get().max_block;
 }
 
 impl pallet_offences::Config for Runtime {
@@ -911,7 +913,9 @@ impl pallet_offences::Config for Runtime {
 	type OnOffenceHandler = Staking;
 }
 
-impl pallet_authority_discovery::Config for Runtime {}
+impl pallet_authority_discovery::Config for Runtime {
+	type MaxAuthorities = AuthorityDiscoveryMaxAuthorities;
+}
 
 parameter_types! {
 	// NOTE: Currently it is not possible to change the epoch duration after the chain has started.
@@ -1010,11 +1014,14 @@ parameter_types! {
 }
 
 impl pallet_vesting::Config for Runtime {
-	type BlockNumberToBalance = ConvertInto;
-	type Currency = Balances;
 	type Event = Event;
+	type Currency = Balances;
+	type BlockNumberToBalance = ConvertInto;
 	type MinVestedTransfer = MinVestedTransfer;
 	type WeightInfo = pallet_vesting::weights::SubstrateWeight<Runtime>;
+	// `VestingInfo` encode length is 36bytes. 28 schedules gets encoded as 1009 bytes, which is the
+	// highest number of schedules that encodes less than 2^10.
+	const MAX_VESTING_SCHEDULES: u32 = 28;
 }
 
 impl pallet_sudo::Config for Runtime {
@@ -1061,16 +1068,6 @@ impl pallet_contracts::Config for Runtime {
 	type DeletionQueueDepth = DeletionQueueDepth;
 	type DeletionWeightLimit = DeletionWeightLimit;
 	type Schedule = Schedule;
-}
-
-#[cfg(not(feature = "beresheet-runtime"))]
-parameter_types! {
-	pub const EthChainId: u64 = 2021;
-}
-
-#[cfg(feature = "beresheet-runtime")]
-parameter_types! {
-	pub const EthChainId: u64 = 2022;
 }
 
 /// Clone of Istanbul config: https://github.com/rust-blockchain/evm/blob/master/runtime/src/lib.rs
@@ -1137,33 +1134,23 @@ impl pallet_evm::GasWeightMapping for EdgewareGasWeightMapping {
 	}
 }
 
+#[cfg(not(feature = "beresheet-runtime"))]
 parameter_types! {
-        pub BlockGasLimit: U256
-               = U256::from(NORMAL_DISPATCH_RATIO * MAXIMUM_BLOCK_WEIGHT / WEIGHT_PER_GAS);
+	pub const EthChainId: u64 = 2021;
 }
 
-impl pallet_evm::Config for Runtime {
-	type AddressMapping = HashedAddressMapping<BlakeTwo256>;
-	type BlockGasLimit = BlockGasLimit;
-	type CallOrigin = EnsureAddressTruncated;
-	type ChainId = EthChainId;
-	type Currency = Balances;
-	type Event = Event;
-	type FeeCalculator = pallet_dynamic_fee::Pallet<Self>;
-	type GasWeightMapping = EdgewareGasWeightMapping;
-	type OnChargeTransaction = ();
-	type Precompiles = EdgewarePrecompiles<Self>;
-	type Runner = pallet_evm::runner::stack::Runner<Self>;
-	type WithdrawOrigin = EnsureAddressTruncated;
-
-	/// EVM config used in the module.
-	fn config() -> &'static EvmConfig {
-		&EVM_CONFIG
-	}
+#[cfg(feature = "beresheet-runtime")]
+parameter_types! {
+	pub const EthChainId: u64 = 2022;
 }
 
-pub struct EthereumFindAuthor<F>(PhantomData<F>);
-impl<F: FindAuthor<u32>> FindAuthor<H160> for EthereumFindAuthor<F> {
+parameter_types! {
+	pub BlockGasLimit: U256
+		= U256::from(NORMAL_DISPATCH_RATIO * MAXIMUM_BLOCK_WEIGHT / WEIGHT_PER_GAS);
+}
+
+pub struct FindAuthorTruncated<F>(PhantomData<F>);
+impl<F: FindAuthor<u32>> FindAuthor<H160> for FindAuthorTruncated<F> {
 	fn find_author<'a, I>(digests: I) -> Option<H160>
 	where
 		I: 'a + IntoIterator<Item = (ConsensusEngineId, &'a [u8])>,
@@ -1173,6 +1160,28 @@ impl<F: FindAuthor<u32>> FindAuthor<H160> for EthereumFindAuthor<F> {
 			return Some(H160::from_slice(&authority_id.to_raw_vec()[4..24]));
 		}
 		None
+	}
+}
+
+impl pallet_evm::Config for Runtime {
+	type FeeCalculator = pallet_dynamic_fee::Pallet<Self>;
+	type GasWeightMapping = EdgewareGasWeightMapping;
+	type BlockHashMapping = pallet_ethereum::EthereumBlockHashMapping<Self>;
+	type CallOrigin = EnsureAddressTruncated;
+	type WithdrawOrigin = EnsureAddressTruncated;
+	type AddressMapping = HashedAddressMapping<BlakeTwo256>;
+	type Currency = Balances;
+	type Event = Event;
+	type Runner = pallet_evm::runner::stack::Runner<Self>;
+	type Precompiles = EdgewarePrecompiles<Self>;
+	type ChainId = EthChainId;
+	type BlockGasLimit = BlockGasLimit;
+	type OnChargeTransaction = ();
+	type FindAuthor = FindAuthorTruncated<Aura>;
+
+	/// EVM config used in the module.
+	fn config() -> &'static EvmConfig {
+		&EVM_CONFIG
 	}
 }
 
@@ -1210,7 +1219,7 @@ construct_runtime!(
 		TransactionPayment: pallet_transaction_payment::{Pallet, Storage} = 7,
 		Staking: pallet_staking::{Pallet, Call, Config<T>, Storage, Event<T>} = 8,
 		Session: pallet_session::{Pallet, Call, Storage, Event, Config<T>} = 9,
-		Democracy: pallet_democracy::{Pallet, Call, Storage, Config, Event<T>} = 10,
+		Democracy: pallet_democracy::{Pallet, Call, Storage, Config<T>, Event<T>} = 10,
 		Council: pallet_collective::<Instance1>::{Pallet, Call, Storage, Origin<T>, Event<T>, Config<T>} = 11,
 		PhragmenElection: pallet_elections_phragmen::{Pallet, Call, Storage, Event<T>, Config<T>} = 12,
 		Grandpa: pallet_grandpa::{Pallet, Call, Storage, Config, Event, ValidateUnsigned} = 14,
@@ -1403,6 +1412,10 @@ impl_runtime_apis! {
 	impl fg_primitives::GrandpaApi<Block> for Runtime {
 		fn grandpa_authorities() -> GrandpaAuthorityList {
 			Grandpa::grandpa_authorities()
+		}
+
+		fn current_set_id() -> fg_primitives::SetId {
+			Grandpa::current_set_id()
 		}
 
 		fn submit_report_equivocation_unsigned_extrinsic(
@@ -1737,7 +1750,7 @@ impl_runtime_apis! {
 		fn extrinsic_filter(
 			xts: Vec<<Block as BlockT>::Extrinsic>,
 		) -> Vec<EthereumTransaction> {
-			xts.into_iter().filter_map(|xt| match xt.0.function {
+			xts.into_iter().filter_map(|xt| match xt.function {// xox why is the .0. removed?
 				Call::Ethereum(transact(t)) => Some(t),
 				_ => None
 			}).collect::<Vec<EthereumTransaction>>()

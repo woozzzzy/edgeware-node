@@ -36,8 +36,8 @@ codec = { package = "parity-scale-codec", version = "2.0.0" }
 serde = { version = "1.0.102", features = ["derive"] }
 futures = { version = "0.3.16", features = ["compat"] }
 hex-literal = "0.3.1"
-jsonrpc-core = "15.0.0"
-jsonrpc-pubsub = "15.0.0"
+jsonrpc-core = "18.0.0"
+jsonrpc-pubsub = "18.0.0"
 log = "0.4.8"
 rand = "0.7.2"
 structopt = { version = "0.3.8", optional = true }
@@ -90,9 +90,8 @@ pallet-im-online = { git = "https://github.com/woozzzzy/substrate", branch = "bb
 pallet-authority-discovery = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-staking = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-grandpa = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
-# xox - commented below and added the two lines below
-# pallet-evm = { git = "https://github.com/woozzzzy/substrate", branch = "bb" }
-pallet-dynamic-fee = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+
+pallet-dynamic-fee = { git = "https://github.com/woozzzzy/frontier", branch = "bb" }
 pallet-evm = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
 
 # node-specific dependencies
@@ -104,14 +103,11 @@ edgeware-executor = { version = "3.2.0", path = "../executor", default-features 
 # CLI-specific dependencies
 sc-cli = { git = "https://github.com/woozzzzy/substrate", branch = "bb", optional = true }
 frame-benchmarking-cli = { git = "https://github.com/woozzzzy/substrate", branch = "bb", optional = true }
-# xox -  The below are linked to woozy, but maybe the substrate of woozy is different from the one here.
-# fc-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
-# fp-consensus = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
-# fc-rpc-core = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
-# xox check the default-features = false below. Is it relevant?
+cli-opt = { package = "moonbeam-cli-opt", path = "../cli-opt", optional = true }
 fc-consensus = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
 fp-consensus = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
 fc-rpc-core = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
+fc-db = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
 
 # WASM-specific dependencies
 wasm-bindgen = { version = "0.2.57", optional = true }
@@ -144,6 +140,7 @@ frame-benchmarking-cli = { git = "https://github.com/woozzzzy/substrate", branch
 substrate-build-script-utils = { git = "https://github.com/woozzzzy/substrate", branch = "bb", optional = true }
 substrate-frame-cli = { git = "https://github.com/woozzzzy/substrate", branch = "bb", optional = true }
 sc-cli = { git = "https://github.com/woozzzzy/substrate", branch = "bb", optional = true }
+cli-opt = { package = "moonbeam-cli-opt", path = "../cli-opt", optional = true }
 
 [features]
 default = [ "cli" ]
@@ -161,6 +158,7 @@ cli = [
 	"sc-service/db",
 	"structopt",
 	"substrate-build-script-utils",
+	"cli-opt",
 ]
 
 runtime-benchmarks = [

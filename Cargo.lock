@@ -172,6 +172,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "assert_matches"
+version = "1.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9b34d609dfbaf33d6889b2b7106d3ca345eacad44200913df5ba02bfd31d2ba9"
+
+[[package]]
 name = "async-channel"
 version = "1.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1479,6 +1485,7 @@ dependencies = [
  "edgeware-rpc",
  "edgeware-runtime",
  "fc-consensus",
+ "fc-db",
  "fc-rpc-core",
  "fp-consensus",
  "frame-benchmarking-cli",
@@ -1487,9 +1494,10 @@ dependencies = [
  "futures 0.3.17",
  "hex 0.3.2",
  "hex-literal",
- "jsonrpc-core 15.1.0",
- "jsonrpc-pubsub 15.1.0",
+ "jsonrpc-core",
+ "jsonrpc-pubsub",
  "log",
+ "moonbeam-cli-opt",
  "nix",
  "pallet-authority-discovery",
  "pallet-balances",
@@ -1595,30 +1603,44 @@ dependencies = [
 name = "edgeware-rpc"
 version = "3.2.0"
 dependencies = [
+ "edgeware-executor",
  "edgeware-primitives",
  "edgeware-runtime",
+ "fc-db",
+ "fc-mapping-sync",
  "fc-rpc",
  "fc-rpc-core",
- "jsonrpc-core 15.1.0",
- "jsonrpc-pubsub 15.1.0",
+ "fp-rpc",
+ "futures 0.3.17",
+ "jsonrpc-core",
+ "jsonrpc-pubsub",
+ "moonbeam-cli-opt",
  "pallet-contracts-rpc",
  "pallet-ethereum",
  "pallet-transaction-payment-rpc",
+ "pallet-transaction-payment-rpc-runtime-api",
  "sc-client-api",
  "sc-consensus-aura",
  "sc-consensus-epochs",
+ "sc-consensus-manual-seal",
  "sc-finality-grandpa",
  "sc-finality-grandpa-rpc",
  "sc-keystore",
  "sc-network",
  "sc-rpc",
  "sc-rpc-api",
+ "sc-service",
+ "sc-transaction-pool",
  "sp-api",
  "sp-block-builder",
  "sp-blockchain",
  "sp-consensus",
  "sp-consensus-aura",
+ "sp-core",
+ "sp-offchain",
  "sp-runtime",
+ "sp-session",
+ "sp-storage",
  "sp-transaction-pool",
  "substrate-frame-rpc-system",
 ]
@@ -2007,6 +2029,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "fc-mapping-sync"
+version = "2.0.0-dev"
+source = "git+https://github.com/woozzzzy/frontier?branch=bb#f9e8e9f8472aa72ec8d6de1f5edd25482529856d"
+dependencies = [
+ "fc-consensus",
+ "fc-db",
+ "fp-consensus",
+ "fp-rpc",
+ "futures 0.3.17",
+ "futures-timer 3.0.2",
+ "log",
+ "sc-client-api",
+ "sp-api",
+ "sp-blockchain",
+ "sp-runtime",
+]
+
+[[package]]
 name = "fc-rpc"
 version = "2.0.0-dev"
 source = "git+https://github.com/woozzzzy/frontier?branch=bb#f9e8e9f8472aa72ec8d6de1f5edd25482529856d"
@@ -2022,10 +2062,10 @@ dependencies = [
  "fp-rpc",
  "fp-storage",
  "futures 0.3.17",
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "jsonrpc-core-client",
  "jsonrpc-derive",
- "jsonrpc-pubsub 18.0.0",
+ "jsonrpc-pubsub",
  "libsecp256k1 0.3.5",
  "log",
  "lru",
@@ -2057,10 +2097,10 @@ version = "1.1.0-dev"
 source = "git+https://github.com/woozzzzy/frontier?branch=bb#f9e8e9f8472aa72ec8d6de1f5edd25482529856d"
 dependencies = [
  "ethereum-types",
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "jsonrpc-core-client",
  "jsonrpc-derive",
- "jsonrpc-pubsub 18.0.0",
+ "jsonrpc-pubsub",
  "rustc-hex",
  "serde",
  "serde_json",
@@ -3237,26 +3277,13 @@ dependencies = [
  "derive_more",
  "futures 0.3.17",
  "hyper 0.14.13",
- "jsonrpc-core 18.0.0",
- "jsonrpc-pubsub 18.0.0",
+ "jsonrpc-core",
+ "jsonrpc-pubsub",
  "log",
  "serde",
  "serde_json",
  "tokio 1.12.0",
  "url 1.7.2",
-]
-
-[[package]]
-name = "jsonrpc-core"
-version = "15.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0745a6379e3edc893c84ec203589790774e4247420033e71a76d3ab4687991fa"
-dependencies = [
- "futures 0.1.31",
- "log",
- "serde",
- "serde_derive",
- "serde_json",
 ]
 
 [[package]]
@@ -3304,7 +3331,7 @@ checksum = "e1dea6e07251d9ce6a552abfb5d7ad6bc290a4596c8dcc3d795fae2bbdc1f3ff"
 dependencies = [
  "futures 0.3.17",
  "hyper 0.14.13",
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "jsonrpc-server-utils",
  "log",
  "net2",
@@ -3319,7 +3346,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "382bb0206323ca7cda3dcd7e245cea86d37d02457a02a975e3378fb149a48845"
 dependencies = [
  "futures 0.3.17",
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "jsonrpc-server-utils",
  "log",
  "parity-tokio-ipc",
@@ -3329,25 +3356,12 @@ dependencies = [
 
 [[package]]
 name = "jsonrpc-pubsub"
-version = "15.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "639558e0604013be9787ae52f798506ae42bf4220fe587bdc5625871cc8b9c77"
-dependencies = [
- "jsonrpc-core 15.1.0",
- "log",
- "parking_lot 0.10.2",
- "rand 0.7.3",
- "serde",
-]
-
-[[package]]
-name = "jsonrpc-pubsub"
 version = "18.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "240f87695e6c6f62fb37f05c02c04953cf68d6408b8c1c89de85c7a0125b1011"
 dependencies = [
  "futures 0.3.17",
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "lazy_static",
  "log",
  "parking_lot 0.11.2",
@@ -3364,7 +3378,7 @@ dependencies = [
  "bytes 1.1.0",
  "futures 0.3.17",
  "globset",
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "lazy_static",
  "log",
  "tokio 1.12.0",
@@ -3380,7 +3394,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f892c7d766369475ab7b0669f417906302d7c0fb521285c0a0c92e52e7c8e946"
 dependencies = [
  "futures 0.3.17",
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "jsonrpc-server-utils",
  "log",
  "parity-ws",
@@ -4232,6 +4246,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "71d96e3f3c0b6325d8ccd83c33b28acb183edcb6c67938ba104ec546854b0882"
 
 [[package]]
+name = "memzero"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "93c0d11ac30a033511ae414355d80f70d9f29a44a49140face477117a1ee90db"
+
+[[package]]
 name = "merlin"
 version = "2.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4336,6 +4356,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b9f1c5b025cda876f66ef43a113f91ebc9f4ccef34843000e0adf6ebbab84e21"
 dependencies = [
  "winapi 0.3.9",
+]
+
+[[package]]
+name = "moonbeam-cli-opt"
+version = "0.13.0"
+dependencies = [
+ "libsecp256k1 0.6.0",
+ "primitive-types",
+ "sha3 0.9.1",
+ "sp-runtime",
+ "structopt",
+ "tiny-bip39",
+ "tiny-hderive",
 ]
 
 [[package]]
@@ -4882,7 +4915,7 @@ name = "pallet-contracts-rpc"
 version = "4.0.0-dev"
 source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
 dependencies = [
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "jsonrpc-core-client",
  "jsonrpc-derive",
  "pallet-contracts-primitives",
@@ -4933,6 +4966,7 @@ dependencies = [
  "frame-system",
  "pallet-evm",
  "parity-scale-codec",
+ "serde",
  "sp-core",
  "sp-inherents",
  "sp-runtime",
@@ -5396,7 +5430,7 @@ name = "pallet-transaction-payment-rpc"
 version = "4.0.0-dev"
 source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
 dependencies = [
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "jsonrpc-core-client",
  "jsonrpc-derive",
  "pallet-transaction-payment-rpc-runtime-api",
@@ -6895,6 +6929,49 @@ dependencies = [
 ]
 
 [[package]]
+name = "sc-consensus-babe"
+version = "0.10.0-dev"
+source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
+dependencies = [
+ "async-trait",
+ "derive_more",
+ "fork-tree",
+ "futures 0.3.17",
+ "log",
+ "merlin",
+ "num-bigint 0.2.6",
+ "num-rational 0.2.4",
+ "num-traits",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "rand 0.7.3",
+ "retain_mut",
+ "sc-client-api",
+ "sc-consensus",
+ "sc-consensus-epochs",
+ "sc-consensus-slots",
+ "sc-keystore",
+ "sc-telemetry",
+ "schnorrkel",
+ "serde",
+ "sp-api",
+ "sp-application-crypto",
+ "sp-block-builder",
+ "sp-blockchain",
+ "sp-consensus",
+ "sp-consensus-babe",
+ "sp-consensus-slots",
+ "sp-consensus-vrf",
+ "sp-core",
+ "sp-inherents",
+ "sp-io",
+ "sp-keystore",
+ "sp-runtime",
+ "sp-version",
+ "substrate-prometheus-endpoint",
+]
+
+[[package]]
 name = "sc-consensus-epochs"
 version = "0.10.0-dev"
 source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
@@ -6905,6 +6982,40 @@ dependencies = [
  "sc-consensus",
  "sp-blockchain",
  "sp-runtime",
+]
+
+[[package]]
+name = "sc-consensus-manual-seal"
+version = "0.10.0-dev"
+source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
+dependencies = [
+ "assert_matches",
+ "async-trait",
+ "derive_more",
+ "futures 0.3.17",
+ "jsonrpc-core",
+ "jsonrpc-core-client",
+ "jsonrpc-derive",
+ "log",
+ "parity-scale-codec",
+ "sc-client-api",
+ "sc-consensus",
+ "sc-consensus-babe",
+ "sc-consensus-epochs",
+ "sc-transaction-pool",
+ "sc-transaction-pool-api",
+ "serde",
+ "sp-api",
+ "sp-blockchain",
+ "sp-consensus",
+ "sp-consensus-babe",
+ "sp-consensus-slots",
+ "sp-core",
+ "sp-inherents",
+ "sp-keystore",
+ "sp-runtime",
+ "sp-timestamp",
+ "substrate-prometheus-endpoint",
 ]
 
 [[package]]
@@ -7057,10 +7168,10 @@ dependencies = [
  "derive_more",
  "finality-grandpa",
  "futures 0.3.17",
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "jsonrpc-core-client",
  "jsonrpc-derive",
- "jsonrpc-pubsub 18.0.0",
+ "jsonrpc-pubsub",
  "log",
  "parity-scale-codec",
  "sc-client-api",
@@ -7246,8 +7357,8 @@ source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927
 dependencies = [
  "futures 0.3.17",
  "hash-db",
- "jsonrpc-core 18.0.0",
- "jsonrpc-pubsub 18.0.0",
+ "jsonrpc-core",
+ "jsonrpc-pubsub",
  "log",
  "parity-scale-codec",
  "parking_lot 0.11.2",
@@ -7276,10 +7387,10 @@ version = "0.10.0-dev"
 source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
 dependencies = [
  "futures 0.3.17",
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "jsonrpc-core-client",
  "jsonrpc-derive",
- "jsonrpc-pubsub 18.0.0",
+ "jsonrpc-pubsub",
  "log",
  "parity-scale-codec",
  "parking_lot 0.11.2",
@@ -7301,10 +7412,10 @@ version = "4.0.0-dev"
 source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
 dependencies = [
  "futures 0.3.17",
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "jsonrpc-http-server",
  "jsonrpc-ipc-server",
- "jsonrpc-pubsub 18.0.0",
+ "jsonrpc-pubsub",
  "jsonrpc-ws-server",
  "log",
  "serde_json",
@@ -7322,8 +7433,8 @@ dependencies = [
  "futures 0.3.17",
  "futures-timer 3.0.2",
  "hash-db",
- "jsonrpc-core 18.0.0",
- "jsonrpc-pubsub 18.0.0",
+ "jsonrpc-core",
+ "jsonrpc-pubsub",
  "log",
  "parity-scale-codec",
  "parity-util-mem",
@@ -8060,6 +8171,28 @@ dependencies = [
 ]
 
 [[package]]
+name = "sp-consensus-babe"
+version = "0.10.0-dev"
+source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
+dependencies = [
+ "async-trait",
+ "merlin",
+ "parity-scale-codec",
+ "serde",
+ "sp-api",
+ "sp-application-crypto",
+ "sp-consensus",
+ "sp-consensus-slots",
+ "sp-consensus-vrf",
+ "sp-core",
+ "sp-inherents",
+ "sp-keystore",
+ "sp-runtime",
+ "sp-std",
+ "sp-timestamp",
+]
+
+[[package]]
 name = "sp-consensus-slots"
 version = "0.10.0-dev"
 source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
@@ -8067,6 +8200,18 @@ dependencies = [
  "parity-scale-codec",
  "sp-arithmetic",
  "sp-runtime",
+]
+
+[[package]]
+name = "sp-consensus-vrf"
+version = "0.10.0-dev"
+source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
+dependencies = [
+ "parity-scale-codec",
+ "schnorrkel",
+ "sp-core",
+ "sp-runtime",
+ "sp-std",
 ]
 
 [[package]]
@@ -8692,7 +8837,7 @@ source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927
 dependencies = [
  "frame-system-rpc-runtime-api",
  "futures 0.3.17",
- "jsonrpc-core 18.0.0",
+ "jsonrpc-core",
  "jsonrpc-core-client",
  "jsonrpc-derive",
  "log",
@@ -8887,6 +9032,19 @@ dependencies = [
  "unicode-normalization",
  "wasm-bindgen",
  "zeroize",
+]
+
+[[package]]
+name = "tiny-hderive"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "01b874a4992538d4b2f4fbbac11b9419d685f4b39bdc3fed95b04e07bfd76040"
+dependencies = [
+ "base58",
+ "hmac 0.7.1",
+ "libsecp256k1 0.3.5",
+ "memzero",
+ "sha2 0.8.2",
 ]
 
 [[package]]
@@ -10077,22 +10235,7 @@ dependencies = [
 ]
 
 [[patch.unused]]
-name = "sc-consensus-babe"
-version = "0.10.0-dev"
-source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
-
-[[patch.unused]]
 name = "sc-consensus-uncles"
-version = "0.10.0-dev"
-source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
-
-[[patch.unused]]
-name = "sp-consensus-babe"
-version = "0.10.0-dev"
-source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
-
-[[patch.unused]]
-name = "sp-consensus-vrf"
 version = "0.10.0-dev"
 source = "git+https://github.com/woozzzzy/substrate?branch=bb#b391b82954ad95a927a921035e3017c4a0aad516"
 
