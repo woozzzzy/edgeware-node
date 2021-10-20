@@ -1441,23 +1441,23 @@ dependencies = [
 name = "edge-treasury-reward"
 version = "1.0.0"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-authorship",
- "pallet-balances",
+ "pallet-balances 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-session",
  "pallet-staking",
  "pallet-staking-reward-curve",
- "pallet-timestamp",
+ "pallet-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-treasury",
  "parity-scale-codec",
  "safe-mix",
  "serde",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-staking",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-staking 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -1483,8 +1483,8 @@ dependencies = [
  "fp-consensus",
  "fp-rpc",
  "frame-benchmarking-cli",
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "futures 0.3.17",
  "hex 0.3.2",
  "hex-literal",
@@ -1494,7 +1494,7 @@ dependencies = [
  "log",
  "nix",
  "pallet-authority-discovery",
- "pallet-balances",
+ "pallet-balances 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-contracts",
  "pallet-dynamic-fee",
  "pallet-evm",
@@ -1502,7 +1502,7 @@ dependencies = [
  "pallet-im-online",
  "pallet-indices",
  "pallet-staking",
- "pallet-timestamp",
+ "pallet-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-transaction-payment",
  "parity-scale-codec",
  "parking_lot 0.10.2",
@@ -1511,38 +1511,38 @@ dependencies = [
  "regex",
  "sc-authority-discovery",
  "sc-basic-authorship",
- "sc-chain-spec",
+ "sc-chain-spec 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sc-cli",
- "sc-client-api",
- "sc-client-db",
- "sc-consensus",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-db 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sc-consensus-aura",
- "sc-consensus-epochs",
- "sc-finality-grandpa",
+ "sc-consensus-epochs 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-finality-grandpa 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sc-finality-grandpa-warp-sync",
- "sc-keystore",
- "sc-network",
- "sc-offchain",
- "sc-rpc",
- "sc-service",
- "sc-telemetry",
- "sc-tracing",
- "sc-transaction-pool",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-offchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-service 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde",
  "serde_json",
  "sp-authority-discovery",
- "sp-blockchain",
- "sp-consensus",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-consensus-aura",
- "sp-core",
- "sp-finality-grandpa",
- "sp-inherents",
- "sp-io",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-finality-grandpa 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-keyring",
- "sp-runtime",
- "sp-timestamp",
- "sp-transaction-pool",
- "sp-trie",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "structopt",
  "substrate-browser-utils",
  "substrate-build-script-utils",
@@ -1565,10 +1565,10 @@ dependencies = [
  "evm-runtime",
  "fp-evm",
  "pallet-evm",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -1579,23 +1579,23 @@ dependencies = [
  "edgeware-primitives",
  "edgeware-runtime",
  "edgeware-runtime-interface",
- "frame-benchmarking",
- "frame-support",
- "frame-system",
- "pallet-balances",
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "pallet-balances 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-grandpa",
  "pallet-indices",
  "pallet-session",
- "pallet-timestamp",
+ "pallet-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-transaction-payment",
  "pallet-treasury",
  "parity-scale-codec",
- "sc-executor",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-state-machine",
- "sp-trie",
+ "sc-executor 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "trie-root",
  "wabt",
 ]
@@ -1608,13 +1608,13 @@ version = "0.1.0"
 name = "edgeware-primitives"
 version = "3.3.6"
 dependencies = [
- "frame-system",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
  "pretty_assertions",
- "sp-application-crypto",
- "sp-core",
- "sp-runtime",
- "sp-serializer",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-serializer 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -1642,29 +1642,29 @@ dependencies = [
  "pallet-ethereum",
  "pallet-transaction-payment-rpc",
  "pallet-transaction-payment-rpc-runtime-api",
- "sc-client-api",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sc-consensus-aura",
- "sc-consensus-epochs",
- "sc-finality-grandpa",
+ "sc-consensus-epochs 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-finality-grandpa 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sc-finality-grandpa-rpc",
- "sc-keystore",
- "sc-network",
- "sc-rpc",
- "sc-rpc-api",
- "sc-service",
- "sc-transaction-graph",
- "sc-transaction-pool",
- "sp-api",
- "sp-block-builder",
- "sp-blockchain",
- "sp-consensus",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc-api 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-service 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-transaction-graph 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-consensus-aura",
- "sp-core",
- "sp-offchain",
- "sp-runtime",
- "sp-session",
- "sp-storage",
- "sp-transaction-pool",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-offchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-session 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "substrate-frame-rpc-system",
  "tokio 0.2.25",
 ]
@@ -1678,8 +1678,8 @@ dependencies = [
  "hyper 0.12.36",
  "jsonrpc-core-client 15.1.0",
  "log",
- "sc-rpc",
- "sp-tracing",
+ "sc-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -1694,7 +1694,7 @@ dependencies = [
  "jsonrpc-derive 14.2.2",
  "serde",
  "serde_json",
- "sp-core",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -1739,14 +1739,14 @@ dependencies = [
  "fp-rpc",
  "futures 0.3.17",
  "jsonrpc-core 15.1.0",
- "sc-client-api",
- "sp-api",
- "sp-block-builder",
- "sp-blockchain",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-utils",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "tokio 0.2.25",
 ]
 
@@ -1760,11 +1760,11 @@ dependencies = [
  "parity-scale-codec",
  "serde",
  "serde_json",
- "sp-api",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -1773,10 +1773,10 @@ version = "0.1.0"
 dependencies = [
  "ethereum",
  "parity-scale-codec",
- "sp-api",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -1793,19 +1793,19 @@ dependencies = [
  "fp-rpc",
  "futures 0.3.17",
  "jsonrpc-core 15.1.0",
- "sc-client-api",
- "sc-network",
- "sc-transaction-graph",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-transaction-graph 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde",
  "sha3 0.8.2",
- "sp-api",
- "sp-block-builder",
- "sp-blockchain",
- "sp-io",
- "sp-runtime",
- "sp-std",
- "sp-transaction-pool",
- "sp-utils",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "tokio 0.2.25",
  "tracing",
 ]
@@ -1819,17 +1819,17 @@ dependencies = [
  "ethereum",
  "ethereum-types",
  "fc-rpc",
- "frame-system",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "jsonrpc-core 15.1.0",
- "sc-transaction-graph",
+ "sc-transaction-graph 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde",
  "sha3 0.8.2",
- "sp-api",
- "sp-blockchain",
- "sp-io",
- "sp-runtime",
- "sp-std",
- "sp-transaction-pool",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -1844,10 +1844,10 @@ dependencies = [
  "evm",
  "evm-runtime",
  "fp-rpc",
- "frame-benchmarking",
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "frame-executive",
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "frame-system-benchmarking",
  "frame-system-rpc-runtime-api",
  "hex-literal",
@@ -1857,7 +1857,7 @@ dependencies = [
  "pallet-aura",
  "pallet-authority-discovery",
  "pallet-authorship",
- "pallet-balances",
+ "pallet-balances 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-bounties",
  "pallet-collective",
  "pallet-contracts",
@@ -1891,7 +1891,7 @@ dependencies = [
  "pallet-staking",
  "pallet-staking-reward-curve",
  "pallet-sudo",
- "pallet-timestamp",
+ "pallet-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-tips",
  "pallet-transaction-payment",
  "pallet-transaction-payment-rpc-runtime-api",
@@ -1903,23 +1903,23 @@ dependencies = [
  "safe-mix",
  "serde",
  "sha3 0.9.1",
- "sp-api",
- "sp-application-crypto",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-authority-discovery",
- "sp-block-builder",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-consensus-aura",
- "sp-core",
- "sp-inherents",
- "sp-io",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-keyring",
  "sp-npos-elections",
- "sp-offchain",
- "sp-runtime",
- "sp-session",
- "sp-staking",
- "sp-std",
- "sp-transaction-pool",
- "sp-version",
+ "sp-offchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-session 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-staking 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "static_assertions",
  "substrate-wasm-builder",
 ]
@@ -1930,9 +1930,9 @@ version = "3.3.6"
 dependencies = [
  "edgeware-primitives",
  "parity-scale-codec",
- "sp-runtime",
- "sp-runtime-interface",
- "sp-runtime-interface-proc-macro",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface-proc-macro 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2195,16 +2195,16 @@ dependencies = [
  "futures 0.3.17",
  "log",
  "parity-scale-codec",
- "sc-client-api",
- "sp-api",
- "sp-block-builder",
- "sp-blockchain",
- "sp-consensus",
- "sp-core",
- "sp-inherents",
- "sp-runtime",
- "sp-timestamp",
- "substrate-prometheus-endpoint",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2218,9 +2218,9 @@ dependencies = [
  "pallet-ethereum",
  "parity-scale-codec",
  "parking_lot 0.11.2",
- "sp-core",
- "sp-database",
- "sp-runtime",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-database 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2235,10 +2235,10 @@ dependencies = [
  "futures 0.3.17",
  "futures-timer 3.0.2",
  "log",
- "sc-client-api",
- "sp-api",
- "sp-blockchain",
- "sp-runtime",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2269,17 +2269,17 @@ dependencies = [
  "rand 0.7.3",
  "rlp",
  "rustc-hex",
- "sc-client-api",
- "sc-network",
- "sc-rpc",
- "sc-service",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-service 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sha3 0.8.2",
- "sp-api",
- "sp-blockchain",
- "sp-io",
- "sp-runtime",
- "sp-storage",
- "sp-transaction-pool",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2378,6 +2378,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "fork-tree"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "parity-scale-codec",
+]
+
+[[package]]
 name = "form_urlencoded"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2396,9 +2404,9 @@ dependencies = [
  "parity-scale-codec",
  "rlp",
  "sha3 0.8.2",
- "sp-core",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2410,8 +2418,8 @@ dependencies = [
  "impl-trait-for-tuples 0.1.3",
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2423,11 +2431,11 @@ dependencies = [
  "ethereum-types",
  "fp-evm",
  "parity-scale-codec",
- "sp-api",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2440,18 +2448,37 @@ name = "frame-benchmarking"
 version = "3.1.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "linregress",
  "log",
  "parity-scale-codec",
  "paste",
- "sp-api",
- "sp-io",
- "sp-runtime",
- "sp-runtime-interface",
- "sp-std",
- "sp-storage",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "frame-benchmarking"
+version = "3.1.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "linregress",
+ "log",
+ "parity-scale-codec",
+ "paste",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2461,19 +2488,19 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "Inflector",
  "chrono",
- "frame-benchmarking",
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "handlebars",
  "parity-scale-codec",
  "sc-cli",
- "sc-client-db",
- "sc-executor",
- "sc-service",
+ "sc-client-db 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-executor 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-service 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde",
- "sp-core",
- "sp-externalities",
- "sp-keystore",
- "sp-runtime",
- "sp-state-machine",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "structopt",
 ]
 
@@ -2482,12 +2509,12 @@ name = "frame-election-provider-support"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-arithmetic",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-npos-elections",
- "sp-std",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2495,14 +2522,14 @@ name = "frame-executive"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
- "sp-tracing",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2512,8 +2539,19 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "frame-metadata"
+version = "13.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "parity-scale-codec",
+ "serde",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2522,8 +2560,8 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "bitflags",
- "frame-metadata",
- "frame-support-procedural",
+ "frame-metadata 13.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support-procedural 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "impl-trait-for-tuples 0.2.1",
  "log",
  "once_cell",
@@ -2531,15 +2569,41 @@ dependencies = [
  "paste",
  "serde",
  "smallvec 1.6.1",
- "sp-arithmetic",
- "sp-core",
- "sp-inherents",
- "sp-io",
- "sp-runtime",
- "sp-staking",
- "sp-state-machine",
- "sp-std",
- "sp-tracing",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-staking 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "frame-support"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "bitflags",
+ "frame-metadata 13.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support-procedural 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "impl-trait-for-tuples 0.2.1",
+ "log",
+ "once_cell",
+ "parity-scale-codec",
+ "paste",
+ "serde",
+ "smallvec 1.6.1",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-staking 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2548,7 +2612,19 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "Inflector",
- "frame-support-procedural-tools",
+ "frame-support-procedural-tools 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "frame-support-procedural"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "Inflector",
+ "frame-support-procedural-tools 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "proc-macro2",
  "quote",
  "syn",
@@ -2559,8 +2635,30 @@ name = "frame-support-procedural-tools"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support-procedural-tools-derive",
+ "frame-support-procedural-tools-derive 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "proc-macro-crate 1.1.0",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "frame-support-procedural-tools"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "frame-support-procedural-tools-derive 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "proc-macro-crate 1.1.0",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "frame-support-procedural-tools-derive"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
  "proc-macro2",
  "quote",
  "syn",
@@ -2581,16 +2679,33 @@ name = "frame-system"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "impl-trait-for-tuples 0.2.1",
  "log",
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
- "sp-version",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "frame-system"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "impl-trait-for-tuples 0.2.1",
+ "log",
+ "parity-scale-codec",
+ "serde",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2599,13 +2714,13 @@ version = "3.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e93602f58cdab9820b6d607b7b50834d9b878efa33405a65c89ebfb5a596b584"
 dependencies = [
- "frame-benchmarking",
- "frame-support",
- "frame-system",
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-core",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -2614,7 +2729,7 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "parity-scale-codec",
- "sp-api",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -4945,12 +5060,12 @@ name = "pallet-assets"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-benchmarking",
- "frame-support",
- "frame-system",
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -4958,15 +5073,15 @@ name = "pallet-aura"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-session",
- "pallet-timestamp",
+ "pallet-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-application-crypto",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-consensus-aura",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -4974,14 +5089,14 @@ name = "pallet-authority-discovery"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-session",
  "parity-scale-codec",
- "sp-application-crypto",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-authority-discovery",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -4989,13 +5104,13 @@ name = "pallet-authorship"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "impl-trait-for-tuples 0.2.1",
  "parity-scale-codec",
- "sp-authorship",
- "sp-runtime",
- "sp-std",
+ "sp-authorship 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5003,13 +5118,27 @@ name = "pallet-balances"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-benchmarking",
- "frame-support",
- "frame-system",
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "log",
  "parity-scale-codec",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "pallet-balances"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "log",
+ "parity-scale-codec",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5017,12 +5146,12 @@ name = "pallet-bounties"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-treasury",
  "parity-scale-codec",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5030,15 +5159,15 @@ name = "pallet-collective"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-benchmarking",
- "frame-support",
- "frame-system",
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "log",
  "parity-scale-codec",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5046,8 +5175,8 @@ name = "pallet-contracts"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "log",
  "pallet-contracts-primitives",
  "pallet-contracts-proc-macro",
@@ -5056,11 +5185,11 @@ dependencies = [
  "pwasm-utils 0.17.1",
  "serde",
  "smallvec 1.6.1",
- "sp-core",
- "sp-io",
- "sp-runtime",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-sandbox",
- "sp-std",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "wasmi-validation 0.4.1",
 ]
 
@@ -5072,9 +5201,9 @@ dependencies = [
  "bitflags",
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5099,11 +5228,11 @@ dependencies = [
  "pallet-contracts-rpc-runtime-api",
  "parity-scale-codec",
  "serde",
- "sp-api",
- "sp-blockchain",
- "sp-core",
- "sp-rpc",
- "sp-runtime",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5113,9 +5242,9 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "pallet-contracts-primitives",
  "parity-scale-codec",
- "sp-api",
- "sp-runtime",
- "sp-std",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5123,14 +5252,14 @@ name = "pallet-democracy"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-benchmarking",
- "frame-support",
- "frame-system",
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
  "serde",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5139,15 +5268,15 @@ version = "2.0.0-dev"
 source = "git+https://github.com/woozzzzy/frontier.git?branch=erup-4#0d3c678983015ebc1fa88e296fb515bb82b1d0b3"
 dependencies = [
  "async-trait",
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-evm",
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-inherents",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5156,16 +5285,16 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "frame-election-provider-support",
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "log",
  "parity-scale-codec",
- "sp-arithmetic",
- "sp-core",
- "sp-io",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-npos-elections",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "static_assertions",
 ]
 
@@ -5174,15 +5303,15 @@ name = "pallet-elections-phragmen"
 version = "4.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "log",
  "parity-scale-codec",
- "sp-core",
- "sp-io",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-npos-elections",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5197,20 +5326,20 @@ dependencies = [
  "fp-evm",
  "fp-rpc",
  "fp-storage",
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "libsecp256k1",
- "pallet-balances",
+ "pallet-balances 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-evm",
- "pallet-timestamp",
+ "pallet-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
  "rlp",
  "rustc-hex",
  "serde",
  "sha3 0.8.2",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5222,20 +5351,20 @@ dependencies = [
  "evm-gasometer",
  "evm-runtime",
  "fp-evm",
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "log",
- "pallet-balances",
- "pallet-timestamp",
+ "pallet-balances 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "pallet-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
  "primitive-types",
  "rlp",
  "serde",
  "sha3 0.8.2",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5245,8 +5374,8 @@ source = "git+https://github.com/woozzzzy/frontier.git?branch=erup-4#0d3c6789830
 dependencies = [
  "evm",
  "fp-evm",
- "sp-core",
- "sp-io",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5256,8 +5385,8 @@ source = "git+https://github.com/woozzzzy/frontier.git?branch=erup-4#0d3c6789830
 dependencies = [
  "evm",
  "fp-evm",
- "sp-core",
- "sp-io",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "substrate-bn",
 ]
 
@@ -5269,10 +5398,10 @@ dependencies = [
  "curve25519-dalek 3.2.0",
  "evm",
  "fp-evm",
- "frame-support",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-core",
- "sp-io",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5282,11 +5411,11 @@ source = "git+https://github.com/woozzzzy/frontier.git?branch=erup-4#0d3c6789830
 dependencies = [
  "evm",
  "fp-evm",
- "frame-support",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-evm",
  "parity-scale-codec",
- "sp-core",
- "sp-io",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5297,8 +5426,8 @@ dependencies = [
  "ed25519-dalek",
  "evm",
  "fp-evm",
- "sp-core",
- "sp-io",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5309,8 +5438,8 @@ dependencies = [
  "evm",
  "fp-evm",
  "num",
- "sp-core",
- "sp-io",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5320,8 +5449,8 @@ source = "git+https://github.com/woozzzzy/frontier.git?branch=erup-4#0d3c6789830
 dependencies = [
  "evm",
  "fp-evm",
- "sp-core",
- "sp-io",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "tiny-keccak",
 ]
 
@@ -5333,8 +5462,8 @@ dependencies = [
  "evm",
  "fp-evm",
  "ripemd160",
- "sp-core",
- "sp-io",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5342,20 +5471,20 @@ name = "pallet-grandpa"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-benchmarking",
- "frame-support",
- "frame-system",
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "log",
  "pallet-authorship",
  "pallet-session",
  "parity-scale-codec",
- "sp-application-crypto",
- "sp-core",
- "sp-finality-grandpa",
- "sp-runtime",
- "sp-session",
- "sp-staking",
- "sp-std",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-finality-grandpa 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-session 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-staking 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5364,13 +5493,13 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "enumflags2",
- "frame-benchmarking",
- "frame-support",
- "frame-system",
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5378,17 +5507,17 @@ name = "pallet-im-online"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "log",
  "pallet-authorship",
  "parity-scale-codec",
- "sp-application-crypto",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-staking",
- "sp-std",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-staking 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5396,14 +5525,14 @@ name = "pallet-indices"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-core",
- "sp-io",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-keyring",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5411,13 +5540,13 @@ name = "pallet-multisig"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5425,15 +5554,15 @@ name = "pallet-offences"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "log",
- "pallet-balances",
+ "pallet-balances 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
  "serde",
- "sp-runtime",
- "sp-staking",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-staking 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5441,13 +5570,13 @@ name = "pallet-proxy"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5455,12 +5584,12 @@ name = "pallet-randomness-collective-flip"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
  "safe-mix",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5469,12 +5598,12 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "enumflags2",
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5482,14 +5611,14 @@ name = "pallet-scheduler"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-benchmarking",
- "frame-support",
- "frame-system",
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "log",
  "parity-scale-codec",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5497,18 +5626,18 @@ name = "pallet-session"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "impl-trait-for-tuples 0.2.1",
- "pallet-timestamp",
+ "pallet-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-session",
- "sp-staking",
- "sp-std",
- "sp-trie",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-session 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-staking 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5517,19 +5646,19 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "frame-election-provider-support",
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "log",
  "pallet-authorship",
  "pallet-session",
  "parity-scale-codec",
  "paste",
  "serde",
- "sp-application-crypto",
- "sp-io",
- "sp-runtime",
- "sp-staking",
- "sp-std",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-staking 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "static_assertions",
 ]
 
@@ -5549,12 +5678,12 @@ name = "pallet-sudo"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5562,16 +5691,33 @@ name = "pallet-timestamp"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-benchmarking",
- "frame-support",
- "frame-system",
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "impl-trait-for-tuples 0.2.1",
  "log",
  "parity-scale-codec",
- "sp-inherents",
- "sp-runtime",
- "sp-std",
- "sp-timestamp",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "pallet-timestamp"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "frame-benchmarking 3.1.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "impl-trait-for-tuples 0.2.1",
+ "log",
+ "parity-scale-codec",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5579,13 +5725,13 @@ name = "pallet-tips"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "pallet-treasury",
  "parity-scale-codec",
  "serde",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5593,15 +5739,15 @@ name = "pallet-transaction-payment"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
  "serde",
  "smallvec 1.6.1",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5614,11 +5760,11 @@ dependencies = [
  "jsonrpc-derive 15.1.0",
  "pallet-transaction-payment-rpc-runtime-api",
  "parity-scale-codec",
- "sp-api",
- "sp-blockchain",
- "sp-core",
- "sp-rpc",
- "sp-runtime",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5628,8 +5774,8 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "pallet-transaction-payment",
  "parity-scale-codec",
- "sp-api",
- "sp-runtime",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5637,14 +5783,14 @@ name = "pallet-treasury"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "impl-trait-for-tuples 0.2.1",
- "pallet-balances",
+ "pallet-balances 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
  "serde",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5652,13 +5798,13 @@ name = "pallet-utility"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -5667,11 +5813,11 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "enumflags2",
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -6930,16 +7076,16 @@ dependencies = [
  "prost",
  "prost-build",
  "rand 0.7.3",
- "sc-client-api",
- "sc-network",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde_json",
- "sp-api",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-authority-discovery",
- "sp-blockchain",
- "sp-core",
- "sp-keystore",
- "sp-runtime",
- "substrate-prometheus-endpoint",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -6951,18 +7097,18 @@ dependencies = [
  "futures-timer 3.0.2",
  "log",
  "parity-scale-codec",
- "sc-block-builder",
- "sc-client-api",
+ "sc-block-builder 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sc-proposer-metrics",
- "sc-telemetry",
- "sp-api",
- "sp-blockchain",
- "sp-consensus",
- "sp-core",
- "sp-inherents",
- "sp-runtime",
- "sp-transaction-pool",
- "substrate-prometheus-endpoint",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -6971,14 +7117,30 @@ version = "0.9.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "parity-scale-codec",
- "sc-client-api",
- "sp-api",
- "sp-block-builder",
- "sp-blockchain",
- "sp-core",
- "sp-inherents",
- "sp-runtime",
- "sp-state-machine",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-block-builder"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "parity-scale-codec",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -6988,18 +7150,50 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "impl-trait-for-tuples 0.2.1",
  "parity-scale-codec",
- "sc-chain-spec-derive",
- "sc-consensus-babe",
- "sc-consensus-epochs",
- "sc-finality-grandpa",
- "sc-network",
- "sc-telemetry",
+ "sc-chain-spec-derive 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus-babe 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus-epochs 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-finality-grandpa 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde",
  "serde_json",
- "sp-chain-spec",
- "sp-consensus-babe",
- "sp-core",
- "sp-runtime",
+ "sp-chain-spec 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-babe 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-chain-spec"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "impl-trait-for-tuples 0.2.1",
+ "parity-scale-codec",
+ "sc-chain-spec-derive 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus-babe 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus-epochs 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-finality-grandpa 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "serde",
+ "serde_json",
+ "sp-chain-spec 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-babe 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-chain-spec-derive"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "proc-macro-crate 1.1.0",
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -7029,22 +7223,22 @@ dependencies = [
  "rand 0.7.3",
  "regex",
  "rpassword",
- "sc-client-api",
- "sc-keystore",
- "sc-network",
- "sc-service",
- "sc-telemetry",
- "sc-tracing",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-service 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde",
  "serde_json",
- "sp-blockchain",
- "sp-core",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-keyring",
- "sp-keystore",
- "sp-panic-handler",
- "sp-runtime",
- "sp-utils",
- "sp-version",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-panic-handler 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "structopt",
  "thiserror",
  "tiny-bip39",
@@ -7065,24 +7259,58 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "parking_lot 0.11.2",
- "sc-executor",
- "sp-api",
- "sp-blockchain",
- "sp-consensus",
- "sp-core",
- "sp-database",
- "sp-externalities",
- "sp-inherents",
- "sp-keystore",
- "sp-runtime",
- "sp-state-machine",
- "sp-std",
- "sp-storage",
- "sp-transaction-pool",
- "sp-trie",
- "sp-utils",
- "sp-version",
- "substrate-prometheus-endpoint",
+ "sc-executor 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-database 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-client-api"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "derive_more",
+ "fnv",
+ "futures 0.3.17",
+ "hash-db",
+ "kvdb",
+ "lazy_static",
+ "log",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "sc-executor 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-database 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7101,18 +7329,48 @@ dependencies = [
  "parity-scale-codec",
  "parity-util-mem",
  "parking_lot 0.11.2",
- "sc-client-api",
- "sc-executor",
- "sc-state-db",
- "sp-arithmetic",
- "sp-blockchain",
- "sp-consensus",
- "sp-core",
- "sp-database",
- "sp-runtime",
- "sp-state-machine",
- "sp-trie",
- "substrate-prometheus-endpoint",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-executor 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-state-db 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-database 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-client-db"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "blake2-rfc",
+ "hash-db",
+ "kvdb",
+ "kvdb-memorydb",
+ "kvdb-rocksdb",
+ "linked-hash-map",
+ "log",
+ "parity-db",
+ "parity-scale-codec",
+ "parity-util-mem",
+ "parking_lot 0.11.2",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-executor 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-state-db 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-database 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7121,10 +7379,22 @@ version = "0.9.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "parking_lot 0.11.2",
- "sc-client-api",
- "sp-blockchain",
- "sp-consensus",
- "sp-runtime",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-consensus"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "parking_lot 0.11.2",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7138,24 +7408,24 @@ dependencies = [
  "futures-timer 3.0.2",
  "log",
  "parity-scale-codec",
- "sc-block-builder",
- "sc-client-api",
- "sc-consensus-slots",
- "sc-telemetry",
- "sp-api",
- "sp-application-crypto",
- "sp-block-builder",
- "sp-blockchain",
- "sp-consensus",
+ "sc-block-builder 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus-slots 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-consensus-aura",
- "sp-consensus-slots",
- "sp-core",
- "sp-inherents",
- "sp-io",
- "sp-keystore",
- "sp-runtime",
- "sp-version",
- "substrate-prometheus-endpoint",
+ "sp-consensus-slots 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7165,7 +7435,7 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "async-trait",
  "derive_more",
- "fork-tree",
+ "fork-tree 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "futures 0.3.17",
  "futures-timer 3.0.2",
  "log",
@@ -7178,30 +7448,76 @@ dependencies = [
  "pdqselect",
  "rand 0.7.3",
  "retain_mut",
- "sc-client-api",
- "sc-consensus-epochs",
- "sc-consensus-slots",
- "sc-consensus-uncles",
- "sc-keystore",
- "sc-telemetry",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus-epochs 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus-slots 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus-uncles 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "schnorrkel",
  "serde",
- "sp-api",
- "sp-application-crypto",
- "sp-block-builder",
- "sp-blockchain",
- "sp-consensus",
- "sp-consensus-babe",
- "sp-consensus-slots",
- "sp-consensus-vrf",
- "sp-core",
- "sp-inherents",
- "sp-io",
- "sp-keystore",
- "sp-runtime",
- "sp-utils",
- "sp-version",
- "substrate-prometheus-endpoint",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-babe 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-slots 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-vrf 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-consensus-babe"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-trait",
+ "derive_more",
+ "fork-tree 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "futures 0.3.17",
+ "futures-timer 3.0.2",
+ "log",
+ "merlin",
+ "num-bigint 0.2.6",
+ "num-rational 0.2.4",
+ "num-traits",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "pdqselect",
+ "rand 0.7.3",
+ "retain_mut",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus-epochs 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus-slots 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus-uncles 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "schnorrkel",
+ "serde",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-babe 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-slots 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-vrf 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7209,12 +7525,25 @@ name = "sc-consensus-epochs"
 version = "0.9.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "fork-tree",
+ "fork-tree 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "parity-scale-codec",
- "sc-client-api",
- "sc-consensus",
- "sp-blockchain",
- "sp-runtime",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-consensus-epochs"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "fork-tree 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "parity-scale-codec",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7228,20 +7557,48 @@ dependencies = [
  "impl-trait-for-tuples 0.2.1",
  "log",
  "parity-scale-codec",
- "sc-client-api",
- "sc-telemetry",
- "sp-api",
- "sp-application-crypto",
- "sp-arithmetic",
- "sp-blockchain",
- "sp-consensus",
- "sp-consensus-slots",
- "sp-core",
- "sp-inherents",
- "sp-runtime",
- "sp-state-machine",
- "sp-timestamp",
- "sp-trie",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-slots 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+]
+
+[[package]]
+name = "sc-consensus-slots"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-trait",
+ "futures 0.3.17",
+ "futures-timer 3.0.2",
+ "impl-trait-for-tuples 0.2.1",
+ "log",
+ "parity-scale-codec",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-slots 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
 ]
 
@@ -7250,9 +7607,20 @@ name = "sc-consensus-uncles"
 version = "0.9.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "sc-client-api",
- "sp-authorship",
- "sp-runtime",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-authorship 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+]
+
+[[package]]
+name = "sc-consensus-uncles"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-authorship 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
 ]
 
@@ -7268,20 +7636,48 @@ dependencies = [
  "parity-scale-codec",
  "parity-wasm 0.41.0",
  "parking_lot 0.11.2",
- "sc-executor-common",
- "sc-executor-wasmi",
+ "sc-executor-common 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-executor-wasmi 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-panic-handler 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-serializer 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tasks 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "wasmi",
+]
+
+[[package]]
+name = "sc-executor"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "derive_more",
+ "lazy_static",
+ "libsecp256k1",
+ "log",
+ "parity-scale-codec",
+ "parity-wasm 0.41.0",
+ "parking_lot 0.11.2",
+ "sc-executor-common 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-executor-wasmi 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sc-executor-wasmtime",
- "sp-api",
- "sp-core",
- "sp-externalities",
- "sp-io",
- "sp-panic-handler",
- "sp-runtime-interface",
- "sp-serializer",
- "sp-tasks",
- "sp-trie",
- "sp-version",
- "sp-wasm-interface",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-panic-handler 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-serializer 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tasks 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "wasmi",
 ]
 
@@ -7294,11 +7690,29 @@ dependencies = [
  "parity-scale-codec",
  "parity-wasm 0.41.0",
  "pwasm-utils 0.14.0",
- "sp-allocator",
- "sp-core",
- "sp-maybe-compressed-blob",
- "sp-serializer",
- "sp-wasm-interface",
+ "sp-allocator 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-maybe-compressed-blob 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-serializer 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+ "wasmi",
+]
+
+[[package]]
+name = "sc-executor-common"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "derive_more",
+ "parity-scale-codec",
+ "parity-wasm 0.41.0",
+ "pwasm-utils 0.14.0",
+ "sp-allocator 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-maybe-compressed-blob 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-serializer 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
  "wasmi",
 ]
@@ -7310,11 +7724,26 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "log",
  "parity-scale-codec",
- "sc-executor-common",
- "sp-allocator",
- "sp-core",
- "sp-runtime-interface",
- "sp-wasm-interface",
+ "sc-executor-common 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-allocator 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "wasmi",
+]
+
+[[package]]
+name = "sc-executor-wasmi"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "log",
+ "parity-scale-codec",
+ "sc-executor-common 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-allocator 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "wasmi",
 ]
 
@@ -7327,12 +7756,12 @@ dependencies = [
  "parity-scale-codec",
  "parity-wasm 0.41.0",
  "pwasm-utils 0.14.0",
- "sc-executor-common",
+ "sc-executor-common 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "scoped-tls",
- "sp-allocator",
- "sp-core",
- "sp-runtime-interface",
- "sp-wasm-interface",
+ "sp-allocator 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "wasmtime",
 ]
 
@@ -7345,7 +7774,7 @@ dependencies = [
  "derive_more",
  "dyn-clone",
  "finality-grandpa",
- "fork-tree",
+ "fork-tree 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "futures 0.3.17",
  "futures-timer 3.0.2",
  "linked-hash-map",
@@ -7354,26 +7783,66 @@ dependencies = [
  "parking_lot 0.11.2",
  "pin-project 1.0.8",
  "rand 0.7.3",
- "sc-block-builder",
- "sc-client-api",
- "sc-consensus",
- "sc-keystore",
- "sc-network",
- "sc-network-gossip",
- "sc-telemetry",
+ "sc-block-builder 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network-gossip 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde_json",
- "sp-api",
- "sp-application-crypto",
- "sp-arithmetic",
- "sp-blockchain",
- "sp-consensus",
- "sp-core",
- "sp-finality-grandpa",
- "sp-inherents",
- "sp-keystore",
- "sp-runtime",
- "sp-utils",
- "substrate-prometheus-endpoint",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-finality-grandpa 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-finality-grandpa"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-trait",
+ "derive_more",
+ "dyn-clone",
+ "finality-grandpa",
+ "fork-tree 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "futures 0.3.17",
+ "futures-timer 3.0.2",
+ "linked-hash-map",
+ "log",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "pin-project 1.0.8",
+ "rand 0.7.3",
+ "sc-block-builder 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network-gossip 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "serde_json",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-finality-grandpa 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7390,14 +7859,14 @@ dependencies = [
  "jsonrpc-pubsub 15.1.0",
  "log",
  "parity-scale-codec",
- "sc-client-api",
- "sc-finality-grandpa",
- "sc-rpc",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-finality-grandpa 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde",
  "serde_json",
- "sp-blockchain",
- "sp-core",
- "sp-runtime",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7412,13 +7881,13 @@ dependencies = [
  "parity-scale-codec",
  "parking_lot 0.11.2",
  "prost",
- "sc-client-api",
- "sc-finality-grandpa",
- "sc-network",
- "sc-service",
- "sp-blockchain",
- "sp-finality-grandpa",
- "sp-runtime",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-finality-grandpa 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-service 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-finality-grandpa 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7430,12 +7899,30 @@ dependencies = [
  "futures 0.3.17",
  "log",
  "parity-util-mem",
- "sc-client-api",
- "sc-network",
- "sp-blockchain",
- "sp-runtime",
- "sp-transaction-pool",
- "sp-utils",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "wasm-timer",
+]
+
+[[package]]
+name = "sc-informant"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "ansi_term 0.12.1",
+ "futures 0.3.17",
+ "log",
+ "parity-util-mem",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "wasm-timer",
 ]
 
@@ -7453,9 +7940,29 @@ dependencies = [
  "parking_lot 0.11.2",
  "rand 0.7.3",
  "serde_json",
- "sp-application-crypto",
- "sp-core",
- "sp-keystore",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "subtle 2.4.1",
+]
+
+[[package]]
+name = "sc-keystore"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-trait",
+ "derive_more",
+ "futures 0.3.17",
+ "futures-util",
+ "hex 0.4.3",
+ "merlin",
+ "parking_lot 0.11.2",
+ "rand 0.7.3",
+ "serde_json",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "subtle 2.4.1",
 ]
 
@@ -7468,14 +7975,33 @@ dependencies = [
  "lazy_static",
  "parity-scale-codec",
  "parking_lot 0.11.2",
- "sc-client-api",
- "sc-executor",
- "sp-api",
- "sp-blockchain",
- "sp-core",
- "sp-externalities",
- "sp-runtime",
- "sp-state-machine",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-executor 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-light"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "hash-db",
+ "lazy_static",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-executor 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7494,7 +8020,7 @@ dependencies = [
  "either",
  "erased-serde",
  "fnv",
- "fork-tree",
+ "fork-tree 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "futures 0.3.17",
  "futures-timer 3.0.2",
  "hex 0.4.3",
@@ -7511,19 +8037,72 @@ dependencies = [
  "prost",
  "prost-build",
  "rand 0.7.3",
- "sc-block-builder",
- "sc-client-api",
- "sc-peerset",
+ "sc-block-builder 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-peerset 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde",
  "serde_json",
  "smallvec 1.6.1",
- "sp-arithmetic",
- "sp-blockchain",
- "sp-consensus",
- "sp-core",
- "sp-runtime",
- "sp-utils",
- "substrate-prometheus-endpoint",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+ "unsigned-varint 0.6.0",
+ "void",
+ "wasm-timer",
+ "zeroize",
+]
+
+[[package]]
+name = "sc-network"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-std",
+ "async-trait",
+ "asynchronous-codec 0.5.0",
+ "bitflags",
+ "bs58",
+ "bytes 1.1.0",
+ "cid",
+ "derive_more",
+ "either",
+ "erased-serde",
+ "fnv",
+ "fork-tree 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "futures 0.3.17",
+ "futures-timer 3.0.2",
+ "hex 0.4.3",
+ "ip_network",
+ "libp2p",
+ "linked-hash-map",
+ "linked_hash_set",
+ "log",
+ "lru",
+ "nohash-hasher",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "pin-project 1.0.8",
+ "prost",
+ "prost-build",
+ "rand 0.7.3",
+ "sc-block-builder 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-peerset 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "serde",
+ "serde_json",
+ "smallvec 1.6.1",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
  "unsigned-varint 0.6.0",
  "void",
@@ -7541,9 +8120,26 @@ dependencies = [
  "libp2p",
  "log",
  "lru",
- "sc-network",
- "sp-runtime",
- "substrate-prometheus-endpoint",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "tracing",
+ "wasm-timer",
+]
+
+[[package]]
+name = "sc-network-gossip"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "futures 0.3.17",
+ "futures-timer 3.0.2",
+ "libp2p",
+ "log",
+ "lru",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "tracing",
  "wasm-timer",
 ]
@@ -7565,14 +8161,42 @@ dependencies = [
  "parity-scale-codec",
  "parking_lot 0.11.2",
  "rand 0.7.3",
- "sc-client-api",
- "sc-keystore",
- "sc-network",
- "sp-api",
- "sp-core",
- "sp-offchain",
- "sp-runtime",
- "sp-utils",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-offchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "threadpool",
+]
+
+[[package]]
+name = "sc-offchain"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "bytes 0.5.6",
+ "fnv",
+ "futures 0.3.17",
+ "futures-timer 3.0.2",
+ "hex 0.4.3",
+ "hyper 0.13.10",
+ "hyper-rustls",
+ "log",
+ "num_cpus",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "rand 0.7.3",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-offchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "threadpool",
 ]
 
@@ -7585,7 +8209,20 @@ dependencies = [
  "libp2p",
  "log",
  "serde_json",
- "sp-utils",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "wasm-timer",
+]
+
+[[package]]
+name = "sc-peerset"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "futures 0.3.17",
+ "libp2p",
+ "log",
+ "serde_json",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "wasm-timer",
 ]
 
@@ -7595,7 +8232,7 @@ version = "0.9.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "log",
- "substrate-prometheus-endpoint",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7610,27 +8247,62 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "parking_lot 0.11.2",
- "sc-block-builder",
- "sc-client-api",
- "sc-executor",
- "sc-keystore",
- "sc-rpc-api",
- "sc-tracing",
+ "sc-block-builder 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-executor 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc-api 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde_json",
- "sp-api",
- "sp-blockchain",
- "sp-chain-spec",
- "sp-core",
- "sp-keystore",
- "sp-offchain",
- "sp-rpc",
- "sp-runtime",
- "sp-session",
- "sp-state-machine",
- "sp-tracing",
- "sp-transaction-pool",
- "sp-utils",
- "sp-version",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-chain-spec 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-offchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-session 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-rpc"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "futures 0.3.17",
+ "hash-db",
+ "jsonrpc-core 15.1.0",
+ "jsonrpc-pubsub 15.1.0",
+ "log",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "sc-block-builder 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-executor 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc-api 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "serde_json",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-chain-spec 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-offchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-session 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7649,13 +8321,38 @@ dependencies = [
  "parking_lot 0.11.2",
  "serde",
  "serde_json",
- "sp-chain-spec",
- "sp-core",
- "sp-rpc",
- "sp-runtime",
- "sp-tracing",
- "sp-transaction-pool",
- "sp-version",
+ "sp-chain-spec 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-rpc-api"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "derive_more",
+ "futures 0.3.17",
+ "jsonrpc-core 15.1.0",
+ "jsonrpc-core-client 15.1.0",
+ "jsonrpc-derive 15.1.0",
+ "jsonrpc-pubsub 15.1.0",
+ "log",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "serde",
+ "serde_json",
+ "sp-chain-spec 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7672,8 +8369,26 @@ dependencies = [
  "log",
  "serde",
  "serde_json",
- "sp-runtime",
- "substrate-prometheus-endpoint",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sc-rpc-server"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "futures 0.1.31",
+ "jsonrpc-core 15.1.0",
+ "jsonrpc-http-server",
+ "jsonrpc-ipc-server",
+ "jsonrpc-pubsub 15.1.0",
+ "jsonrpc-ws-server",
+ "log",
+ "serde",
+ "serde_json",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -7697,42 +8412,106 @@ dependencies = [
  "parking_lot 0.11.2",
  "pin-project 1.0.8",
  "rand 0.7.3",
- "sc-block-builder",
- "sc-chain-spec",
- "sc-client-api",
- "sc-client-db",
- "sc-executor",
- "sc-informant",
- "sc-keystore",
- "sc-light",
- "sc-network",
- "sc-offchain",
- "sc-rpc",
- "sc-rpc-server",
- "sc-telemetry",
- "sc-tracing",
- "sc-transaction-pool",
+ "sc-block-builder 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-chain-spec 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-db 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-executor 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-informant 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-light 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-offchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc-server 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde",
  "serde_json",
- "sp-api",
- "sp-application-crypto",
- "sp-block-builder",
- "sp-blockchain",
- "sp-consensus",
- "sp-core",
- "sp-externalities",
- "sp-inherents",
- "sp-io",
- "sp-keystore",
- "sp-runtime",
- "sp-session",
- "sp-state-machine",
- "sp-tracing",
- "sp-transaction-pool",
- "sp-trie",
- "sp-utils",
- "sp-version",
- "substrate-prometheus-endpoint",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-session 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "tempfile",
+ "thiserror",
+ "tracing",
+ "tracing-futures",
+ "wasm-timer",
+]
+
+[[package]]
+name = "sc-service"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-trait",
+ "directories",
+ "exit-future",
+ "futures 0.1.31",
+ "futures 0.3.17",
+ "futures-timer 3.0.2",
+ "hash-db",
+ "jsonrpc-core 15.1.0",
+ "jsonrpc-pubsub 15.1.0",
+ "lazy_static",
+ "log",
+ "parity-scale-codec",
+ "parity-util-mem",
+ "parking_lot 0.11.2",
+ "pin-project 1.0.8",
+ "rand 0.7.3",
+ "sc-block-builder 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-chain-spec 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-client-db 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-executor 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-informant 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-keystore 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-light 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-offchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc-server 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "serde",
+ "serde_json",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-session 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "tempfile",
  "thiserror",
  "tracing",
@@ -7750,9 +8529,44 @@ dependencies = [
  "parity-util-mem",
  "parity-util-mem-derive",
  "parking_lot 0.11.2",
- "sc-client-api",
- "sp-core",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
+]
+
+[[package]]
+name = "sc-state-db"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "log",
+ "parity-scale-codec",
+ "parity-util-mem",
+ "parity-util-mem-derive",
+ "parking_lot 0.11.2",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+]
+
+[[package]]
+name = "sc-telemetry"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "chrono",
+ "futures 0.3.17",
+ "libp2p",
+ "log",
+ "parking_lot 0.11.2",
+ "pin-project 1.0.8",
+ "rand 0.7.3",
+ "serde",
+ "serde_json",
+ "take_mut",
+ "thiserror",
+ "void",
+ "wasm-timer",
 ]
 
 [[package]]
@@ -7789,20 +8603,20 @@ dependencies = [
  "parking_lot 0.11.2",
  "regex",
  "rustc-hash",
- "sc-client-api",
- "sc-rpc-server",
- "sc-telemetry",
- "sc-tracing-proc-macro",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc-server 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-tracing-proc-macro 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde",
  "serde_json",
- "sp-api",
- "sp-block-builder",
- "sp-blockchain",
- "sp-core",
- "sp-rpc",
- "sp-runtime",
- "sp-storage",
- "sp-tracing",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
  "tracing",
  "tracing-log",
@@ -7810,6 +8624,54 @@ dependencies = [
  "wasm-bindgen",
  "wasm-timer",
  "web-sys",
+]
+
+[[package]]
+name = "sc-tracing"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "ansi_term 0.12.1",
+ "atty",
+ "erased-serde",
+ "lazy_static",
+ "log",
+ "once_cell",
+ "parking_lot 0.11.2",
+ "regex",
+ "rustc-hash",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc-server 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-telemetry 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-tracing-proc-macro 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "serde",
+ "serde_json",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-rpc 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+ "tracing",
+ "tracing-log",
+ "tracing-subscriber",
+ "wasm-bindgen",
+ "wasm-timer",
+ "web-sys",
+]
+
+[[package]]
+name = "sc-tracing-proc-macro"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "proc-macro-crate 1.1.0",
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -7836,11 +8698,33 @@ dependencies = [
  "parking_lot 0.11.2",
  "retain_mut",
  "serde",
- "sp-blockchain",
- "sp-core",
- "sp-runtime",
- "sp-transaction-pool",
- "sp-utils",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+ "wasm-timer",
+]
+
+[[package]]
+name = "sc-transaction-graph"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "derive_more",
+ "futures 0.3.17",
+ "linked-hash-map",
+ "log",
+ "parity-util-mem",
+ "parking_lot 0.11.2",
+ "retain_mut",
+ "serde",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
  "wasm-timer",
 ]
@@ -7857,16 +8741,42 @@ dependencies = [
  "parity-scale-codec",
  "parity-util-mem",
  "parking_lot 0.11.2",
- "sc-client-api",
- "sc-transaction-graph",
- "sp-api",
- "sp-blockchain",
- "sp-core",
- "sp-runtime",
- "sp-tracing",
- "sp-transaction-pool",
- "sp-utils",
- "substrate-prometheus-endpoint",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-transaction-graph 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+ "wasm-timer",
+]
+
+[[package]]
+name = "sc-transaction-pool"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "futures 0.3.17",
+ "futures-diagnose",
+ "intervalier",
+ "log",
+ "parity-scale-codec",
+ "parity-util-mem",
+ "parking_lot 0.11.2",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-transaction-graph 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
  "wasm-timer",
 ]
@@ -8319,9 +9229,21 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "log",
- "sp-core",
- "sp-std",
- "sp-wasm-interface",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+]
+
+[[package]]
+name = "sp-allocator"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "log",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
 ]
 
@@ -8333,13 +9255,42 @@ dependencies = [
  "hash-db",
  "log",
  "parity-scale-codec",
- "sp-api-proc-macro",
- "sp-core",
- "sp-runtime",
- "sp-state-machine",
- "sp-std",
- "sp-version",
+ "sp-api-proc-macro 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
+]
+
+[[package]]
+name = "sp-api"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "hash-db",
+ "log",
+ "parity-scale-codec",
+ "sp-api-proc-macro 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+]
+
+[[package]]
+name = "sp-api-proc-macro"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "blake2-rfc",
+ "proc-macro-crate 1.1.0",
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -8361,9 +9312,21 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-io",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-application-crypto"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "parity-scale-codec",
+ "serde",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8375,8 +9338,22 @@ dependencies = [
  "num-traits",
  "parity-scale-codec",
  "serde",
- "sp-debug-derive",
- "sp-std",
+ "sp-debug-derive 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "static_assertions",
+]
+
+[[package]]
+name = "sp-arithmetic"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "integer-sqrt",
+ "num-traits",
+ "parity-scale-codec",
+ "serde",
+ "sp-debug-derive 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "static_assertions",
 ]
 
@@ -8386,10 +9363,10 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "parity-scale-codec",
- "sp-api",
- "sp-application-crypto",
- "sp-runtime",
- "sp-std",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8399,9 +9376,21 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "async-trait",
  "parity-scale-codec",
- "sp-inherents",
- "sp-runtime",
- "sp-std",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-authorship"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-trait",
+ "parity-scale-codec",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8410,10 +9399,22 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "parity-scale-codec",
- "sp-api",
- "sp-inherents",
- "sp-runtime",
- "sp-std",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-block-builder"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "parity-scale-codec",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8426,12 +9427,39 @@ dependencies = [
  "lru",
  "parity-scale-codec",
  "parking_lot 0.11.2",
- "sp-api",
- "sp-consensus",
- "sp-database",
- "sp-runtime",
- "sp-state-machine",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-database 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
+]
+
+[[package]]
+name = "sp-blockchain"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "futures 0.3.17",
+ "log",
+ "lru",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-database 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+]
+
+[[package]]
+name = "sp-chain-spec"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
@@ -8456,16 +9484,43 @@ dependencies = [
  "parity-scale-codec",
  "parking_lot 0.11.2",
  "serde",
- "sp-api",
- "sp-core",
- "sp-inherents",
- "sp-runtime",
- "sp-state-machine",
- "sp-std",
- "sp-trie",
- "sp-utils",
- "sp-version",
- "substrate-prometheus-endpoint",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+ "wasm-timer",
+]
+
+[[package]]
+name = "sp-consensus"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-trait",
+ "futures 0.3.17",
+ "futures-timer 3.0.2",
+ "libp2p",
+ "log",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "serde",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-utils 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-prometheus-endpoint 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
  "wasm-timer",
 ]
@@ -8477,14 +9532,14 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "async-trait",
  "parity-scale-codec",
- "sp-api",
- "sp-application-crypto",
- "sp-consensus",
- "sp-consensus-slots",
- "sp-inherents",
- "sp-runtime",
- "sp-std",
- "sp-timestamp",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-slots 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8496,17 +9551,39 @@ dependencies = [
  "merlin",
  "parity-scale-codec",
  "serde",
- "sp-api",
- "sp-application-crypto",
- "sp-consensus",
- "sp-consensus-slots",
- "sp-consensus-vrf",
- "sp-core",
- "sp-inherents",
- "sp-keystore",
- "sp-runtime",
- "sp-std",
- "sp-timestamp",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-slots 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-vrf 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-consensus-babe"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-trait",
+ "merlin",
+ "parity-scale-codec",
+ "serde",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-slots 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-consensus-vrf 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-timestamp 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8515,8 +9592,18 @@ version = "0.9.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "parity-scale-codec",
- "sp-arithmetic",
- "sp-runtime",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-consensus-slots"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "parity-scale-codec",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8526,9 +9613,21 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "parity-scale-codec",
  "schnorrkel",
- "sp-core",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-consensus-vrf"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "parity-scale-codec",
+ "schnorrkel",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8561,11 +9660,11 @@ dependencies = [
  "secrecy",
  "serde",
  "sha2 0.9.8",
- "sp-debug-derive",
- "sp-externalities",
- "sp-runtime-interface",
- "sp-std",
- "sp-storage",
+ "sp-debug-derive 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "substrate-bip39",
  "thiserror",
  "tiny-bip39",
@@ -8573,6 +9672,59 @@ dependencies = [
  "twox-hash",
  "wasmi",
  "zeroize",
+]
+
+[[package]]
+name = "sp-core"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "base58",
+ "blake2-rfc",
+ "byteorder",
+ "dyn-clonable",
+ "ed25519-dalek",
+ "futures 0.3.17",
+ "hash-db",
+ "hash256-std-hasher",
+ "hex 0.4.3",
+ "impl-serde",
+ "lazy_static",
+ "libsecp256k1",
+ "log",
+ "merlin",
+ "num-traits",
+ "parity-scale-codec",
+ "parity-util-mem",
+ "parking_lot 0.11.2",
+ "primitive-types",
+ "rand 0.7.3",
+ "regex",
+ "schnorrkel",
+ "secrecy",
+ "serde",
+ "sha2 0.9.8",
+ "sp-debug-derive 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "substrate-bip39",
+ "thiserror",
+ "tiny-bip39",
+ "tiny-keccak",
+ "twox-hash",
+ "wasmi",
+ "zeroize",
+]
+
+[[package]]
+name = "sp-database"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "kvdb",
+ "parking_lot 0.11.2",
 ]
 
 [[package]]
@@ -8595,14 +9747,35 @@ dependencies = [
 ]
 
 [[package]]
+name = "sp-debug-derive"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "sp-externalities"
 version = "0.9.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "environmental",
  "parity-scale-codec",
- "sp-std",
- "sp-storage",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-externalities"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "environmental",
+ "parity-scale-codec",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8614,12 +9787,29 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "serde",
- "sp-api",
- "sp-application-crypto",
- "sp-core",
- "sp-keystore",
- "sp-runtime",
- "sp-std",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-finality-grandpa"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "finality-grandpa",
+ "log",
+ "parity-scale-codec",
+ "serde",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8630,9 +9820,23 @@ dependencies = [
  "async-trait",
  "impl-trait-for-tuples 0.2.1",
  "parity-scale-codec",
- "sp-core",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+]
+
+[[package]]
+name = "sp-inherents"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-trait",
+ "impl-trait-for-tuples 0.2.1",
+ "parity-scale-codec",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
 ]
 
@@ -8647,16 +9851,41 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "parking_lot 0.11.2",
- "sp-core",
- "sp-externalities",
- "sp-keystore",
- "sp-maybe-compressed-blob",
- "sp-runtime-interface",
- "sp-state-machine",
- "sp-std",
- "sp-tracing",
- "sp-trie",
- "sp-wasm-interface",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-maybe-compressed-blob 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "tracing",
+ "tracing-core",
+]
+
+[[package]]
+name = "sp-io"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "futures 0.3.17",
+ "hash-db",
+ "libsecp256k1",
+ "log",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-keystore 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-maybe-compressed-blob 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-state-machine 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "tracing",
  "tracing-core",
 ]
@@ -8667,8 +9896,8 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "lazy_static",
- "sp-core",
- "sp-runtime",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "strum",
 ]
 
@@ -8685,8 +9914,34 @@ dependencies = [
  "parking_lot 0.11.2",
  "schnorrkel",
  "serde",
- "sp-core",
- "sp-externalities",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-keystore"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-trait",
+ "derive_more",
+ "futures 0.3.17",
+ "merlin",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "schnorrkel",
+ "serde",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-maybe-compressed-blob"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "ruzstd",
+ "zstd",
 ]
 
 [[package]]
@@ -8705,10 +9960,10 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "parity-scale-codec",
  "serde",
- "sp-arithmetic",
- "sp-core",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sp-npos-elections-compact",
- "sp-std",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8727,9 +9982,27 @@ name = "sp-offchain"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "sp-api",
- "sp-core",
- "sp-runtime",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-offchain"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-panic-handler"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "backtrace",
 ]
 
 [[package]]
@@ -8747,7 +10020,18 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "rustc-hash",
  "serde",
- "sp-core",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "tracing-core",
+]
+
+[[package]]
+name = "sp-rpc"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "rustc-hash",
+ "serde",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "tracing-core",
 ]
 
@@ -8765,11 +10049,32 @@ dependencies = [
  "paste",
  "rand 0.7.3",
  "serde",
- "sp-application-crypto",
- "sp-arithmetic",
- "sp-core",
- "sp-io",
- "sp-std",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-runtime"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "either",
+ "hash256-std-hasher",
+ "impl-trait-for-tuples 0.2.1",
+ "log",
+ "parity-scale-codec",
+ "parity-util-mem",
+ "paste",
+ "rand 0.7.3",
+ "serde",
+ "sp-application-crypto 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-arithmetic 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8780,13 +10085,42 @@ dependencies = [
  "impl-trait-for-tuples 0.2.1",
  "parity-scale-codec",
  "primitive-types",
- "sp-externalities",
- "sp-runtime-interface-proc-macro",
- "sp-std",
- "sp-storage",
- "sp-tracing",
- "sp-wasm-interface",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface-proc-macro 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "static_assertions",
+]
+
+[[package]]
+name = "sp-runtime-interface"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "impl-trait-for-tuples 0.2.1",
+ "parity-scale-codec",
+ "primitive-types",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface-proc-macro 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-storage 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "static_assertions",
+]
+
+[[package]]
+name = "sp-runtime-interface-proc-macro"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "Inflector",
+ "proc-macro-crate 1.1.0",
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -8807,11 +10141,20 @@ version = "0.9.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "parity-scale-codec",
- "sp-core",
- "sp-io",
- "sp-std",
- "sp-wasm-interface",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "wasmi",
+]
+
+[[package]]
+name = "sp-serializer"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
@@ -8829,11 +10172,24 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "parity-scale-codec",
- "sp-api",
- "sp-core",
- "sp-runtime",
- "sp-staking",
- "sp-std",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-staking 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-session"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "parity-scale-codec",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-staking 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8842,8 +10198,18 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "parity-scale-codec",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-staking"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "parity-scale-codec",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8858,16 +10224,44 @@ dependencies = [
  "parking_lot 0.11.2",
  "rand 0.7.3",
  "smallvec 1.6.1",
- "sp-core",
- "sp-externalities",
- "sp-panic-handler",
- "sp-std",
- "sp-trie",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-panic-handler 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
  "tracing",
  "trie-db",
  "trie-root",
 ]
+
+[[package]]
+name = "sp-state-machine"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "hash-db",
+ "log",
+ "num-traits",
+ "parity-scale-codec",
+ "parking_lot 0.11.2",
+ "rand 0.7.3",
+ "smallvec 1.6.1",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-panic-handler 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-trie 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+ "tracing",
+ "trie-db",
+ "trie-root",
+]
+
+[[package]]
+name = "sp-std"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 
 [[package]]
 name = "sp-std"
@@ -8883,8 +10277,21 @@ dependencies = [
  "parity-scale-codec",
  "ref-cast",
  "serde",
- "sp-debug-derive",
- "sp-std",
+ "sp-debug-derive 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-storage"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "impl-serde",
+ "parity-scale-codec",
+ "ref-cast",
+ "serde",
+ "sp-debug-derive 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8893,11 +10300,24 @@ version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
  "log",
- "sp-core",
- "sp-externalities",
- "sp-io",
- "sp-runtime-interface",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-tasks"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "log",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-externalities 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-io 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
 ]
 
 [[package]]
@@ -8909,10 +10329,27 @@ dependencies = [
  "futures-timer 3.0.2",
  "log",
  "parity-scale-codec",
- "sp-api",
- "sp-inherents",
- "sp-runtime",
- "sp-std",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+ "wasm-timer",
+]
+
+[[package]]
+name = "sp-timestamp"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-trait",
+ "futures-timer 3.0.2",
+ "log",
+ "parity-scale-codec",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-inherents 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
  "wasm-timer",
 ]
@@ -8929,7 +10366,25 @@ dependencies = [
  "serde",
  "serde_json",
  "slog",
- "sp-std",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "tracing",
+ "tracing-core",
+ "tracing-subscriber",
+]
+
+[[package]]
+name = "sp-tracing"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "erased-serde",
+ "log",
+ "parity-scale-codec",
+ "parking_lot 0.10.2",
+ "serde",
+ "serde_json",
+ "slog",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "tracing",
  "tracing-core",
  "tracing-subscriber",
@@ -8945,9 +10400,25 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "serde",
- "sp-api",
- "sp-blockchain",
- "sp-runtime",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "thiserror",
+]
+
+[[package]]
+name = "sp-transaction-pool"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "derive_more",
+ "futures 0.3.17",
+ "log",
+ "parity-scale-codec",
+ "serde",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "thiserror",
 ]
 
@@ -8959,10 +10430,36 @@ dependencies = [
  "hash-db",
  "memory-db",
  "parity-scale-codec",
- "sp-core",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "trie-db",
  "trie-root",
+]
+
+[[package]]
+name = "sp-trie"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "hash-db",
+ "memory-db",
+ "parity-scale-codec",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "trie-db",
+ "trie-root",
+]
+
+[[package]]
+name = "sp-utils"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "futures 0.3.17",
+ "futures-core",
+ "futures-timer 3.0.2",
+ "lazy_static",
+ "prometheus",
 ]
 
 [[package]]
@@ -8985,9 +10482,34 @@ dependencies = [
  "impl-serde",
  "parity-scale-codec",
  "serde",
- "sp-runtime",
- "sp-std",
- "sp-version-proc-macro",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version-proc-macro 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-version"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "impl-serde",
+ "parity-scale-codec",
+ "serde",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-version-proc-macro 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "sp-version-proc-macro"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "parity-scale-codec",
+ "proc-macro-crate 1.1.0",
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -9009,7 +10531,18 @@ source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faa
 dependencies = [
  "impl-trait-for-tuples 0.2.1",
  "parity-scale-codec",
- "sp-std",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "wasmi",
+]
+
+[[package]]
+name = "sp-wasm-interface"
+version = "3.0.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "impl-trait-for-tuples 0.2.1",
+ "parity-scale-codec",
+ "sp-std 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "wasmi",
 ]
 
@@ -9146,12 +10679,12 @@ dependencies = [
  "libp2p-wasm-ext",
  "log",
  "rand 0.7.3",
- "sc-chain-spec",
- "sc-informant",
- "sc-network",
- "sc-service",
- "sc-tracing",
- "sp-database",
+ "sc-chain-spec 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-informant 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-network 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-service 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-tracing 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-database 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "wasm-bindgen",
  "wasm-bindgen-futures",
 ]
@@ -9170,11 +10703,11 @@ name = "substrate-frame-cli"
 version = "3.0.0"
 source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "frame-system 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "sc-cli",
- "sp-core",
- "sp-runtime",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "structopt",
 ]
 
@@ -9190,15 +10723,29 @@ dependencies = [
  "jsonrpc-derive 15.1.0",
  "log",
  "parity-scale-codec",
- "sc-client-api",
- "sc-rpc-api",
+ "sc-client-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sc-rpc-api 0.9.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
  "serde",
- "sp-api",
- "sp-block-builder",
- "sp-blockchain",
- "sp-core",
- "sp-runtime",
- "sp-transaction-pool",
+ "sp-api 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-block-builder 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-blockchain 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-core 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-runtime 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+ "sp-transaction-pool 3.0.0 (git+https://github.com/woozzzzy/substrate.git?branch=erup-4)",
+]
+
+[[package]]
+name = "substrate-prometheus-endpoint"
+version = "0.9.0"
+source = "git+https://github.com/woozzzzy/substrate.git?branch=erup-4#656e206faaf0353c7e7f14689779379018bbb02a"
+dependencies = [
+ "async-std",
+ "derive_more",
+ "futures-util",
+ "hyper 0.13.10",
+ "log",
+ "prometheus",
+ "tokio 0.2.25",
 ]
 
 [[package]]
