@@ -60,11 +60,12 @@ type FullGrandpaBlockImport =
 	sc_finality_grandpa::GrandpaBlockImport<FullBackend, Block, FullClient, FullSelectChain>;
 
 pub type ConsensusResult = (
-	FrontierBlockImport<
-		Block,
-		FullGrandpaBlockImport,
-		FullClient,
-	>,
+	// FrontierBlockImport<
+	// 	Block,
+	// 	FullGrandpaBlockImport,
+	// 	FullClient,
+	// >,
+	sc_finality_grandpa::GrandpaBlockImport<FullBackend, Block, FullClient, FullSelectChain>,
 	sc_finality_grandpa::LinkHalf<Block, FullClient, FullSelectChain>,
 );
 
@@ -198,9 +199,9 @@ pub fn new_partial(
 	let target_gas_price = cli.run.target_gas_price;
 
 	let import_queue =
-		sc_consensus_aura::import_queue::<sp_consensus_aura::ed25519::AuthorityPair, _, _, _, _,  _, _>(
+		sc_consensus_aura::import_queue::<AuraPair, _, _, _, _,  _, _>(
 			ImportQueueParams {
-				block_import: frontier_block_import.clone(),
+				block_import: grandpa_block_import.clone(),
 				justification_import: Some(Box::new(grandpa_block_import.clone())),
 				client: client.clone(),
 				create_inherent_data_providers: move |_, ()| async move {
@@ -235,7 +236,7 @@ pub fn new_partial(
 		select_chain,
 		transaction_pool,
 		other: (
-			(frontier_block_import, grandpa_link),
+			(grandpa_block_import, grandpa_link),
 			filter_pool,
 			frontier_backend,
 			telemetry,

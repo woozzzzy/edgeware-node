@@ -1,47 +1,37 @@
-FROM ubuntu as builder
+FROM paritytech/ci-linux:production as builder
 
-LABEL maintainer="eliott@nuclei.studio"
+LABEL description="This is the build stage for edgeware. Here we create the binary."
 
-ARG RUST_VERSION=nightly-2020-10-06
 ARG PROFILE=release
-ARG GIT_REPO=https://github.com/hicommonwealth/edgeware-node
-ARG GIT_BRANCH=v3.2.0
-ARG BINARY_NAME=edgeware
-ARG PACKAGE_NAME=edgeware-cli
+WORKDIR /edgeware
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    clang \
-    cmake \
-    curl \
-    git \
-    libssl-dev \
-    pkg-config
+COPY . /edgeware/
+#RUN  fallocate -l 1G /swapfile
+RUN rustup uninstall nightly
+RUN rustup install nightly-2021-09-24
+RUN rustup update nightly
+RUN rustup target add wasm32-unknown-unknown --toolchain nightly-2021-09-24
 
-# rustup is down for now -- using the raw github page instead
-RUN curl https://raw.githubusercontent.com/rust-lang/rustup/master/rustup-init.sh -sSf | sh -s -- -y && \
-    export PATH=$PATH:$HOME/.cargo/bin && \
-    git clone ${GIT_REPO} source && \
-    cd source && \
-    git checkout ${GIT_BRANCH} && \
-    git submodule update --init --recursive && \
-    rustup default stable && \
-    rustup uninstall nightly && \	
-    rustup toolchain install ${RUST_VERSION} && \	
-    rustup target add wasm32-unknown-unknown --toolchain ${RUST_VERSION} && \
-    cargo build -p ${PACKAGE_NAME} --${PROFILE} && \
-    cp target/${PROFILE}/${BINARY_NAME} /node
+
+RUN cargo build --$PROFILE -j 1
 
 # ===== SECOND STAGE ======
 
-FROM ubuntu
+FROM debian:buster-slim
+LABEL description="This is the 2nd stage: a very small image where we copy the edgeware binary."
+ARG PROFILE=release
+COPY --from=builder /edgeware/target/$PROFILE/edgeware /usr/local/bin
 
-COPY --from=builder /node /usr/local/bin
+RUN useradd -m -u 1000 -U -s /bin/sh -d /edgeware edgeware && \
+	mkdir -p /edgeware/.local/share && \
+	mkdir /data && \
+	chown -R edgeware:edgeware /data && \
+	ln -s /data /edgeware/.local/share/edgeware && \
+	rm -rf /usr/bin /usr/sbin
 
-# install curl in the event we want to interact with the local rpc
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y curl
-RUN useradd --create-home runner
-
-USER runner
+USER edgeware
 EXPOSE 30333 9933 9944
+VOLUME ["/data"]
 
-ENTRYPOINT ["node"]
+CMD ["/usr/local/bin/edgeware"]
+    

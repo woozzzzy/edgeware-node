@@ -1,9 +1,9 @@
 [workspace]
 members = [
-	"modules/edge-treasury-reward",
+	"pallets/edge-treasury-reward",
 # xox - Should we reenable this?
-	# "modules/chainbridge",
-	# "modules/edge-chainbridge",
+	# "pallets/chainbridge",
+	# "pallets/edge-chainbridge",
 	"node/cli",
 	"node/executor",
 	"node/primitives",

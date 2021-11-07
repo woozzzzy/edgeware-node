@@ -24,7 +24,7 @@ pub use sc_executor::NativeElseWasmExecutor;
 pub struct ExecutorDispatch;
 
 impl sc_executor::NativeExecutionDispatch for ExecutorDispatch {
-	type ExtendHostFunctions = frame_benchmarking::benchmarking::HostFunctions;
+	type ExtendHostFunctions = (frame_benchmarking::benchmarking::HostFunctions,edgeware_runtime_interface::storage::HostFunctions);
 
 	fn dispatch(method: &str, data: &[u8]) -> Option<Vec<u8>> {
 		edgeware_runtime::api::dispatch(method, data)

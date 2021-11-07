@@ -1,6 +1,6 @@
 [package]
 name = "edgeware-runtime"
-version = "3.2.0"
+version = "4.0.0"
 authors = ["Commonwealth Labs <hello@commonwealth.im>"]
 edition = "2018"
 build = "build.rs"
@@ -46,7 +46,7 @@ sp-offchain = { git = "https://github.com/woozzzzy/substrate", branch = "bb", de
 sp-npos-elections = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
 # edgeware primitives
-edgeware-primitives = { version = "3.2.0", path = "../primitives", default-features = false }
+edgeware-primitives = { version = "4.0.0", path = "../primitives", default-features = false }
 # xox - from moonbeam - to add later with other name obviously
 #edgeware-evm-tracer = { path = "../evm_tracer", default-features = false }
 #edgeware-rpc-primitives-debug = { path = "../debug", default-features = false }
@@ -93,12 +93,12 @@ pallet-transaction-payment = { git = "https://github.com/woozzzzy/substrate", br
 pallet-transaction-payment-rpc-runtime-api = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 pallet-vesting = { git = "https://github.com/woozzzzy/substrate", branch = "bb", default-features = false }
 
-treasury-reward = { package = "edge-treasury-reward", path = "../../modules/edge-treasury-reward", default-features = false }
+treasury-reward = { package = "edge-treasury-reward", path = "../../pallets/edge-treasury-reward", default-features = false }
 
 # xox - Should we reenable this?
-# edge-chainbridge = { path = "../../modules/edge-chainbridge", default-features = false }
-# chainbridge = { path = "../../modules/chainbridge", default-features = false }
-# edge-assets = { path = "../../modules/edge-assets", default-features = false }
+# edge-chainbridge = { path = "../../pallets/edge-chainbridge", default-features = false }
+# chainbridge = { path = "../../pallets/chainbridge", default-features = false }
+# edge-assets = { path = "../../pallets/edge-assets", default-features = false }
 
 pallet-dynamic-fee = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
 fp-rpc = { git = "https://github.com/woozzzzy/frontier", branch = "bb", default-features = false }
